@@ -1,0 +1,97 @@
+{
+    "name": "@anolilab/cerebro-core",
+    "version": "0.0.0",
+    "description": "A delightful toolkit for building Node-powered CLIs.",
+    "keywords": [
+        "CLI",
+        "command",
+        "line",
+        "class",
+        "terminal",
+        "ANSI",
+        "cli",
+        "opts",
+        "nopt",
+        "options",
+        "args",
+        "argv",
+        "interactive"
+    ],
+    "homepage": "http://anolilab.com/nodejs/packages/cerebro",
+    "repository": "https://github.com/anolilab/cerebro.git",
+    "license": "MIT",
+    "author": {
+        "name": "Daniel Bannert",
+        "email": "d.bannert@anolilab.de",
+        "url": "https://github.com/prisis"
+    },
+    "type": "module",
+    "main": "dist/cjs/index.js",
+    "module": "dist/mjs/index.js",
+    "exports": {
+        ".": {
+            "import": "./dist/mjs/index.js",
+            "require": "./dist/cjs/index.js"
+        }
+    },
+    "types": "./dist/index.d.ts",
+    "files": [
+        "dist",
+        "README.md",
+        "CHANGELOG.md",
+        "LICENSE.md"
+    ],
+    "scripts": {
+        "build": "rimraf ./dist && tsc -p tsconfig-mjs.json && tsc -p tsconfig-cjs.json && ./fixup.sh",
+        "dev:esm": "rimraf ./dist && tsc -p tsconfig-mjs.json --watch"
+    },
+    "dependencies": {
+        "@types/chalk": "^2.2.0",
+        "@types/chalk-animation": "^1.6.0",
+        "@types/command-line-args": "^5.0.0",
+        "@types/command-line-commands": "^2.0.1",
+        "@types/command-line-usage": "^5.0.1",
+        "@types/is-ci": "^3.0.0",
+        "boxen": "^5.0.1",
+        "caller-id": "^0.1.0",
+        "chalk": "^4.1.1",
+        "chalk-animation": "^1.6.0",
+        "cli-table3": "^0.6.0",
+        "command-line-args": "^5.1.1",
+        "command-line-commands": "^3.0.2",
+        "command-line-usage": "^6.1.1",
+        "cross-spawn": "^7.0.3",
+        "cycle": "^1.0.3",
+        "execa": "^5.1.1",
+        "fs-jetpack": "^4.1.0",
+        "hard-rejection": "^2.1.0",
+        "has-yarn": "^2.1.0",
+        "is-ci": "^3.0.0",
+        "is-installed-globally": "^0.4.0",
+        "is-yarn-global": "^0.4.0",
+        "kind-of": "^6.0.3",
+        "leven": "^3.1.0",
+        "ora": "^5.4.1",
+        "prompts": "^2.4.1",
+        "strip-ansi": "7.0.0",
+        "supports-color": "^9.0.1",
+        "supports-hyperlinks": "^2.2.0",
+        "terminal-link": "^3.0.0",
+        "tslib": "^2.3.0",
+        "which": "^2.0.2",
+        "window-size": "^1.1.1"
+    },
+    "devDependencies": {
+        "@types/node": "16.0.0",
+        "@types/prompts": "^2.0.13",
+        "@types/which": "^2.0.1",
+        "mock-stdin": "1.0.0",
+        "rimraf": "^3.0.2",
+        "temp-write": "5.0.0",
+        "typescript": "4.3.4",
+        "unique-temp-dir": "1.0.0"
+    },
+    "engines": {
+        "node": ">=12.6.8"
+    }
+}
