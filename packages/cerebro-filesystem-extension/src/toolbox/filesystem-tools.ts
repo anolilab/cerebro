@@ -86,7 +86,9 @@ const filesystem: IFilesystem = {
             .then(() => {
                 /* do nothing on success */
             })
-            .catch((error) => console.error);
+            .catch((error) => {
+                console.error(error);
+            });
     },
     chdir: (path = "") => {
         process.chdir(path);

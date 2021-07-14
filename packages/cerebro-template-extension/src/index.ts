@@ -1,2 +1,2 @@
-export { buildGenerate, Template } from "./toolbox/template-tools";
-export { default } from "./extension/template-extension";
+export { default as buildGenerate } from "./toolbox/template-tools.js";
+export { default } from "./extension/template-extension.js";

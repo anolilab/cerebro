@@ -12,15 +12,7 @@
     },
     "type": "module",
     "workspaces": [
-        "packages/cerebro-core",
-        "packages/cerebro-filesystem-extension",
-        "packages/cerebro-http-extension",
-        "packages/cerebro-notify-extension",
-        "packages/cerebro-package-manager-extension",
-        "packages/cerebro-patching-extension",
-        "packages/cerebro-semvar-extension",
-        "packages/cerebro-strings-extension",
-        "packages/cerebro-template-extension"
+        "packages/cerebro-core"
     ],
     "scripts": {
         "preinstall": "node verify-node-version.cjs",

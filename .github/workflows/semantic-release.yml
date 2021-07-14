@@ -59,4 +59,4 @@ jobs:
               env:
                   GITHUB_TOKEN: "${{ secrets.SEMANTIC_RELEASE_GITHUB_TOKEN }}"
                   NPM_TOKEN: "${{ secrets.NPM_AUTH_TOKEN }}"
-              run: "yarn exec multi-semantic-release --debug"
+              run: "yarn run multi-semantic-release"

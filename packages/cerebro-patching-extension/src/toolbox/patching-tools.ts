@@ -1,5 +1,5 @@
 import { is } from "@anolilab/cerebro-core/toolbox/utils";
-import { filesystem } from "@anolilab/cerebro-filesystem-extension/toolbox/filesystem-tools";
+import { filesystem } from "@anolilab/cerebro-filesystem-extension";
 
 import { Patching as IPatching, PatchingPatchOptions as IPatchingPatchOptions } from "../types";
 
@@ -13,16 +13,33 @@ function isPatternIncluded(data: string, findPattern: string | RegExp): boolean 
 
 function insertNextToPattern(data: string, options: IPatchingPatchOptions) {
     // Insert before/after a particular string
-    const findPattern: string | RegExp = options.before || options.after;
+    const findPattern: string | RegExp | undefined = options.before || options.after;
 
     // sanity check the findPattern
     const patternIsString = typeof findPattern === "string";
-    if (!(findPattern instanceof RegExp) && !patternIsString) return false;
+
+    if (typeof findPattern === "undefined" || (!(findPattern instanceof RegExp) && !patternIsString)) {
+        return false;
+    }
 
     const isPatternFound = isPatternIncluded(data, findPattern);
     if (!isPatternFound) return false;
 
-    const originalString = patternIsString ? findPattern : data.match(findPattern)[0];
+    let originalString;
+
+    if (patternIsString) {
+        originalString = findPattern;
+    } else {
+        const match = data.match(findPattern);
+
+        if (match === null) {
+            return false;
+        }
+
+        // eslint-disable-next-line prefer-destructuring
+        originalString = match[0];
+    }
+
     const newContents = options.after ? `${originalString}${options.insert || ""}` : `${options.insert || ""}${originalString}`;
 
     return data.replace(findPattern, newContents);
@@ -122,13 +139,17 @@ export async function replace(filename: string, oldContent: string, newContent: 
 
 export function patchString(data: string, options: IPatchingPatchOptions = {}): string | false {
     // Already includes string, and not forcing it
-    if (isPatternIncluded(data, options.insert) && !options.force) return false;
+    if (typeof options.insert === "undefined" || (isPatternIncluded(data, options.insert) && !options.force)) {
+        return false;
+    }
 
     // delete <string> is the same as replace <string> + insert ''
     const replaceString = options.delete || options.replace;
 
     if (replaceString) {
-        if (!isPatternIncluded(data, replaceString)) return false;
+        if (!isPatternIncluded(data, replaceString)) {
+            return false;
+        }
 
         // Replace matching string with new string or nothing if nothing provided
         return data.replace(replaceString, `${options.insert || ""}`);
@@ -154,15 +175,15 @@ export function patchString(data: string, options: IPatchingPatchOptions = {}): 
  *   await toolbox.patching.patch('thing.js', { before: 'bar', insert: 'foo' })
  *
  */
-export async function patch(filename: string, ...options: IPatchingPatchOptions[]): Promise<string | false> {
-    return update(filename, (data: string) => {
+export async function patch(filename: string, ...options: IPatchingPatchOptions[]): Promise<string | boolean> {
+    return update(filename, (data) => {
         const result = options.reduce(
             (updatedData: string, opt: IPatchingPatchOptions) => patchString(updatedData, opt) || updatedData,
-            data,
+            data as string,
         );
 
         return result !== data && result;
-    }) as Promise<string | false>;
+    }) as Promise<string | boolean>;
 }
 
 export const patching: IPatching = {

@@ -1,7 +1,3 @@
-export interface Template {
-    generate(options: TemplateGenerateOptions): Promise<string>;
-}
-
 export interface TemplateGenerateOptions {
     /**
      * Path to the EJS template relative from the plugin's `template` directory.

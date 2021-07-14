@@ -4,9 +4,9 @@ import { filesystem } from "@anolilab/cerebro-filesystem-extension";
 import { strings } from "@anolilab/cerebro-strings-extension";
 import ejs from "ejs";
 
-import { Template as ITemplate, TemplateGenerateOptions as ITemplateGenerateOptions } from "../types";
+import { TemplateGenerateOptions as ITemplateGenerateOptions } from "../types";
 
-const buildGenerate = (toolbox: Toolbox): ITemplate => {
+const buildGenerate = (toolbox: Toolbox) => {
     const { plugin, config, parameters } = toolbox;
 
     /**
@@ -15,7 +15,7 @@ const buildGenerate = (toolbox: Toolbox): ITemplate => {
          * @param options Generation options.
          * @return The generated string.
          */
-    async function generate(options: ITemplateGenerateOptions): Promise<string> {
+    return async function generate(options: ITemplateGenerateOptions): Promise<string> {
         const {
             template, target, props: properties = {}, directory,
         } = options;
@@ -65,8 +65,7 @@ const buildGenerate = (toolbox: Toolbox): ITemplate => {
 
         // send back the rendered string
         return content;
-    }
-
-    return generate;
+    };
 };
-export { buildGenerate, ITemplate as Template };
+
+export default buildGenerate;
