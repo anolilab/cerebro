@@ -1,4 +1,4 @@
-import { Toolbox } from "@anolilab/cerebro-core/domain/toolbox";
+import IToolbox from "@anolilab/cerebro-core/types/domain/toolbox";
 
 import { packageManager } from "../toolbox/package-manager-tools.js";
 
@@ -7,7 +7,7 @@ import { packageManager } from "../toolbox/package-manager-tools.js";
  */
 export default {
     name: "package-manager",
-    execute: (toolbox: Toolbox) => {
+    execute: (toolbox: IToolbox) => {
         toolbox.packageManager = packageManager;
     },
 };

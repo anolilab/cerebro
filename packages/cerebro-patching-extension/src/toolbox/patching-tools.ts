@@ -1,7 +1,9 @@
-import { is } from "@anolilab/cerebro-core/toolbox/utils";
+import { toolbox } from "@anolilab/cerebro-core";
 import { filesystem } from "@anolilab/cerebro-filesystem-extension";
 
 import { Patching as IPatching, PatchingPatchOptions as IPatchingPatchOptions } from "../types";
+
+const { is } = toolbox;
 
 function isPatternIncluded(data: string, findPattern: string | RegExp): boolean {
     if (!findPattern) {

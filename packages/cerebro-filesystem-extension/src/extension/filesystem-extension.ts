@@ -1,4 +1,4 @@
-import { Toolbox } from "@anolilab/cerebro-core/domain/toolbox";
+import IToolbox from "@anolilab/cerebro-core/types/domain/toolbox";
 
 import { filesystem } from "../toolbox/filesystem-tools.js";
 
@@ -7,7 +7,7 @@ import { filesystem } from "../toolbox/filesystem-tools.js";
  */
 export default {
     name: "filesystem",
-    execute: (toolbox: Toolbox) => {
+    execute: (toolbox: IToolbox) => {
         toolbox.filesystem = filesystem;
     },
 };

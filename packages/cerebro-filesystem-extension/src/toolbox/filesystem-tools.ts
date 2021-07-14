@@ -1,4 +1,4 @@
-import { isBlank } from "@anolilab/cerebro-core/toolbox/utils";
+import { toolbox } from "@anolilab/cerebro-core";
 import { chmod, chmodSync, existsSync } from "fs-chmod";
 import jetpack from "fs-jetpack";
 import os from "os";
@@ -6,6 +6,8 @@ import pathlib from "path";
 import trash from "trash";
 
 import { Filesystem as IFilesystem } from "../types";
+
+const { isBlank } = toolbox;
 
 /**
  * Is this a file?

@@ -3,7 +3,9 @@ import execa from "execa";
 import { exec as childProcessExec, ExecException } from "child_process";
 import whichlib from "which";
 
-import { CerebroError, Options as IOptions, StringOrBuffer as IStringOrBuffer, System as ISystem } from "../types";
+import {
+    CerebroError, Options as IOptions, StringOrBuffer as IStringOrBuffer, System as ISystem,
+} from "../types";
 import { head, isNil, tail } from "./utils.js";
 
 /**

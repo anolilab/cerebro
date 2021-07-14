@@ -1,4 +1,4 @@
-import { is, isBlank } from "@anolilab/cerebro-core/toolbox/utils";
+import { is, isBlank } from "@anolilab/cerebro-core";
 import camelCase from "lodash.camelcase";
 import kebabCase from "lodash.kebabcase";
 import lowerCase from "lodash.lowercase";

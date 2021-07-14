@@ -1,10 +1,12 @@
-import { Toolbox } from "@anolilab/cerebro-core/domain/toolbox";
-import { replace } from "@anolilab/cerebro-core/toolbox/utils";
+import { toolbox } from "@anolilab/cerebro-core";
+import Toolbox from "@anolilab/cerebro-core/types/domain/toolbox";
 import { filesystem } from "@anolilab/cerebro-filesystem-extension";
 import { strings } from "@anolilab/cerebro-strings-extension";
 import ejs from "ejs";
 
 import { TemplateGenerateOptions as ITemplateGenerateOptions } from "../types";
+
+const { replace } = toolbox;
 
 const buildGenerate = (toolbox: Toolbox) => {
     const { plugin, config, parameters } = toolbox;

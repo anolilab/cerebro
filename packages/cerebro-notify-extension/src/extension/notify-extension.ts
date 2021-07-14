@@ -1,4 +1,4 @@
-import { Toolbox } from "@anolilab/cerebro-core/domain/toolbox";
+import Toolbox from "@anolilab/cerebro-core/types/domain/toolbox";
 import notifier from "node-notifier";
 
 /**

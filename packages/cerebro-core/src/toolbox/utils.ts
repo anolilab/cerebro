@@ -9,8 +9,7 @@ const keys = (a: Object): string[] => (Object(a) !== a ? [] : Object.keys(a));
 const replace = (b: string | RegExp, c: string, a: string): string => a.replace(b, c);
 const last = <T>(a: T[]): T => a[a.length - 1];
 const reject = <T>(f: (index: T) => boolean, a: T[]): T[] => a.filter((b) => !f(b));
-const is = (Ctor: any, value: any): boolean =>
-    (typeof value !== "undefined" && value.constructor === Ctor) || value instanceof Ctor;
+const is = (Ctor: any, value: any): boolean => (typeof value !== "undefined" && value.constructor === Ctor) || value instanceof Ctor;
 const takeLast = <T>(n: number, a: T[]): T[] => a.slice(-1 * n);
 const equals = (a: string[], b: string[]) => a.length === b.length && a.every((v, index) => v === b[index]);
 const times = (function_: Function, n: number) => {

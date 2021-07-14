@@ -1,4 +1,4 @@
-import { Toolbox } from "@anolilab/cerebro-core/domain/toolbox";
+import IToolbox from "@anolilab/cerebro-core/types/domain/toolbox";
 
 import { strings } from "../toolbox/string-tools.js";
 
@@ -7,7 +7,7 @@ import { strings } from "../toolbox/string-tools.js";
  */
 export default {
     name: "strings",
-    execute: (toolbox: Toolbox): void => {
+    execute: (toolbox: IToolbox): void => {
         toolbox.strings = strings;
     },
 };

@@ -1,10 +1,12 @@
-import { system } from "@anolilab/cerebro-core/toolbox/system-tools";
+import { toolbox } from "@anolilab/cerebro-core";
 
 import {
     PackageManager as IPackageManager,
     PackageManagerOptions as IPackageManagerOptions,
     PackageManagerResult as IPackageManagerResult,
 } from "../types";
+
+const { system } = toolbox;
 
 let yarnpath;
 

@@ -1,4 +1,4 @@
-import { Toolbox } from "@anolilab/cerebro-core/domain/toolbox";
+import IToolbox from "@anolilab/cerebro-core/types/domain/toolbox";
 
 import { patching } from "../toolbox/patching-tools.js";
 
@@ -7,7 +7,7 @@ import { patching } from "../toolbox/patching-tools.js";
  */
 export default {
     name: "patching",
-    execute: (toolbox: Toolbox): void => {
+    execute: (toolbox: IToolbox): void => {
         toolbox.patching = patching;
     },
 };

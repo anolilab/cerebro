@@ -1,4 +1,4 @@
-import { Toolbox } from "@anolilab/cerebro-core/domain/toolbox";
+import IToolbox from "@anolilab/cerebro-core/types/domain/toolbox";
 
 import buildGenerate from "../toolbox/template-tools.js";
 
@@ -7,7 +7,7 @@ import buildGenerate from "../toolbox/template-tools.js";
  */
 export default {
     name: "template",
-    execute: (toolbox: Toolbox): void => {
+    execute: (toolbox: IToolbox): void => {
         const generate = buildGenerate(toolbox);
 
         toolbox.template = { generate };

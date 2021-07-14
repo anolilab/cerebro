@@ -5,7 +5,7 @@
         "outDir": "dist/mjs",
         "baseUrl": ".",
         // Emits types for others to consume
-        "declarationDir": "./dist/types"
+        "declarationDir": "./types"
     },
     "include": ["src"]
 }
