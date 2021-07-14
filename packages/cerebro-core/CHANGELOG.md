@@ -1,3 +1,10 @@
+## @anolilab/cerebro-core [1.0.0-alpha.2](https://github.com/anolilab/cerebro/compare/@anolilab/cerebro-core@1.0.0-alpha.1...@anolilab/cerebro-core@1.0.0-alpha.2) (2021-07-14)
+
+
+### Bug Fixes
+
+* debug release flow ([6a35aab](https://github.com/anolilab/cerebro/commit/6a35aabf66652a6c173153043afa0b57d96d4cf5))
+
 ## @anolilab/cerebro-core 1.0.0-alpha.1 (2021-07-14)
 
 
