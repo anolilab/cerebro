@@ -1,0 +1,11 @@
+{
+    "extends": "./../../tsconfig.json",
+    "compilerOptions": {
+        "module": "ESNext",
+        "outDir": "dist/mjs",
+        "baseUrl": ".",
+        // Emits types for others to consume
+        "declarationDir": "./dist/types"
+    },
+    "include": ["src"]
+}
