@@ -33,8 +33,7 @@
             "import": "./dist/mjs/index.js",
             "require": "./dist/cjs/index.js"
         },
-        "./package.json": "./package.json",
-        "./": "./"
+        "./package.json": "./package.json"
     },
     "types": "./dist/index.d.ts",
     "files": [
