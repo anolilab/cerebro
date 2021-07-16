@@ -1,4 +1,4 @@
-import { is, isBlank } from "@anolilab/cerebro-core";
+import { toolbox } from "@anolilab/cerebro-core";
 import camelCase from "lodash.camelcase";
 import kebabCase from "lodash.kebabcase";
 import lowerCase from "lodash.lowercase";
@@ -14,6 +14,8 @@ import pluralize, {
 } from "pluralize";
 
 import { Strings as IStrings } from "../types";
+
+const { is, isBlank } = toolbox.utils;
 
 /**
  * Is this not a string?

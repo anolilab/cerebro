@@ -40,12 +40,12 @@
         "dev:esm": "rimraf ./dist ./types && tsc --outDir dist --watch"
     },
     "devDependencies": {
-        "@anolilab/cerebro-core": "1.0.0-alpha.3",
+        "@anolilab/cerebro-core": "^1.0.0-alpha.3",
         "rimraf": "^3.0.2",
         "typescript": "^4.3.4"
     },
     "peerDependencies": {
-        "@anolilab/cerebro-core": "1.0.0-alpha.3"
+        "@anolilab/cerebro-core": "^1.0.0-alpha.3"
     },
     "engines": {
         "node": ">=12"

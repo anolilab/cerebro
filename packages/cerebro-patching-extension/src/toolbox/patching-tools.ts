@@ -3,7 +3,7 @@ import { filesystem } from "@anolilab/cerebro-filesystem-extension";
 
 import { Patching as IPatching, PatchingPatchOptions as IPatchingPatchOptions } from "../types";
 
-const { is } = toolbox;
+const { is } = toolbox.utils;
 
 function isPatternIncluded(data: string, findPattern: string | RegExp): boolean {
     if (!findPattern) {

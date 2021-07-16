@@ -7,7 +7,7 @@ import trash from "trash";
 
 import { Filesystem as IFilesystem } from "../types";
 
-const { isBlank } = toolbox;
+const { isBlank } = toolbox.utils;
 
 /**
  * Is this a file?

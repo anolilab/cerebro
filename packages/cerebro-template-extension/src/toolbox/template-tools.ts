@@ -6,10 +6,10 @@ import ejs from "ejs";
 
 import { TemplateGenerateOptions as ITemplateGenerateOptions } from "../types";
 
-const { replace } = toolbox;
+const { replace, isBlank } = toolbox.utils;
 
-const buildGenerate = (toolbox: Toolbox) => {
-    const { plugin, config, parameters } = toolbox;
+const buildGenerate = (t: Toolbox) => {
+    const { plugin, config, parameters } = t;
 
     /**
          * Generates a file from a template.
@@ -57,9 +57,9 @@ const buildGenerate = (toolbox: Toolbox) => {
         const content = ejs.render(templateContent, data);
 
         // save it to the file system
-        if (!strings.isBlank(target)) {
+        if (!isBlank(target)) {
             // prep the destination directory
-            const directiory = replace(/$(\/)*/g, "", target);
+            const directiory = replace(/$(\/)*/g, "", target as string);
             const destination = filesystem.path(directiory);
 
             filesystem.write(destination, content);
