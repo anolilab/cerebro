@@ -1,6 +1,6 @@
 {
     "name": "@anolilab/cerebro-template-extension",
-    "version": "0.0.0",
+    "version": "1.0.0-alpha.1",
     "description": "Prettier shareable config for Anolilab.",
     "keywords": [
         "cerebro",
@@ -40,18 +40,18 @@
         "dev:esm": "rimraf ./dist ./types && tsc --outDir dist --watch"
     },
     "dependencies": {
-        "@anolilab/cerebro-filesystem-extension": "^1.0.0-alpha.1",
-        "@anolilab/cerebro-strings-extension": "^1.0.0-alpha.1",
+        "@anolilab/cerebro-filesystem-extension": "1.0.0-alpha.2",
+        "@anolilab/cerebro-strings-extension": "1.0.0-alpha.2",
         "@types/ejs": "^3.0.7",
         "ejs": "^3.1.6"
     },
     "devDependencies": {
-        "@anolilab/cerebro-core": "^1.0.0-alpha.3",
+        "@anolilab/cerebro-core": "1.0.0-alpha.4",
         "rimraf": "^3.0.2",
         "typescript": "^4.3.4"
     },
     "peerDependencies": {
-        "@anolilab/cerebro-core": "^1.0.0-alpha.3"
+        "@anolilab/cerebro-core": "1.0.0-alpha.4"
     },
     "engines": {
         "node": ">=12"
