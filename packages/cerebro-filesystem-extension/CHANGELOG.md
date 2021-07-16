@@ -1,3 +1,16 @@
+## @anolilab/cerebro-filesystem-extension [1.0.0-alpha.2](https://github.com/anolilab/cerebro/compare/@anolilab/cerebro-filesystem-extension@1.0.0-alpha.1...@anolilab/cerebro-filesystem-extension@1.0.0-alpha.2) (2021-07-16)
+
+
+### Bug Fixes
+
+* fixed export definition in package.json ([fe2423d](https://github.com/anolilab/cerebro/commit/fe2423dd23e305a07e4e3522b60da92e15c34670))
+
+
+
+### Dependencies
+
+* **@anolilab/cerebro-core:** upgraded to 1.0.0-alpha.4
+
 ## @anolilab/cerebro-filesystem-extension 1.0.0-alpha.1 (2021-07-16)
 
 
