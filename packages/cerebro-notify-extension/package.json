@@ -25,10 +25,12 @@
         },
         "./package.json": "./package.json"
     },
-    "main": "index.js",
-    "types": "./dist/index.d.ts",
+    "main": "dist/cjs/index.js",
+    "module": "dist/mjs/index.js",
+    "types": "types/index.d.ts",
     "files": [
         "dist",
+        "types",
         "README.md",
         "CHANGELOG.md",
         "LICENSE.md"

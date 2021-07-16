@@ -25,10 +25,12 @@
         },
         "./package.json": "./package.json"
     },
-    "main": "index.js",
-    "types": "./dist/index.d.ts",
+    "main": "dist/cjs/index.js",
+    "module": "dist/mjs/index.js",
+    "types": "types/index.d.ts",
     "files": [
         "dist",
+        "types",
         "README.md",
         "CHANGELOG.md",
         "LICENSE.md"
@@ -38,8 +40,8 @@
         "dev:esm": "rimraf ./dist ./types && tsc --outDir dist --watch"
     },
     "dependencies": {
-        "@anolilab/cerebro-filesystem-extension": "0.0.0",
-        "@anolilab/cerebro-strings-extension": "0.0.0",
+        "@anolilab/cerebro-filesystem-extension": "^1.0.0-alpha.1",
+        "@anolilab/cerebro-strings-extension": "^1.0.0-alpha.1",
         "@types/ejs": "^3.0.7",
         "ejs": "^3.1.6"
     },

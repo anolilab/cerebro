@@ -18,9 +18,19 @@
         "email": "d.bannert@anolilab.de"
     },
     "type": "module",
-    "main": "index.js",
+    "exports": {
+        ".": {
+            "import": "./dist/mjs/index.js",
+            "require": "./dist/cjs/index.js"
+        },
+        "./package.json": "./package.json"
+    },
+    "main": "dist/cjs/index.js",
+    "module": "dist/mjs/index.js",
+    "types": "types/index.d.ts",
     "files": [
         "dist",
+        "types",
         "README.md",
         "CHANGELOG.md",
         "LICENSE.md"
@@ -46,12 +56,5 @@
     },
     "publishConfig": {
         "access": "public"
-    },
-    "exports": {
-        ".": {
-            "import": "./dist/mjs/index.js",
-            "require": "./dist/cjs/index.js"
-        },
-        "./package.json": "./package.json"
     }
 }

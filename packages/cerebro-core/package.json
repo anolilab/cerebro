@@ -26,8 +26,6 @@
         "url": "https://github.com/prisis"
     },
     "type": "module",
-    "main": "dist/cjs/index.js",
-    "module": "dist/mjs/index.js",
     "exports": {
         ".": {
             "import": "./dist/mjs/index.js",
@@ -35,9 +33,12 @@
         },
         "./package.json": "./package.json"
     },
-    "types": "./dist/index.d.ts",
+    "main": "dist/cjs/index.js",
+    "module": "dist/mjs/index.js",
+    "types": "types/index.d.ts",
     "files": [
         "dist",
+        "types",
         "README.md",
         "CHANGELOG.md",
         "LICENSE.md"
