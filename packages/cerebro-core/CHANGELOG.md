@@ -1,3 +1,15 @@
+## @anolilab/cerebro-core [1.0.0-alpha.3](https://github.com/anolilab/cerebro/compare/@anolilab/cerebro-core@1.0.0-alpha.2...@anolilab/cerebro-core@1.0.0-alpha.3) (2021-07-16)
+
+
+### Features
+
+* added other extension for release ([0a206d3](https://github.com/anolilab/cerebro/commit/0a206d37bd8dc2b1ffa2a9cd04e007c9a409b3f0))
+
+
+### Bug Fixes
+
+* fixed release flow ([5539cd7](https://github.com/anolilab/cerebro/commit/5539cd7263692bbdaec0c1a3f13d084485a3e6fa))
+
 ## @anolilab/cerebro-core [1.0.0-alpha.2](https://github.com/anolilab/cerebro/compare/@anolilab/cerebro-core@1.0.0-alpha.1...@anolilab/cerebro-core@1.0.0-alpha.2) (2021-07-14)
 
 
