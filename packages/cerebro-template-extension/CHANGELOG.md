@@ -1,3 +1,18 @@
+## @anolilab/cerebro-template-extension [1.0.0-alpha.3](https://github.com/anolilab/cerebro/compare/@anolilab/cerebro-template-extension@1.0.0-alpha.2...@anolilab/cerebro-template-extension@1.0.0-alpha.3) (2021-07-18)
+
+
+### Bug Fixes
+
+* downgraded packages to not use esm ([9c28899](https://github.com/anolilab/cerebro/commit/9c288992621900011c3d0b881368fce76b7477ca))
+
+
+
+### Dependencies
+
+* **@anolilab/cerebro-filesystem-extension:** upgraded to 1.0.0-alpha.4
+* **@anolilab/cerebro-strings-extension:** upgraded to 1.0.0-alpha.4
+* **@anolilab/cerebro-core:** upgraded to 1.0.0-alpha.6
+
 ## @anolilab/cerebro-template-extension [1.0.0-alpha.2](https://github.com/anolilab/cerebro/compare/@anolilab/cerebro-template-extension@1.0.0-alpha.1...@anolilab/cerebro-template-extension@1.0.0-alpha.2) (2021-07-18)
 
 
