@@ -5,7 +5,7 @@ __metadata:
   version: 4
   cacheKey: 7
 
-"@anolilab/cerebro-core@1.0.0-alpha.4, @anolilab/cerebro-core@workspace:packages/cerebro-core":
+"@anolilab/cerebro-core@1.0.0-alpha.5, @anolilab/cerebro-core@workspace:packages/cerebro-core":
   version: 0.0.0-use.local
   resolution: "@anolilab/cerebro-core@workspace:packages/cerebro-core"
   dependencies:
@@ -34,18 +34,18 @@ __metadata:
     has-yarn: ^2.1.0
     is-ci: ^3.0.0
     is-installed-globally: ^0.4.0
-    is-yarn-global: ^0.4.0
+    is-yarn-global: ^0.3.0
     kind-of: ^6.0.3
     leven: ^3.1.0
     mock-stdin: 1.0.0
     ora: ^5.4.1
     prompts: ^2.4.1
     rimraf: ^3.0.2
-    strip-ansi: 7.0.0
-    supports-color: ^9.0.1
+    strip-ansi: ^6.0.0
+    supports-color: ^8.1.1
     supports-hyperlinks: ^2.2.0
     temp-write: ^5.0.0
-    terminal-link: ^3.0.0
+    terminal-link: ^2.1.1
     tslib: ^2.3.0
     typescript: ^4.3.4
     unique-temp-dir: 1.0.0
@@ -54,11 +54,11 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@anolilab/cerebro-filesystem-extension@1.0.0-alpha.2, @anolilab/cerebro-filesystem-extension@workspace:packages/cerebro-filesystem-extension":
+"@anolilab/cerebro-filesystem-extension@1.0.0-alpha.3, @anolilab/cerebro-filesystem-extension@workspace:packages/cerebro-filesystem-extension":
   version: 0.0.0-use.local
   resolution: "@anolilab/cerebro-filesystem-extension@workspace:packages/cerebro-filesystem-extension"
   dependencies:
-    "@anolilab/cerebro-core": 1.0.0-alpha.4
+    "@anolilab/cerebro-core": 1.0.0-alpha.5
     fs-chmod: 1.0.6
     fs-extra: 10.0.0
     fs-jetpack: ^4.1.0
@@ -66,7 +66,7 @@ __metadata:
     trash: ^7.2.0
     typescript: ^4.3.4
   peerDependencies:
-    "@anolilab/cerebro-core": 1.0.0-alpha.4
+    "@anolilab/cerebro-core": 1.0.0-alpha.5
     fs-jetpack: ^4.1.0
   languageName: unknown
   linkType: soft
@@ -75,13 +75,13 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@anolilab/cerebro-http-extension@workspace:packages/cerebro-http-extension"
   dependencies:
-    "@anolilab/cerebro-core": 1.0.0-alpha.4
+    "@anolilab/cerebro-core": 1.0.0-alpha.5
     "@types/got": ^9.6.11
     got: ^11.8.2
     rimraf: ^3.0.2
     typescript: ^4.3.4
   peerDependencies:
-    "@anolilab/cerebro-core": 1.0.0-alpha.4
+    "@anolilab/cerebro-core": 1.0.0-alpha.5
   languageName: unknown
   linkType: soft
 
@@ -89,13 +89,13 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@anolilab/cerebro-notify-extension@workspace:packages/cerebro-notify-extension"
   dependencies:
-    "@anolilab/cerebro-core": 1.0.0-alpha.4
+    "@anolilab/cerebro-core": 1.0.0-alpha.5
     "@types/node-notifier": ^8.0.1
     node-notifier: ^10.0.0
     rimraf: ^3.0.2
     typescript: ^4.3.4
   peerDependencies:
-    "@anolilab/cerebro-core": 1.0.0-alpha.4
+    "@anolilab/cerebro-core": 1.0.0-alpha.5
   languageName: unknown
   linkType: soft
 
@@ -103,11 +103,11 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@anolilab/cerebro-package-manager-extension@workspace:packages/cerebro-package-manager-extension"
   dependencies:
-    "@anolilab/cerebro-core": 1.0.0-alpha.4
+    "@anolilab/cerebro-core": 1.0.0-alpha.5
     rimraf: ^3.0.2
     typescript: ^4.3.4
   peerDependencies:
-    "@anolilab/cerebro-core": 1.0.0-alpha.4
+    "@anolilab/cerebro-core": 1.0.0-alpha.5
   languageName: unknown
   linkType: soft
 
@@ -115,12 +115,12 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@anolilab/cerebro-patching-extension@workspace:packages/cerebro-patching-extension"
   dependencies:
-    "@anolilab/cerebro-core": 1.0.0-alpha.4
-    "@anolilab/cerebro-filesystem-extension": 1.0.0-alpha.2
+    "@anolilab/cerebro-core": 1.0.0-alpha.5
+    "@anolilab/cerebro-filesystem-extension": 1.0.0-alpha.3
     rimraf: ^3.0.2
     typescript: ^4.3.4
   peerDependencies:
-    "@anolilab/cerebro-core": 1.0.0-alpha.4
+    "@anolilab/cerebro-core": 1.0.0-alpha.5
   languageName: unknown
   linkType: soft
 
@@ -128,20 +128,20 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@anolilab/cerebro-semvar-extension@workspace:packages/cerebro-semvar-extension"
   dependencies:
-    "@anolilab/cerebro-core": 1.0.0-alpha.4
+    "@anolilab/cerebro-core": 1.0.0-alpha.5
     rimraf: ^3.0.2
     semver: ^7.3.5
     typescript: ^4.3.4
   peerDependencies:
-    "@anolilab/cerebro-core": 1.0.0-alpha.4
+    "@anolilab/cerebro-core": 1.0.0-alpha.5
   languageName: unknown
   linkType: soft
 
-"@anolilab/cerebro-strings-extension@1.0.0-alpha.2, @anolilab/cerebro-strings-extension@workspace:packages/cerebro-strings-extension":
+"@anolilab/cerebro-strings-extension@1.0.0-alpha.3, @anolilab/cerebro-strings-extension@workspace:packages/cerebro-strings-extension":
   version: 0.0.0-use.local
   resolution: "@anolilab/cerebro-strings-extension@workspace:packages/cerebro-strings-extension"
   dependencies:
-    "@anolilab/cerebro-core": 1.0.0-alpha.4
+    "@anolilab/cerebro-core": 1.0.0-alpha.5
     "@types/lodash.camelcase": ^4.3.6
     "@types/lodash.kebabcase": ^4.1.6
     "@types/lodash.lowercase": ^4.3.6
@@ -169,7 +169,7 @@ __metadata:
     rimraf: ^3.0.2
     typescript: ^4.3.4
   peerDependencies:
-    "@anolilab/cerebro-core": 1.0.0-alpha.4
+    "@anolilab/cerebro-core": 1.0.0-alpha.5
   languageName: unknown
   linkType: soft
 
@@ -177,15 +177,15 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@anolilab/cerebro-template-extension@workspace:packages/cerebro-template-extension"
   dependencies:
-    "@anolilab/cerebro-core": 1.0.0-alpha.4
-    "@anolilab/cerebro-filesystem-extension": 1.0.0-alpha.2
-    "@anolilab/cerebro-strings-extension": 1.0.0-alpha.2
+    "@anolilab/cerebro-core": 1.0.0-alpha.5
+    "@anolilab/cerebro-filesystem-extension": 1.0.0-alpha.3
+    "@anolilab/cerebro-strings-extension": 1.0.0-alpha.3
     "@types/ejs": ^3.0.7
     ejs: ^3.1.6
     rimraf: ^3.0.2
     typescript: ^4.3.4
   peerDependencies:
-    "@anolilab/cerebro-core": 1.0.0-alpha.4
+    "@anolilab/cerebro-core": 1.0.0-alpha.5
   languageName: unknown
   linkType: soft
 
@@ -3737,15 +3737,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"ansi-escapes@npm:^5.0.0":
-  version: 5.0.0
-  resolution: "ansi-escapes@npm:5.0.0"
-  dependencies:
-    type-fest: ^1.0.2
-  checksum: 1806619ec89ab6373e3ffd32d6795eee17c36c569c323ca3d68e24b00cee77e0c50e5c5e2a4e82c73e07c851074e83cdd56c6d0ab2b4f79f93cdb31f3bcd6155
-  languageName: node
-  linkType: hard
-
 "ansi-regex@npm:^2.0.0":
   version: 2.1.1
   resolution: "ansi-regex@npm:2.1.1"
@@ -3771,13 +3762,6 @@ __metadata:
   version: 5.0.0
   resolution: "ansi-regex@npm:5.0.0"
   checksum: cbd9b5c9dbbb4a949c2a6e93f1c6cc19f0683d8a4724d08d2158627be6d373f0f3ba1f4ada01dce7ee141f2ba2628fbbd29932c7d49926e3b630c7f329f3178b
-  languageName: node
-  linkType: hard
-
-"ansi-regex@npm:^6.0.0":
-  version: 6.0.0
-  resolution: "ansi-regex@npm:6.0.0"
-  checksum: 69b395ba2c6b38957a0540561c5db0dc1a7f55d9432752628a59942645c0f145dabe2963bc4e57a1c921cd15a90722a46be2cea0b556ae74e16e09548c3f7ffc
   languageName: node
   linkType: hard
 
@@ -7800,13 +7784,6 @@ fsevents@^2.3.2:
   languageName: node
   linkType: hard
 
-"has-flag@npm:^5.0.0":
-  version: 5.0.0
-  resolution: "has-flag@npm:5.0.0"
-  checksum: 6d3be1873675a1b3a63d27f6670d46f685f8fd0d2133c9bafbcad10aedd0069db4b540b8097af3754f374c33f19c70a171ecc5d77f899c04087d9498cf56d2b6
-  languageName: node
-  linkType: hard
-
 "has-own-prop@npm:^2.0.0":
   version: 2.0.0
   resolution: "has-own-prop@npm:2.0.0"
@@ -8865,13 +8842,6 @@ fsevents@^2.3.2:
   version: 0.3.0
   resolution: "is-yarn-global@npm:0.3.0"
   checksum: 5a66f706f24e76979ce252a8f5ff4bb680da3c3eb978a2930f0147fecaa583eefb4ee1765bcfb85c0b4e83f67a231355e158a89b0047e83649f8f11a93563ef9
-  languageName: node
-  linkType: hard
-
-"is-yarn-global@npm:^0.4.0":
-  version: 0.4.0
-  resolution: "is-yarn-global@npm:0.4.0"
-  checksum: b22d060babe1ce3538f43f2250fd88b46581a13bf24a356bd151eaaaf091a3f3baa813eb2e581fd513aaf2f0558e72f3abd0e456dad92830f6bccfbf39764354
   languageName: node
   linkType: hard
 
@@ -14699,15 +14669,6 @@ resolve@^2.0.0-next.3:
   languageName: node
   linkType: hard
 
-"strip-ansi@npm:7.0.0":
-  version: 7.0.0
-  resolution: "strip-ansi@npm:7.0.0"
-  dependencies:
-    ansi-regex: ^6.0.0
-  checksum: f6f5f89d5f8e80e0b24c7f3e8775bf6c98a7111fbd22dc35d051903de4bcf66b6e4e222b60962383d66542fdd37b4a9a9d18f65689cd7d7fa7e5a89459e9135b
-  languageName: node
-  linkType: hard
-
 "strip-ansi@npm:^3.0.0, strip-ansi@npm:^3.0.1":
   version: 3.0.1
   resolution: "strip-ansi@npm:3.0.1"
@@ -14863,21 +14824,12 @@ resolve@^2.0.0-next.3:
   languageName: node
   linkType: hard
 
-"supports-color@npm:^8.0.0":
+"supports-color@npm:^8.0.0, supports-color@npm:^8.1.1":
   version: 8.1.1
   resolution: "supports-color@npm:8.1.1"
   dependencies:
     has-flag: ^4.0.0
   checksum: 0219f5c91753fea8dc8046cd4b18d39458b5dc0c6421c67c1072209faae9ba93b89283252e3b05d5c18901fd9f8b95001e3247fb93e2265f66d584a676522c75
-  languageName: node
-  linkType: hard
-
-"supports-color@npm:^9.0.1":
-  version: 9.0.1
-  resolution: "supports-color@npm:9.0.1"
-  dependencies:
-    has-flag: ^5.0.0
-  checksum: 34eebb1f2be64939eb73b08089413b395797cc18a7e4272f92faba7ba9e88746fba3edfd6ad3051ce2b4d959ea1c440155e83bb6d0ad6622ed310f163ed9dcef
   languageName: node
   linkType: hard
 
@@ -15001,23 +14953,13 @@ resolve@^2.0.0-next.3:
   languageName: node
   linkType: hard
 
-"terminal-link@npm:^2.0.0":
+"terminal-link@npm:^2.0.0, terminal-link@npm:^2.1.1":
   version: 2.1.1
   resolution: "terminal-link@npm:2.1.1"
   dependencies:
     ansi-escapes: ^4.2.1
     supports-hyperlinks: ^2.0.0
   checksum: f84553e11e9dc9034c9a62aeada2985e2c50adf161b773b3e4a5cf174b0d14f6b8868eb1dcdf91c3f71e3d932a3be158b8742c2a43ee459e9b88a246d78a6dc1
-  languageName: node
-  linkType: hard
-
-"terminal-link@npm:^3.0.0":
-  version: 3.0.0
-  resolution: "terminal-link@npm:3.0.0"
-  dependencies:
-    ansi-escapes: ^5.0.0
-    supports-hyperlinks: ^2.2.0
-  checksum: 372a0b9e7edaaea66d62f9fad483322b7cd5d076b43db5b2a9c0f1524c72d6d50383e84d0e703cb9c7494e44dbcb3499d29b9c0a4da2bbb785494659896deba8
   languageName: node
   linkType: hard
 
@@ -15721,13 +15663,6 @@ resolve@^2.0.0-next.3:
   version: 0.8.1
   resolution: "type-fest@npm:0.8.1"
   checksum: f8c4b4249f52e8bea7a4fc55b3653c96c2d547240e4c772e001d02b7cc38b8c3eb493ab9fbe985a76a203cd1aa7044776b728a71ba12bf36e7131f989597885b
-  languageName: node
-  linkType: hard
-
-"type-fest@npm:^1.0.2":
-  version: 1.2.1
-  resolution: "type-fest@npm:1.2.1"
-  checksum: 03c56d304481db8498aca7a093cee5680080da36cd9cc59dc64679c3a296dd6b58b940963ee4ab93e91f02b9d6dec0c41efbb02d3672b4d3ccde5b64f5d3667b
   languageName: node
   linkType: hard
 

@@ -1,4 +1,17 @@
 # Cerebro core
+cerebro is a delightful toolkit for building Node-based command-line interfaces (CLIs) in TypeScript or modern JavaScript.
+
+---
+
+<div align="center">
+    <p>
+        <sup>
+            Daniel Bannert's open source work is supported by the community on <a href="https://github.com/sponsors/prisis">GitHub Sponsors</a>
+        </sup>
+    </p>
+</div>
+
+---
 
 ## Supported Node.js Versions
 

@@ -1,6 +1,18 @@
 # Cerebro notify extension
 send cross platform native notifications
 
+---
+
+<div align="center">
+    <p>
+        <sup>
+            Daniel Bannert's open source work is supported by the community on <a href="https://github.com/sponsors/prisis">GitHub Sponsors</a>
+        </sup>
+    </p>
+</div>
+
+---
+
 ## Supported Node.js Versions
 
 Libraries in this ecosystem make the best effort to track
