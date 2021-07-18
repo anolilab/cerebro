@@ -16,17 +16,17 @@ cerebro is a delightful toolkit for building Node-based command-line interfaces 
 
 [*filesystem* - moving files and directories around](./packages/cerebro-filesystem-extension)
 
-[*semver* - working with semantic versioning](./packages/cerebro-semvar-extension)
+[*http* - interacting with API servers](./packages/cerebro-http-extension)
 
-[*strings* - manipulating strings & template data](./packages/cerebro-strings-extension)
+[*notify* - send cross platform native notifications](./packages/cerebro-notify-extension)
 
 [*packageManager* - installing NPM packages with Yarn or NPM](./packages/cerebro-package-manager-extension)
 
-[*http* - interacting with API servers](./packages/cerebro-http-extension)
-
 [*patching* - manipulating file contents](./packages/cerebro-patching-extension)
 
-[*notify* - send cross platform native notifications](./packages/cerebro-notify-extension)
+[*semver* - working with semantic versioning](./packages/cerebro-semvar-extension)
+
+[*strings* - manipulating strings & template data](./packages/cerebro-strings-extension)
 
 [*template* - generating files from templates](./packages/cerebro-template-extension)
 

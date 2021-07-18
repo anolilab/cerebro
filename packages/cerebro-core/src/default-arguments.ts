@@ -35,7 +35,7 @@ const defaultArguments: OptionDefinition[] = [
     },
     {
         name: "version",
-        description: "print version info.",
+        description: "print version info",
         type: Boolean,
         alias: "V",
         group: "global",

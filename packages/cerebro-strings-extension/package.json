@@ -1,7 +1,7 @@
 {
     "name": "@anolilab/cerebro-strings-extension",
     "version": "1.0.0-alpha.4",
-    "description": "Prettier shareable config for Anolilab.",
+    "description": "cerebro strings extension - manipulating strings & template data",
     "keywords": [
         "cerebro",
         "anolilab",

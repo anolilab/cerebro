@@ -1,7 +1,7 @@
 {
     "name": "@anolilab/cerebro-patching-extension",
     "version": "1.0.0-alpha.3",
-    "description": "Prettier shareable config for Anolilab.",
+    "description": "cerebro patching extension - manipulating file contents",
     "keywords": [
         "cerebro",
         "anolilab",

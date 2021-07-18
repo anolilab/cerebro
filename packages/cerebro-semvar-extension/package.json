@@ -1,7 +1,7 @@
 {
     "name": "@anolilab/cerebro-semvar-extension",
     "version": "1.0.0-alpha.4",
-    "description": "Prettier shareable config for Anolilab.",
+    "description": "cerebro semvar extension - working with semantic versioning",
     "keywords": [
         "cerebro",
         "anolilab",

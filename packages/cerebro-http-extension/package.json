@@ -1,7 +1,7 @@
 {
     "name": "@anolilab/cerebro-http-extension",
     "version": "1.0.0-alpha.4",
-    "description": "Prettier shareable config for Anolilab.",
+    "description": "cerebro http extension - interacting with API servers",
     "keywords": [
         "cerebro",
         "anolilab",
