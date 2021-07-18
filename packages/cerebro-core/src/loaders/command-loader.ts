@@ -17,7 +17,7 @@ import loadModule from "./module-loader.js";
  *
  * @return The loaded command.
  */
-export async function loadCommandFromFile(file: string, options: IOptions = {}): Promise<ICommand> {
+export async function loadCommandFromFile(file: string, options?: IOptions): Promise<ICommand> {
     // sanity check the input
     if (isBlank(file)) {
         throw new Error(`Error: couldn't load command (file is blank): ${file}`);
@@ -37,7 +37,7 @@ export async function loadCommandFromFile(file: string, options: IOptions = {}):
     command.name = (jetpack.inspect(file) as any).name.split(".")[0];
 
     // strip the extension from the end of the commandPath
-    command.commandPath = (options.commandPath || last(file.split(`commands${sep}`)).split(sep)).map((f) => ([`${command.name}.js`, `${command.name}.mjs`, `${command.name}.cjs`].includes(f) ? command.name : f));
+    command.commandPath = (options?.commandPath || last(file.split(`commands${sep}`)).split(sep)).map((f) => ([`${command.name}.js`, `${command.name}.mjs`, `${command.name}.cjs`].includes(f) ? command.name : f));
 
     // if the last two elements of the commandPath are the same, remove the last one
     const lastElems = takeLast(2, command.commandPath);
@@ -73,7 +73,7 @@ export class CommandLoader implements Loader {
 
     private readonly path: string;
 
-    public constructor(path: string, options: IOptions) {
+    public constructor(path: string, options?: IOptions) {
         this.options = {
             commandFilePattern: ["*.{js,mjs,cjs}", "!*.test.{js,mjs,cjs}"],
             hidden: false,

@@ -13,7 +13,7 @@ export async function run(argv?: string[] | string): Promise<IToolbox> {
     .defaultCommand({
       run: async (toolbox: IToolbox) => {
         const { print, meta } = toolbox
-        print.info(`Gluegun version ${meta.version()}`)
+        print.info(`cerebro version ${meta.version()}`)
         print.info(``)
         print.info(`  Type cerebro --help for more info`)
       },

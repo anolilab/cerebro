@@ -54,7 +54,7 @@ export class ExtensionLoader implements Loader {
 
     private readonly path: string;
 
-    public constructor(folderPath: string, options: IOptions) {
+    public constructor(folderPath: string, options?: IOptions) {
         this.options = {
             commandFilePattern: ["*.{js,mjs,cjs}", "!*.test.{js,mjs,cjs}"],
             hidden: false,

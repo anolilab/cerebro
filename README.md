@@ -24,11 +24,11 @@ cerebro is a delightful toolkit for building Node-based command-line interfaces 
 
 [*http* - interacting with API servers](./packages/cerebro-http-extension)
 
-[*template* - generating files from templates](./packages/cerebro-template-extension)
-
 [*patching* - manipulating file contents](./packages/cerebro-patching-extension)
 
 [*notify* - send cross platform native notifications](./packages/cerebro-notify-extension)
+
+[*template* - generating files from templates](./packages/cerebro-template-extension)
 
 # Why use cerebro?
 
