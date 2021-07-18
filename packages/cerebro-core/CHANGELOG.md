@@ -1,3 +1,16 @@
+## @anolilab/cerebro-core [1.0.0-alpha.5](https://github.com/anolilab/cerebro/compare/@anolilab/cerebro-core@1.0.0-alpha.4...@anolilab/cerebro-core@1.0.0-alpha.5) (2021-07-18)
+
+
+### Features
+
+* changed export for all extensions ([2fecd12](https://github.com/anolilab/cerebro/commit/2fecd12ae4289f154c39fc4ee28d87f1a303376a))
+* changed export of files ([40b7e6a](https://github.com/anolilab/cerebro/commit/40b7e6a063c5be30ec8a8b8186f436024f372713))
+
+
+### Bug Fixes
+
+* fixed wrong path in fixup.sh ([a01a540](https://github.com/anolilab/cerebro/commit/a01a54042b92a18231772338d5974ddbdd509eed))
+
 ## @anolilab/cerebro-core [1.0.0-alpha.4](https://github.com/anolilab/cerebro/compare/@anolilab/cerebro-core@1.0.0-alpha.3...@anolilab/cerebro-core@1.0.0-alpha.4) (2021-07-16)
 
 
