@@ -1,6 +1,6 @@
 {
     "name": "@anolilab/cerebro-template-extension",
-    "version": "1.0.0-alpha.3",
+    "version": "1.0.0-alpha.4",
     "description": "cerebro template extension - generating files from templates",
     "keywords": [
         "cerebro",
@@ -43,18 +43,18 @@
         "dev:esm": "rimraf ./dist ./types && tsc --outDir dist --watch"
     },
     "dependencies": {
-        "@anolilab/cerebro-filesystem-extension": "1.0.0-alpha.4",
-        "@anolilab/cerebro-strings-extension": "1.0.0-alpha.4",
+        "@anolilab/cerebro-filesystem-extension": "1.0.0-alpha.5",
+        "@anolilab/cerebro-strings-extension": "1.0.0-alpha.5",
         "@types/ejs": "^3.0.7",
         "ejs": "^3.1.6"
     },
     "devDependencies": {
-        "@anolilab/cerebro-core": "1.0.0-alpha.6",
+        "@anolilab/cerebro-core": "1.0.0-alpha.7",
         "rimraf": "^3.0.2",
         "typescript": "^4.3.4"
     },
     "peerDependencies": {
-        "@anolilab/cerebro-core": "1.0.0-alpha.6"
+        "@anolilab/cerebro-core": "1.0.0-alpha.7"
     },
     "engines": {
         "node": ">=12"
