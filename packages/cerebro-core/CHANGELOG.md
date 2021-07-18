@@ -1,3 +1,10 @@
+## @anolilab/cerebro-core [1.0.0-alpha.6](https://github.com/anolilab/cerebro/compare/@anolilab/cerebro-core@1.0.0-alpha.5...@anolilab/cerebro-core@1.0.0-alpha.6) (2021-07-18)
+
+
+### Bug Fixes
+
+* downgraded packages to not use esm ([9c28899](https://github.com/anolilab/cerebro/commit/9c288992621900011c3d0b881368fce76b7477ca))
+
 ## @anolilab/cerebro-core [1.0.0-alpha.5](https://github.com/anolilab/cerebro/compare/@anolilab/cerebro-core@1.0.0-alpha.4...@anolilab/cerebro-core@1.0.0-alpha.5) (2021-07-18)
 
 
