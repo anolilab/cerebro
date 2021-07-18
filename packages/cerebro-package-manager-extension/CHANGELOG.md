@@ -1,3 +1,16 @@
+## @anolilab/cerebro-package-manager-extension [1.0.0-alpha.5](https://github.com/anolilab/cerebro/compare/@anolilab/cerebro-package-manager-extension@1.0.0-alpha.4...@anolilab/cerebro-package-manager-extension@1.0.0-alpha.5) (2021-07-18)
+
+
+### Bug Fixes
+
+* fixed package descriptions ([93b71f2](https://github.com/anolilab/cerebro/commit/93b71f2377ef403c15b330f86fa13ae9d95d47c6))
+
+
+
+### Dependencies
+
+* **@anolilab/cerebro-core:** upgraded to 1.0.0-alpha.7
+
 ## @anolilab/cerebro-package-manager-extension [1.0.0-alpha.4](https://github.com/anolilab/cerebro/compare/@anolilab/cerebro-package-manager-extension@1.0.0-alpha.3...@anolilab/cerebro-package-manager-extension@1.0.0-alpha.4) (2021-07-18)
 
 
