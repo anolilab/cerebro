@@ -17,20 +17,23 @@
         "name": "Daniel Bannert",
         "email": "d.bannert@anolilab.de"
     },
-    "main": "dist/cjs/index.js",
-    "module": "dist/mjs/index.js",
     "type": "module",
     "exports": {
         ".": {
-            "import": "./dist/mjs/index.js",
-            "require": "./dist/cjs/index.js"
+            "import": "./esm/index.js",
+            "require": "./commonjs/index.js"
         },
+        "./esm": "./esm/index.js",
+        "./commonjs": "./commonjs/index.js",
         "./package.json": "./package.json"
     },
+    "main": "./commonjs/index.js",
+    "module": "./esm/index.js",
     "types": "types/index.d.ts",
     "files": [
-        "dist",
-        "types",
+        "esm/",
+        "commonjs/",
+        "types/",
         "README.md",
         "CHANGELOG.md",
         "LICENSE.md"

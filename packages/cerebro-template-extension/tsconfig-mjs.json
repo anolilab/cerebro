@@ -2,7 +2,7 @@
     "extends": "./../../tsconfig.json",
     "compilerOptions": {
         "module": "ESNext",
-        "outDir": "dist/mjs",
+        "outDir": "esm",
         "baseUrl": ".",
         // Emits types for others to consume
         "declarationDir": "./types"

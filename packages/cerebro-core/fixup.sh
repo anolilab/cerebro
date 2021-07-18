@@ -1,6 +1,6 @@
 #!/bin/bash
 #
-#   Add package.json files to cjs/mjs subtrees
+#   Add package.json files to commonjs/esm subtrees
 #
 
 cat >commonjs/package.json <<!EOF

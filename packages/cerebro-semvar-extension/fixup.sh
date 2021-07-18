@@ -1,15 +1,15 @@
 #!/bin/bash
 #
-#   Add package.json files to cjs/mjs subtrees
+#   Add package.json files to commonjs/esm subtrees
 #
 
-cat >dist/cjs/package.json <<!EOF
+cat >commonjs/package.json <<!EOF
 {
     "type": "commonjs"
 }
 !EOF
 
-cat >dist/mjs/package.json <<!EOF
+cat >esm/package.json <<!EOF
 {
     "type": "module"
 }
