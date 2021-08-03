@@ -1,5 +1,5 @@
 import expect from "expect";
-import { loadModule } from "../../src/loaders/module-loader";
+import { loadModule } from "../../src/loaders/utils/load-module";
 
 test("handles weird input", () => {
     expect(() => loadModule("")).toThrow();

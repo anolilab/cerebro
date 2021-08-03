@@ -8,7 +8,8 @@ import {
 import {
     Cli as ICli, Command as ICommand, Loader, Options as IOptions,
 } from "../types";
-import loadModule from "./module-loader.js";
+import loadModule from "./utils/load-module.js";
+import loadRequire from "./utils/load-require.js";
 
 /**
  * Loads the command from the given file.
@@ -47,7 +48,7 @@ export async function loadCommandFromFile(file: string, options?: IOptions): Pro
     }
 
     // require in the module -- best chance to bomb is here
-    const commandModule = (await loadModule(file)) as ICommand;
+    const commandModule = options?.loadingType === "require" ? loadRequire(file) as ICommand : (await loadModule(file)) as ICommand;
 
     // is it a valid commandModule?
     const valid = commandModule && typeof commandModule === "object" && typeof commandModule.execute === "function";

@@ -8,7 +8,8 @@ import { asyncForEach, isBlank } from "../toolbox/utils.js";
 import {
     Cli as ICli, Extension as IExtension, Loader, Options as IOptions,
 } from "../types";
-import loadModule from "./module-loader.js";
+import loadModule from "./utils/load-module.js";
+import loadRequire from "./utils/load-require.js";
 
 /**
  * Loads the extension from a file.
@@ -30,7 +31,7 @@ export async function loadExtensionFromFile(file: string): Promise<IExtension> {
     const name = (jetpack.inspect(file) as any).name.split(".")[0];
 
     // require in the module -- best chance to bomb is here
-    const extensionModule = (await loadModule(file)) as IExtension;
+    const commandModule = options?.loadingType === "require" ? loadRequire(file) as ICommand : (await loadModule(file)) as ICommand;
 
     // should we try the default export?
     const valid = extensionModule && typeof extensionModule === "object" && typeof extensionModule.execute === "function";

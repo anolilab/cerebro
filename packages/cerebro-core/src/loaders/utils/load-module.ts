@@ -1,6 +1,6 @@
 import jetpack from "fs-jetpack";
 
-import { isBlank } from "../toolbox/utils.js";
+import { isBlank } from "../../toolbox/utils.js";
 
 function esmResolver(output: any) {
     return output && output.__esModule && output.default ? output.default : output;

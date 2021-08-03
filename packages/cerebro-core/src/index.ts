@@ -26,7 +26,7 @@ import {
 export { default } from "./cli.js";
 export { CommandLoader } from "./loaders/command-loader.js";
 export { ExtensionLoader } from "./loaders/extension-loader.js";
-export { default as ModuleLoader } from "./loaders/module-loader.js";
+export { default as ModuleLoader } from "./loaders/utils/load-module.js";
 export const toolbox = {
     system,
     print,
