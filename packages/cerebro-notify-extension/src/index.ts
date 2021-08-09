@@ -1,2 +1,2 @@
 export { default } from "./extension/notify-extension";
-export { NodeNotifier } from "node-notifier";
+export type { NodeNotifier } from "node-notifier";

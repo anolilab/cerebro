@@ -5,9 +5,7 @@ import EmptyToolbox from "../domain/empty-toolbox.js";
 import { Extension } from "../domain/extension.js";
 import Toolbox from "../domain/toolbox.js";
 import { asyncForEach, isBlank } from "../toolbox/utils.js";
-import {
-    Cli as ICli, Extension as IExtension, Loader, Options as IOptions,
-} from "../types";
+import { Cli as ICli, Extension as IExtension, Loader, Options as IOptions } from "../types";
 import loadModule from "./utils/load-module.js";
 import loadRequire from "./utils/load-require.js";
 
@@ -16,7 +14,7 @@ import loadRequire from "./utils/load-require.js";
  *
  * @param file The full path to the file to load.
  */
-export async function loadExtensionFromFile(file: string): Promise<IExtension> {
+export async function loadExtensionFromFile(file: string, options?: IOptions): Promise<IExtension> {
     // sanity check the input
     if (isBlank(file)) {
         throw new Error(`Error: couldn't load extension (file is blank): ${file}`);
@@ -31,13 +29,19 @@ export async function loadExtensionFromFile(file: string): Promise<IExtension> {
     const name = (jetpack.inspect(file) as any).name.split(".")[0];
 
     // require in the module -- best chance to bomb is here
-    const commandModule = options?.loadingType === "require" ? loadRequire(file) as ICommand : (await loadModule(file)) as ICommand;
+    const extensionModule =
+        options?.loadingType === "require"
+            ? (loadRequire(file) as IExtension)
+            : ((await loadModule(file)) as IExtension);
 
     // should we try the default export?
-    const valid = extensionModule && typeof extensionModule === "object" && typeof extensionModule.execute === "function";
+    const valid =
+        extensionModule && typeof extensionModule === "object" && typeof extensionModule.execute === "function";
 
     if (valid) {
-        const extension = new Extension(extensionModule.name, (toolbox: EmptyToolbox) => extensionModule.execute(toolbox as Toolbox));
+        const extension = new Extension(extensionModule.name, (toolbox: EmptyToolbox) =>
+            extensionModule.execute(toolbox as Toolbox),
+        );
 
         extension.file = file;
         extension.description = extensionModule.description || undefined;
@@ -45,7 +49,9 @@ export async function loadExtensionFromFile(file: string): Promise<IExtension> {
         return extension;
     }
 
-    throw new Error(`Error: couldn't load ${name}. Expected a object with "name" as string and "execute" as function, got ${extensionModule}.`);
+    throw new Error(
+        `Error: couldn't load ${name}. Expected a object with "name" as string and "execute" as function, got ${extensionModule}.`,
+    );
 }
 
 export class ExtensionLoader implements Loader {

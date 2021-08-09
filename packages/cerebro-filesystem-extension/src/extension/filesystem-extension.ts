@@ -1,6 +1,6 @@
-import IToolbox from "@anolilab/cerebro-core/types/domain/toolbox";
+import type { Toolbox as IToolbox } from "@anolilab/cerebro-core";
 
-import { filesystem } from "../toolbox/filesystem-tools.js";
+import filesystem from "../toolbox/filesystem-tools.js";
 
 /**
  * Extensions to filesystem. Brought to you by fs-jetpack.

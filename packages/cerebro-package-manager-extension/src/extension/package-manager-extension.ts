@@ -1,10 +1,7 @@
-import IToolbox from "@anolilab/cerebro-core/types/domain/toolbox";
+import type { Toolbox as IToolbox } from "@anolilab/cerebro-core";
 
-import { packageManager } from "../toolbox/package-manager-tools.js";
+import packageManager from "../toolbox/package-manager-tools.js";
 
-/**
- * Extensions to filesystem.  Brought to you by fs-jetpack.
- */
 export default {
     name: "package-manager",
     execute: (toolbox: IToolbox) => {

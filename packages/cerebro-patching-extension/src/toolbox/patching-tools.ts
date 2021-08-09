@@ -1,8 +1,6 @@
 import { toolbox } from "@anolilab/cerebro-core";
 import { filesystem } from "@anolilab/cerebro-filesystem-extension";
 
-import { Patching as IPatching, PatchingPatchOptions as IPatchingPatchOptions } from "../types";
-
 const { is } = toolbox.utils;
 
 function isPatternIncluded(data: string, findPattern: string | RegExp): boolean {
@@ -13,7 +11,7 @@ function isPatternIncluded(data: string, findPattern: string | RegExp): boolean 
     return typeof findPattern === "string" ? data.includes(findPattern) : findPattern.test(data);
 }
 
-function insertNextToPattern(data: string, options: IPatchingPatchOptions) {
+function insertNextToPattern(data: string, options: PatchingPatchOptions) {
     // Insert before/after a particular string
     const findPattern: string | RegExp | undefined = options.before || options.after;
 
@@ -42,7 +40,9 @@ function insertNextToPattern(data: string, options: IPatchingPatchOptions) {
         originalString = match[0];
     }
 
-    const newContents = options.after ? `${originalString}${options.insert || ""}` : `${options.insert || ""}${originalString}`;
+    const newContents = options.after
+        ? `${originalString}${options.insert || ""}`
+        : `${options.insert || ""}${originalString}`;
 
     return data.replace(findPattern, newContents);
 }
@@ -139,7 +139,7 @@ export async function replace(filename: string, oldContent: string, newContent: 
     return update(filename, (data) => (data as string).replace(oldContent, newContent)) as Promise<string | false>;
 }
 
-export function patchString(data: string, options: IPatchingPatchOptions = {}): string | false {
+export function patchString(data: string, options: PatchingPatchOptions = {}): string | false {
     // Already includes string, and not forcing it
     if (typeof options.insert === "undefined" || (isPatternIncluded(data, options.insert) && !options.force)) {
         return false;
@@ -177,10 +177,10 @@ export function patchString(data: string, options: IPatchingPatchOptions = {}): 
  *   await toolbox.patching.patch('thing.js', { before: 'bar', insert: 'foo' })
  *
  */
-export async function patch(filename: string, ...options: IPatchingPatchOptions[]): Promise<string | boolean> {
+export async function patch(filename: string, ...options: PatchingPatchOptions[]): Promise<string | boolean> {
     return update(filename, (data) => {
         const result = options.reduce(
-            (updatedData: string, opt: IPatchingPatchOptions) => patchString(updatedData, opt) || updatedData,
+            (updatedData: string, opt: PatchingPatchOptions) => patchString(updatedData, opt) || updatedData,
             data as string,
         );
 
@@ -188,8 +188,53 @@ export async function patch(filename: string, ...options: IPatchingPatchOptions[
     }) as Promise<string | boolean>;
 }
 
-export const patching: IPatching = {
-    update, append, prepend, replace, patch, exists,
+export const patching: Patching = {
+    update,
+    append,
+    prepend,
+    replace,
+    patch,
+    exists,
 };
 
-export { IPatching as Patching, IPatchingPatchOptions as PatchingPatchOptions };
+export interface Patching {
+    /**
+     * Checks if a string or pattern exists in a file.
+     */
+    exists(filename: string, findPattern: string | RegExp): Promise<boolean>;
+    /**
+     * Updates a file.
+     */
+    update(filename: string, callback: (contents: any) => any): Promise<string | object | boolean>;
+    /**
+     * Appends to the end of a file.
+     */
+    append(filename: string, contents: string): Promise<string | boolean>;
+    /**
+     * Prepends to the start of a files.
+     */
+    prepend(filename: string, contents: string): Promise<string | boolean>;
+    /**
+     * Replaces part of a file.
+     */
+    replace(filename: string, searchFor: string, replaceWith: string): Promise<string | boolean>;
+    /**
+     * Makes a patch inside file.
+     */
+    patch(filename: string, ...options: PatchingPatchOptions[]): Promise<string | boolean>;
+}
+
+export interface PatchingPatchOptions {
+    /* String to be inserted */
+    insert?: string;
+    /* Insert before this string */
+    before?: string | RegExp;
+    /* Insert after this string */
+    after?: string | RegExp;
+    /* Replace this string */
+    replace?: string | RegExp;
+    /* Delete this string */
+    delete?: string | RegExp;
+    /* Write even if it already exists  */
+    force?: boolean;
+}

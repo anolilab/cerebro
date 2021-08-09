@@ -4,7 +4,6 @@
         "module": "ESNext",
         "outDir": "esm",
         "baseUrl": ".",
-        // Emits types for others to consume
         "declarationDir": "./types"
     },
     "include": ["src"]

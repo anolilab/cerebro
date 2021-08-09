@@ -1,4 +1,4 @@
-import IToolbox from "@anolilab/cerebro-core/types/domain/toolbox";
+import { Toolbox as IToolbox } from "@anolilab/cerebro-core";
 
 import { semver } from "../toolbox/semver-tools.js";
 

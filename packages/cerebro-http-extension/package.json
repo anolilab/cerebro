@@ -27,28 +27,21 @@
         "./commonjs": "./commonjs/index.js",
         "./package.json": "./package.json"
     },
-    "main": "./commonjs/index.js",
-    "module": "./esm/index.js",
+    "main": "dist/anolilab-cerebro-http-extension.cjs.js",
+    "module": "dist/anolilab-cerebro-http-extension.esm.js",
     "types": "types/index.d.ts",
     "files": [
-        "esm/",
-        "commonjs/",
-        "types/",
+        "dist",
         "README.md",
         "CHANGELOG.md",
         "LICENSE.md"
     ],
-    "scripts": {
-        "build": "rimraf ./dist ./types && tsc -p tsconfig-mjs.json && tsc -p tsconfig-cjs.json && ./fixup.sh",
-        "dev:esm": "rimraf ./dist ./types && tsc --outDir dist --watch"
-    },
     "dependencies": {
         "@types/got": "^9.6.11",
         "got": "^11.8.2"
     },
     "devDependencies": {
         "@anolilab/cerebro-core": "1.0.0-alpha.7",
-        "rimraf": "^3.0.2",
         "typescript": "^4.3.4"
     },
     "peerDependencies": {

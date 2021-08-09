@@ -1,11 +1,5 @@
 import { toolbox } from "@anolilab/cerebro-core";
 
-import {
-    PackageManager as IPackageManager,
-    PackageManagerOptions as IPackageManagerOptions,
-    PackageManagerResult as IPackageManagerResult,
-} from "../types";
-
 const { system } = toolbox;
 
 let yarnpath;
@@ -22,8 +16,8 @@ const concatPackages = (packageName) => (Array.isArray(packageName) ? packageNam
 
 const add = async (
     packageName: string | string[],
-    options: IPackageManagerOptions,
-): Promise<IPackageManagerResult> => {
+    options: PackageManagerOptions,
+): Promise<PackageManagerResult> => {
     const yarn = typeof options.force === "undefined" ? hasYarn() : options.force === "yarn";
     const development = options.dev ? (yarn ? "--dev " : "--save-dev ") : "";
     const folder = options.dir ? options.dir : ".";
@@ -43,8 +37,8 @@ const add = async (
 
 const remove = async (
     packageName: string | string[],
-    options: IPackageManagerOptions,
-): Promise<IPackageManagerResult> => {
+    options: PackageManagerOptions,
+): Promise<PackageManagerResult> => {
     const folder = options.dir ? options.dir : ".";
     const command = `${hasYarn() ? "yarn remove --cwd" : "npm uninstall --prefix"} ${folder} ${concatPackages(
         packageName,
@@ -58,10 +52,30 @@ const remove = async (
     return { success: true, command, stdout };
 };
 
-const packageManager: IPackageManager = {
+const packageManager: PackageManager = {
     add,
     remove,
     hasYarn,
 };
 
-export { packageManager, IPackageManager as PackageManager };
+export default packageManager;
+
+export type PackageManagerOptions = {
+    dev?: boolean;
+    dryRun?: boolean;
+    dir?: string;
+    force?: "npm" | "yarn";
+};
+
+export type PackageManagerResult = {
+    success: boolean;
+    command: string;
+    stdout: string;
+    error?: string;
+};
+
+export type PackageManager = {
+    add: (packageName: string | string[], options: PackageManagerOptions) => Promise<PackageManagerResult>;
+    remove: (packageName: string | string[], options: PackageManagerOptions) => Promise<PackageManagerResult>;
+    hasYarn: () => boolean;
+};

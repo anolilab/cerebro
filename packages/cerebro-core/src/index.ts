@@ -27,6 +27,7 @@ export { default } from "./cli.js";
 export { CommandLoader } from "./loaders/command-loader.js";
 export { ExtensionLoader } from "./loaders/extension-loader.js";
 export { default as ModuleLoader } from "./loaders/utils/load-module.js";
+
 export const toolbox = {
     system,
     print,
@@ -53,3 +54,29 @@ export const toolbox = {
         times,
     },
 };
+
+export type {
+    Print,
+    Parameters,
+    Timer,
+    System,
+    Cli,
+    Toolbox,
+    EmptyToolbox,
+    StringOrBuffer,
+    PrintTableOptions,
+    Options,
+    TableStyle,
+    Meta,
+    PackageJSON,
+    Logger,
+    Loader,
+    ConfigType,
+    Extension,
+    ExtensionSetup,
+    ExtensionOverrides,
+    Command,
+    Prompts,
+    Questions,
+    CerebroError,
+} from "./types";

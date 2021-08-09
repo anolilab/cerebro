@@ -1,11 +1,10 @@
 import { toolbox } from "@anolilab/cerebro-core";
 import { chmod, chmodSync, existsSync } from "fs-chmod";
 import jetpack from "fs-jetpack";
+import type { FSJetpack } from "fs-jetpack/types";
 import os from "os";
 import pathlib from "path";
 import trash from "trash";
-
-import { Filesystem as IFilesystem } from "../types";
 
 const { isBlank } = toolbox.utils;
 
@@ -72,7 +71,7 @@ function subdirectories(path: string, isRelative: boolean = false, matching: str
     return directories.map((dir) => pathlib.join(path, dir));
 }
 
-const filesystem: IFilesystem = {
+const filesystem: Filesystem = {
     chmodSync,
     eol: os.EOL, // end of line marker
     homedir: os.homedir, // get home directory
@@ -104,4 +103,83 @@ const filesystem: IFilesystem = {
     ...jetpack,
 };
 
-export { filesystem, IFilesystem as Filesystem };
+export default filesystem;
+
+export interface Filesystem extends FSJetpack {
+    /**
+     * Convenience property for `os.EOL`.
+     */
+    eol: string;
+
+    /**
+     * Convenience property for `path.sep`.
+     */
+    separator: string;
+
+    /**
+     * Convenience property for `os.homedir` function
+     */
+    homedir: () => string;
+
+    /**
+     * The right-most parameter is considered {to}.  Other parameters are considered an array of {from}.
+     *
+     * Starting from leftmost {from} parameter, resolves {to} to an absolute path.
+     *
+     * If {to} isn't already absolute, {from} arguments are prepended in right to left order,
+     * until an absolute path is found. If after using all {from} paths still no absolute path is found,
+     * the current working directory is used as well. The resulting path is normalized,
+     * and trailing slashes are removed unless the path gets resolved to the root directory.
+     *
+     * @param pathSegments string paths to join.  Non-string arguments are ignored.
+     */
+    chmodSync: typeof chmodSync;
+
+    /**
+     * The right-most parameter is considered {to}.  Other parameters are considered an array of {from}.
+     *
+     * Starting from leftmost {from} parameter, resolves {to} to an absolute path.
+     *
+     * If {to} isn't already absolute, {from} arguments are prepended in right to left order,
+     * until an absolute path is found. If after using all {from} paths still no absolute path is found,
+     * the current working directory is used as well. The resulting path is normalized,
+     * and trailing slashes are removed unless the path gets resolved to the root directory.
+     *
+     * @param pathSegments string paths to join.  Non-string arguments are ignored.
+     */
+    resolve: typeof pathlib.resolve;
+
+    /**
+     * Retrieves a list of subdirectories for a given path.
+     */
+    subdirectories(path: string, isRelative?: boolean, matching?: string): string[];
+
+    /**
+     * Is this a file?
+     */
+    isFile(path: string): boolean;
+
+    /**
+     * Is this not a file?
+     */
+    isNotFile(path: string): boolean;
+
+    /**
+     * Is this a directory?
+     */
+    isDirectory(path: string): boolean;
+
+    /**
+     * Is this not a directory?
+     */
+    isNotDirectory(path: string): boolean;
+
+    executable(path: string, mode: string): void;
+
+    chdir(path: string): void;
+
+    /**
+     * Move a file to trash.
+     */
+    trash(filename: string): void;
+}

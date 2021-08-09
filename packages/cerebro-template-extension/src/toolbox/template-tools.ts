@@ -1,14 +1,12 @@
 import { toolbox } from "@anolilab/cerebro-core";
-import Toolbox from "@anolilab/cerebro-core/types/domain/toolbox";
+import type { Toolbox as IToolbox } from "@anolilab/cerebro-core";
 import { filesystem } from "@anolilab/cerebro-filesystem-extension";
 import { strings } from "@anolilab/cerebro-strings-extension";
 import ejs from "ejs";
 
-import { TemplateGenerateOptions as ITemplateGenerateOptions } from "../types";
-
 const { replace, isBlank } = toolbox.utils;
 
-const buildGenerate = (t: Toolbox) => {
+const buildGenerate = (t: IToolbox) => {
     const { plugin, config, parameters } = t;
 
     /**
@@ -17,7 +15,7 @@ const buildGenerate = (t: Toolbox) => {
          * @param options Generation options.
          * @return The generated string.
          */
-    return async function generate(options: ITemplateGenerateOptions): Promise<string> {
+    return async function generate(options: TemplateGenerateOptions): Promise<string> {
         const {
             template, target, props: properties = {}, directory,
         } = options;
@@ -71,3 +69,22 @@ const buildGenerate = (t: Toolbox) => {
 };
 
 export default buildGenerate;
+
+export interface TemplateGenerateOptions {
+    /**
+     * Path to the EJS template relative from the plugin's `template` directory.
+     */
+    template: string;
+    /**
+     * Path to create the file relative from the user's working directory.
+     */
+    target?: string;
+    /**
+     * Additional props to provide to the EJS template.
+     */
+    props?: { [name: string]: any };
+    /**
+     * An absolute path of where to find the templates (if not default).
+     */
+    directory?: string;
+}

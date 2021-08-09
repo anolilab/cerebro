@@ -1,4 +1,4 @@
-import IToolbox from "@anolilab/cerebro-core/types/domain/toolbox";
+import type { Toolbox as IToolbox } from "@anolilab/cerebro-core";
 
 import { patching } from "../toolbox/patching-tools.js";
 
