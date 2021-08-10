@@ -1,3 +1,16 @@
+## @anolilab/cerebro-notify-extension [1.0.0-alpha.6](https://github.com/anolilab/cerebro/compare/@anolilab/cerebro-notify-extension@1.0.0-alpha.5...@anolilab/cerebro-notify-extension@1.0.0-alpha.6) (2021-08-10)
+
+
+### Features
+
+* switched build process to preconstruct ([16859f5](https://github.com/anolilab/cerebro/commit/16859f5608db8d52d926201805a582244b6d86de))
+
+
+
+### Dependencies
+
+* **@anolilab/cerebro-core:** upgraded to 1.0.0-alpha.8
+
 ## @anolilab/cerebro-notify-extension [1.0.0-alpha.5](https://github.com/anolilab/cerebro/compare/@anolilab/cerebro-notify-extension@1.0.0-alpha.4...@anolilab/cerebro-notify-extension@1.0.0-alpha.5) (2021-07-18)
 
 
