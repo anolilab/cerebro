@@ -17,8 +17,12 @@
         "argv",
         "interactive"
     ],
-    "homepage": "http://anolilab.com/nodejs/packages/cerebro",
-    "repository": "https://github.com/anolilab/cerebro.git",
+    "homepage": "https://anolilab.com/nodejs/packages/cerebro",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/anolilab/cerebro.git",
+        "directory": "packages/cerebro-core"
+    },
     "license": "MIT",
     "author": {
         "name": "Daniel Bannert",
@@ -80,13 +84,13 @@
     },
     "devDependencies": {
         "@babel/runtime": "^7.14.8",
-        "@types/node": "16.0.0",
+        "@types/node": "12.20.19",
         "@types/prompts": "^2.0.13",
         "@types/which": "^2.0.1",
         "mock-stdin": "1.0.0",
         "rimraf": "^3.0.2",
         "temp-write": "^5.0.0",
-        "typescript": "^4.3.4",
+        "typescript": "^4.3.5",
         "unique-temp-dir": "1.0.0"
     },
     "peerDependencies": {

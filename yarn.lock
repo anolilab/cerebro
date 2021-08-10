@@ -70,7 +70,7 @@ __metadata:
     "@types/command-line-commands": ^2.0.1
     "@types/command-line-usage": ^5.0.1
     "@types/is-ci": ^3.0.0
-    "@types/node": 16.0.0
+    "@types/node": 12.20.19
     "@types/prompts": ^2.0.13
     "@types/which": ^2.0.1
     boxen: ^5.0.1
@@ -102,7 +102,7 @@ __metadata:
     temp-write: ^5.0.0
     terminal-link: ^2.1.1
     tslib: ^2.3.0
-    typescript: ^4.3.4
+    typescript: ^4.3.5
     unique-temp-dir: 1.0.0
     which: ^2.0.2
     window-size: ^1.1.1
@@ -121,7 +121,7 @@ __metadata:
     fs-extra: 10.0.0
     fs-jetpack: ^4.1.0
     trash: ^7.2.0
-    typescript: ^4.3.4
+    typescript: ^4.3.5
   peerDependencies:
     "@anolilab/cerebro-core": 1.0.0-alpha.7
     "@babel/runtime": ^7.14.8
@@ -136,7 +136,7 @@ __metadata:
     "@anolilab/cerebro-core": 1.0.0-alpha.7
     "@types/got": ^9.6.11
     got: ^11.8.2
-    typescript: ^4.3.4
+    typescript: ^4.3.5
   peerDependencies:
     "@anolilab/cerebro-core": 1.0.0-alpha.7
   languageName: unknown
@@ -149,7 +149,7 @@ __metadata:
     "@anolilab/cerebro-core": 1.0.0-alpha.7
     "@types/node-notifier": ^8.0.1
     node-notifier: ^10.0.0
-    typescript: ^4.3.4
+    typescript: ^4.3.5
   peerDependencies:
     "@anolilab/cerebro-core": 1.0.0-alpha.7
   languageName: unknown
@@ -160,7 +160,7 @@ __metadata:
   resolution: "@anolilab/cerebro-package-manager-extension@workspace:packages/cerebro-package-manager-extension"
   dependencies:
     "@anolilab/cerebro-core": 1.0.0-alpha.7
-    typescript: ^4.3.4
+    typescript: ^4.3.5
   peerDependencies:
     "@anolilab/cerebro-core": 1.0.0-alpha.7
   languageName: unknown
@@ -172,7 +172,7 @@ __metadata:
   dependencies:
     "@anolilab/cerebro-core": 1.0.0-alpha.7
     "@anolilab/cerebro-filesystem-extension": 1.0.0-alpha.5
-    typescript: ^4.3.4
+    typescript: ^4.3.5
   peerDependencies:
     "@anolilab/cerebro-core": 1.0.0-alpha.7
   languageName: unknown
@@ -184,7 +184,7 @@ __metadata:
   dependencies:
     "@anolilab/cerebro-core": 1.0.0-alpha.7
     semver: ^7.3.5
-    typescript: ^4.3.4
+    typescript: ^4.3.5
   peerDependencies:
     "@anolilab/cerebro-core": 1.0.0-alpha.7
   languageName: unknown
@@ -219,7 +219,7 @@ __metadata:
     lodash.uppercase: ^4.3.0
     lodash.upperfirst: ^4.3.1
     pluralize: ^8.0.0
-    typescript: ^4.3.4
+    typescript: ^4.3.5
   peerDependencies:
     "@anolilab/cerebro-core": 1.0.0-alpha.7
   languageName: unknown
@@ -236,7 +236,7 @@ __metadata:
     "@types/ejs": ^3.0.7
     ejs: ^3.1.6
     rimraf: ^3.0.2
-    typescript: ^4.3.4
+    typescript: ^4.3.5
   peerDependencies:
     "@anolilab/cerebro-core": 1.0.0-alpha.7
   languageName: unknown
@@ -254,23 +254,23 @@ __metadata:
     "@babel/plugin-syntax-jsx": ^7.14.5
     "@babel/preset-typescript": ^7.15.0
     "@babel/runtime": ^7.14.8
-    "@commitlint/cli": 13.1.0
-    "@commitlint/config-conventional": 13.1.0
-    "@commitlint/core": 13.1.0
+    "@commitlint/cli": ^13.1.0
+    "@commitlint/config-conventional": ^13.1.0
+    "@commitlint/core": ^13.1.0
     "@manypkg/cli": ^0.18.0
     "@preconstruct/cli": ^2.1.0
-    "@qiwi/multi-semantic-release": 3.15.0
-    "@semantic-release/changelog": 5.0.1
-    "@semantic-release/commit-analyzer": 8.0.1
-    "@semantic-release/exec": 5.0.0
-    "@semantic-release/git": 9.0.0
-    "@semantic-release/github": 7.2.3
-    "@semantic-release/npm": 7.1.3
-    "@semantic-release/release-notes-generator": 9.0.3
-    "@types/jest": 26.0.24
-    "@types/node": ^16.4.13
-    "@typescript-eslint/eslint-plugin": 4.29.0
-    "@typescript-eslint/parser": 4.29.0
+    "@qiwi/multi-semantic-release": ^3.15.0
+    "@semantic-release/changelog": ^5.0.1
+    "@semantic-release/commit-analyzer": ^8.0.1
+    "@semantic-release/exec": ^5.0.0
+    "@semantic-release/git": ^9.0.0
+    "@semantic-release/github": ^7.2.3
+    "@semantic-release/npm": ^7.1.3
+    "@semantic-release/release-notes-generator": ^9.0.3
+    "@types/jest": ^26.0.24
+    "@types/node": 12.20.19
+    "@typescript-eslint/eslint-plugin": ^4.29.0
+    "@typescript-eslint/parser": ^4.29.0
     babel-eslint: ^10.1.0
     commitizen: ^4.2.4
     conventional-changelog-conventionalcommits: ^4.6.0
@@ -278,17 +278,17 @@ __metadata:
     eslint: ^7.32.0
     eslint-plugin-jest: ^24.4.0
     eslint-plugin-node: ^11.1.0
-    husky: 7.0.1
-    jest: 27.0.6
-    jest-mock: 27.0.6
+    husky: ^7.0.1
+    jest: ^27.0.6
+    jest-mock: ^27.0.6
     lint-staged: ^11.1.2
-    prettier: 2.3.2
+    prettier: ^2.3.2
     rimraf: ^3.0.2
     semantic-release: ^17.4.4
-    sort-package-json: 1.50.0
-    ts-jest: 27.0.4
-    ts-node: 10.1.0
-    typescript: 4.3.5
+    sort-package-json: ^1.50.0
+    ts-jest: ^27.0.4
+    ts-node: ^10.1.0
+    typescript: ^4.3.5
   languageName: unknown
   linkType: soft
 
@@ -2283,7 +2283,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@commitlint/cli@npm:13.1.0":
+"@commitlint/cli@npm:^13.1.0":
   version: 13.1.0
   resolution: "@commitlint/cli@npm:13.1.0"
   dependencies:
@@ -2302,7 +2302,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@commitlint/config-conventional@npm:13.1.0":
+"@commitlint/config-conventional@npm:^13.1.0":
   version: 13.1.0
   resolution: "@commitlint/config-conventional@npm:13.1.0"
   dependencies:
@@ -2311,7 +2311,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@commitlint/core@npm:13.1.0":
+"@commitlint/core@npm:^13.1.0":
   version: 13.1.0
   resolution: "@commitlint/core@npm:13.1.0"
   dependencies:
@@ -2488,6 +2488,22 @@ __metadata:
   dependencies:
     chalk: ^4.0.0
   checksum: 423ce7af4db4a0e83cd3ad360b7a435915198c0ee6a353975e38761fee60a03a71110c3abe332bd52b0caa0219f5ca8a2ccdba574c0031b838a6ac8994d11623
+  languageName: node
+  linkType: hard
+
+"@cspotcode/source-map-consumer@npm:0.8.0":
+  version: 0.8.0
+  resolution: "@cspotcode/source-map-consumer@npm:0.8.0"
+  checksum: c0c16ca3d2f58898f1bd74c4f41a189dbcc202e642e60e489cbcc2e52419c4e89bdead02c886a12fb13ea37798ede9e562b2321df997ebc210ae9bd881561b4e
+  languageName: node
+  linkType: hard
+
+"@cspotcode/source-map-support@npm:0.6.1":
+  version: 0.6.1
+  resolution: "@cspotcode/source-map-support@npm:0.6.1"
+  dependencies:
+    "@cspotcode/source-map-consumer": 0.8.0
+  checksum: da9fb4f6404ebd210537bfa8b2821a747407bf422d2d3d46f29bf85c7c3a68a126de1a9ec41398d57ca116c3bef56d58c2fb4def0800630b1ec82533ad2447c2
   languageName: node
   linkType: hard
 
@@ -3246,7 +3262,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@qiwi/multi-semantic-release@npm:3.15.0":
+"@qiwi/multi-semantic-release@npm:^3.15.0":
   version: 3.15.0
   resolution: "@qiwi/multi-semantic-release@npm:3.15.0"
   dependencies:
@@ -3373,7 +3389,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@semantic-release/changelog@npm:5.0.1":
+"@semantic-release/changelog@npm:^5.0.1":
   version: 5.0.1
   resolution: "@semantic-release/changelog@npm:5.0.1"
   dependencies:
@@ -3387,7 +3403,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@semantic-release/commit-analyzer@npm:8.0.1, @semantic-release/commit-analyzer@npm:^8.0.0":
+"@semantic-release/commit-analyzer@npm:^8.0.0, @semantic-release/commit-analyzer@npm:^8.0.1":
   version: 8.0.1
   resolution: "@semantic-release/commit-analyzer@npm:8.0.1"
   dependencies:
@@ -3411,7 +3427,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@semantic-release/exec@npm:5.0.0":
+"@semantic-release/exec@npm:^5.0.0":
   version: 5.0.0
   resolution: "@semantic-release/exec@npm:5.0.0"
   dependencies:
@@ -3427,7 +3443,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@semantic-release/git@npm:9.0.0":
+"@semantic-release/git@npm:^9.0.0":
   version: 9.0.0
   resolution: "@semantic-release/git@npm:9.0.0"
   dependencies:
@@ -3445,7 +3461,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@semantic-release/github@npm:7.2.3, @semantic-release/github@npm:^7.0.0":
+"@semantic-release/github@npm:^7.0.0, @semantic-release/github@npm:^7.2.3":
   version: 7.2.3
   resolution: "@semantic-release/github@npm:7.2.3"
   dependencies:
@@ -3471,7 +3487,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@semantic-release/npm@npm:7.1.3, @semantic-release/npm@npm:^7.0.0":
+"@semantic-release/npm@npm:^7.0.0, @semantic-release/npm@npm:^7.1.3":
   version: 7.1.3
   resolution: "@semantic-release/npm@npm:7.1.3"
   dependencies:
@@ -3494,7 +3510,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@semantic-release/release-notes-generator@npm:9.0.3, @semantic-release/release-notes-generator@npm:^9.0.0":
+"@semantic-release/release-notes-generator@npm:^9.0.0, @semantic-release/release-notes-generator@npm:^9.0.3":
   version: 9.0.3
   resolution: "@semantic-release/release-notes-generator@npm:9.0.3"
   dependencies:
@@ -4059,10 +4075,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@tsconfig/node16@npm:^1.0.1":
-  version: 1.0.1
-  resolution: "@tsconfig/node16@npm:1.0.1"
-  checksum: 5fdfd91e48dc1f406cb59d19fd450a594ea6279f3be54a50bd6fd6b8d189a53bb930f2e7d496cbc3bb45fbb23f0ce5c69086f90c796ce8441cbd2a26fb738fd5
+"@tsconfig/node16@npm:^1.0.2":
+  version: 1.0.2
+  resolution: "@tsconfig/node16@npm:1.0.2"
+  checksum: ca94d3639714672bbfd55f03521d3f56bb6a25479bd425da81faf21f13e1e9d15f40f97377dedbbf477a5841c5b0c8f4cd1b391f33553d750b9202c54c2c07aa
   languageName: node
   linkType: hard
 
@@ -4295,7 +4311,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/jest@npm:26.0.24":
+"@types/jest@npm:^26.0.24":
   version: 26.0.24
   resolution: "@types/jest@npm:26.0.24"
   dependencies:
@@ -4482,10 +4498,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:16.0.0":
-  version: 16.0.0
-  resolution: "@types/node@npm:16.0.0"
-  checksum: 57e5731ba8d64d9a6434c69f1153186b7fc1b0f58ae54f3eb8c32cd122e87e9aca35947f62e92e1902027994dac97b5bff7cce4d9c56cb319f07f694fe55d012
+"@types/node@npm:12.20.19":
+  version: 12.20.19
+  resolution: "@types/node@npm:12.20.19"
+  checksum: 00b623beed4d4b17ad8d60bd2e99a0acab1b95e1d2242d1e2c313abd05a639ecb902c33c5970436d2fd13d5d772747dec6ec73d7f40ad799fe09a35009566699
   languageName: node
   linkType: hard
 
@@ -4493,13 +4509,6 @@ __metadata:
   version: 12.20.16
   resolution: "@types/node@npm:12.20.16"
   checksum: 172f0b445781377e1adca12ffe7f4a73d9f1eb6b235fd5165f97db19079477e871d59db5f95a8e1650094d9ec5d3b9f06c5ca9ec9d00ff923edb9bb7bd3c0427
-  languageName: node
-  linkType: hard
-
-"@types/node@npm:^16.4.13":
-  version: 16.4.13
-  resolution: "@types/node@npm:16.4.13"
-  checksum: 071e86a1d196cf72928a7109e99769dffed93db481032b9ca2f52e6f3ced432e2a179849c85e587e67409202e1ed37bffd0c7a31d38adf35a385d327dfe8bd72
   languageName: node
   linkType: hard
 
@@ -4637,7 +4646,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@typescript-eslint/eslint-plugin@npm:4.29.0, @typescript-eslint/eslint-plugin@npm:^4.28.4":
+"@typescript-eslint/eslint-plugin@npm:^4.28.4, @typescript-eslint/eslint-plugin@npm:^4.29.0":
   version: 4.29.0
   resolution: "@typescript-eslint/eslint-plugin@npm:4.29.0"
   dependencies:
@@ -4720,7 +4729,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@typescript-eslint/parser@npm:4.29.0, @typescript-eslint/parser@npm:^4.28.4":
+"@typescript-eslint/parser@npm:^4.28.4, @typescript-eslint/parser@npm:^4.29.0":
   version: 4.29.0
   resolution: "@typescript-eslint/parser@npm:4.29.0"
   dependencies:
@@ -4951,6 +4960,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"acorn-walk@npm:^8.1.1":
+  version: 8.1.1
+  resolution: "acorn-walk@npm:8.1.1"
+  checksum: 5e4dafbcec14fbfac96e1f13726273e969a30fdf607ed4eb6ca335292f85b8c896393fee15837a8f2b27afd7ede0f1c6edb5b5e6d0123a8821fee1a834318e62
+  languageName: node
+  linkType: hard
+
 "acorn@npm:^7.1.1, acorn@npm:^7.4.0":
   version: 7.4.1
   resolution: "acorn@npm:7.4.1"
@@ -4966,6 +4982,15 @@ __metadata:
   bin:
     acorn: bin/acorn
   checksum: 9ccc11b2b3e3bdb8801ac23a0da38c0f2996445f63aacde0f5022effa550f18fdf9fea77e85c33f00386a277cce4dfdbcb2f3dbb8af29a6d3a707c78af1d5e90
+  languageName: node
+  linkType: hard
+
+"acorn@npm:^8.4.1":
+  version: 8.4.1
+  resolution: "acorn@npm:8.4.1"
+  bin:
+    acorn: bin/acorn
+  checksum: 0a8fd264349285aa36194b26a5a9d70c3641e78ad459ec44b9a9a5738e0ce6d86ec120ca2c0f04477165cee912fdeb158f62d6582697185c82278bdbf71187f8
   languageName: node
   linkType: hard
 
@@ -9922,7 +9947,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"husky@npm:7.0.1":
+"husky@npm:^7.0.1":
   version: 7.0.1
   resolution: "husky@npm:7.0.1"
   bin:
@@ -11179,7 +11204,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"jest-mock@npm:27.0.6, jest-mock@npm:^27.0.6":
+"jest-mock@npm:^27.0.6":
   version: 27.0.6
   resolution: "jest-mock@npm:27.0.6"
   dependencies:
@@ -11421,7 +11446,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"jest@npm:27.0.6":
+"jest@npm:^27.0.6":
   version: 27.0.6
   resolution: "jest@npm:27.0.6"
   dependencies:
@@ -14893,7 +14918,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"prettier@npm:2.3.2":
+"prettier@npm:^2.3.2":
   version: 2.3.2
   resolution: "prettier@npm:2.3.2"
   bin:
@@ -16515,7 +16540,7 @@ resolve@^2.0.0-next.3:
   languageName: node
   linkType: hard
 
-"sort-package-json@npm:1.50.0":
+"sort-package-json@npm:^1.50.0":
   version: 1.50.0
   resolution: "sort-package-json@npm:1.50.0"
   dependencies:
@@ -16544,7 +16569,7 @@ resolve@^2.0.0-next.3:
   languageName: node
   linkType: hard
 
-"source-map-support@npm:^0.5.16, source-map-support@npm:^0.5.17, source-map-support@npm:~0.5.19":
+"source-map-support@npm:^0.5.16, source-map-support@npm:~0.5.19":
   version: 0.5.19
   resolution: "source-map-support@npm:0.5.19"
   dependencies:
@@ -17833,7 +17858,7 @@ resolve@^2.0.0-next.3:
   languageName: node
   linkType: hard
 
-"ts-jest@npm:27.0.4":
+"ts-jest@npm:^27.0.4":
   version: 27.0.4
   resolution: "ts-jest@npm:27.0.4"
   dependencies:
@@ -17866,19 +17891,21 @@ resolve@^2.0.0-next.3:
   languageName: node
   linkType: hard
 
-"ts-node@npm:10.1.0":
-  version: 10.1.0
-  resolution: "ts-node@npm:10.1.0"
+"ts-node@npm:^10.1.0":
+  version: 10.2.0
+  resolution: "ts-node@npm:10.2.0"
   dependencies:
+    "@cspotcode/source-map-support": 0.6.1
     "@tsconfig/node10": ^1.0.7
     "@tsconfig/node12": ^1.0.7
     "@tsconfig/node14": ^1.0.0
-    "@tsconfig/node16": ^1.0.1
+    "@tsconfig/node16": ^1.0.2
+    acorn: ^8.4.1
+    acorn-walk: ^8.1.1
     arg: ^4.1.0
     create-require: ^1.1.0
     diff: ^4.0.1
     make-error: ^1.1.1
-    source-map-support: ^0.5.17
     yn: 3.1.1
   peerDependencies:
     "@swc/core": ">=1.2.50"
@@ -17896,7 +17923,7 @@ resolve@^2.0.0-next.3:
     ts-node-script: dist/bin-script.js
     ts-node-transpile-only: dist/bin-transpile.js
     ts-script: dist/bin-script-deprecated.js
-  checksum: 96979e9a81f801733195fbfe2db540e7d223f1b0affbd29c9c2d346ef3879a8c3c562cab9ef712b96b624905b9a0f31b12fd5b6f9e087fcd6038df253b104cf2
+  checksum: da767e0fd5c1b4941f0b846c3532147f31cd2ac4d66a4809358e29ed5971a4e699720bd65f9e5a585a10bc7f9c55571a8fce9e485cedce6a224dcba3869bbd3a
   languageName: node
   linkType: hard
 
@@ -18057,7 +18084,7 @@ resolve@^2.0.0-next.3:
   languageName: node
   linkType: hard
 
-"typescript@4.3.5, typescript@^4.3.4":
+typescript@^4.3.5:
   version: 4.3.5
   resolution: "typescript@npm:4.3.5"
   bin:
@@ -18067,7 +18094,7 @@ resolve@^2.0.0-next.3:
   languageName: node
   linkType: hard
 
-"typescript@patch:typescript@4.3.5#~builtin<compat/typescript>, typescript@patch:typescript@^4.3.4#~builtin<compat/typescript>":
+"typescript@patch:typescript@^4.3.5#~builtin<compat/typescript>":
   version: 4.3.5
   resolution: "typescript@patch:typescript@npm%3A4.3.5#~builtin<compat/typescript>::version=4.3.5&hash=d8b4e7"
   bin:

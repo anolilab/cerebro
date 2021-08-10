@@ -10,8 +10,12 @@
         "toolbox",
         "patching"
     ],
-    "homepage": "http://anolilab.com/nodejs/packages/cerebro-patching-extension",
-    "repository": "https://github.com/anolilab/cerebro.git",
+    "homepage": "https://anolilab.com/nodejs/packages/cerebro-patching-extension",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/anolilab/cerebro.git",
+        "directory": "packages/cerebro-patching-extension"
+    },
     "license": "MIT",
     "author": {
         "name": "Daniel Bannert",
@@ -41,7 +45,7 @@
     },
     "devDependencies": {
         "@anolilab/cerebro-core": "1.0.0-alpha.7",
-        "typescript": "^4.3.4"
+        "typescript": "^4.3.5"
     },
     "peerDependencies": {
         "@anolilab/cerebro-core": "1.0.0-alpha.7"
