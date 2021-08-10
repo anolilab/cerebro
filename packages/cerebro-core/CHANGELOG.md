@@ -1,3 +1,11 @@
+## @anolilab/cerebro-core [1.0.0-alpha.8](https://github.com/anolilab/cerebro/compare/@anolilab/cerebro-core@1.0.0-alpha.7...@anolilab/cerebro-core@1.0.0-alpha.8) (2021-08-10)
+
+
+### Features
+
+* added new load utils for loader ([cc65fcb](https://github.com/anolilab/cerebro/commit/cc65fcb190b79d1246bdb9bdecd114a61c00e53f))
+* switched build process to preconstruct ([16859f5](https://github.com/anolilab/cerebro/commit/16859f5608db8d52d926201805a582244b6d86de))
+
 ## @anolilab/cerebro-core [1.0.0-alpha.7](https://github.com/anolilab/cerebro/compare/@anolilab/cerebro-core@1.0.0-alpha.6...@anolilab/cerebro-core@1.0.0-alpha.7) (2021-07-18)
 
 
