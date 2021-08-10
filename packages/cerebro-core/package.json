@@ -29,7 +29,6 @@
         "email": "d.bannert@anolilab.de",
         "url": "https://github.com/prisis"
     },
-    "type": "module",
     "exports": {
         ".": {
             "import": "./dist/anolilab-cerebro-core.esm.js",

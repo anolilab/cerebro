@@ -5,14 +5,22 @@ import EmptyToolbox from "../domain/empty-toolbox.js";
 import { Extension } from "../domain/extension.js";
 import Toolbox from "../domain/toolbox.js";
 import { asyncForEach, isBlank } from "../toolbox/utils.js";
-import { Cli as ICli, Extension as IExtension, Loader, Options as IOptions } from "../types";
+import type { Cli as ICli, Extension as IExtension, Loader } from "../types";
 import loadModule from "./utils/load-module.js";
 import loadRequire from "./utils/load-require.js";
+
+type IOptions = {
+    loadingType?: "require" | "import";
+    commandFilePattern?: string[],
+    hidden?: boolean,
+    [key: string]: any;
+};
 
 /**
  * Loads the extension from a file.
  *
  * @param file The full path to the file to load.
+ * @param options
  */
 export async function loadExtensionFromFile(file: string, options?: IOptions): Promise<IExtension> {
     // sanity check the input
@@ -29,19 +37,15 @@ export async function loadExtensionFromFile(file: string, options?: IOptions): P
     const name = (jetpack.inspect(file) as any).name.split(".")[0];
 
     // require in the module -- best chance to bomb is here
-    const extensionModule =
-        options?.loadingType === "require"
-            ? (loadRequire(file) as IExtension)
-            : ((await loadModule(file)) as IExtension);
+    const extensionModule = options?.loadingType === "require"
+        ? (loadRequire(file) as IExtension)
+        : ((await loadModule(file)) as IExtension);
 
     // should we try the default export?
-    const valid =
-        extensionModule && typeof extensionModule === "object" && typeof extensionModule.execute === "function";
+    const valid = extensionModule && typeof extensionModule === "object" && typeof extensionModule.execute === "function";
 
     if (valid) {
-        const extension = new Extension(extensionModule.name, (toolbox: EmptyToolbox) =>
-            extensionModule.execute(toolbox as Toolbox),
-        );
+        const extension = new Extension(extensionModule.name, (toolbox: EmptyToolbox) => extensionModule.execute(toolbox as Toolbox));
 
         extension.file = file;
         extension.description = extensionModule.description || undefined;
