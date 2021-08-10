@@ -1,3 +1,17 @@
+## @anolilab/cerebro-patching-extension [1.0.0-alpha.6](https://github.com/anolilab/cerebro/compare/@anolilab/cerebro-patching-extension@1.0.0-alpha.5...@anolilab/cerebro-patching-extension@1.0.0-alpha.6) (2021-08-10)
+
+
+### Bug Fixes
+
+* removed type module form package.json ([cdf1397](https://github.com/anolilab/cerebro/commit/cdf13971faaee737c03c9db41cb8ed6169871db1))
+
+
+
+### Dependencies
+
+* **@anolilab/cerebro-filesystem-extension:** upgraded to 1.0.0-alpha.7
+* **@anolilab/cerebro-core:** upgraded to 1.0.0-alpha.9
+
 ## @anolilab/cerebro-patching-extension [1.0.0-alpha.5](https://github.com/anolilab/cerebro/compare/@anolilab/cerebro-patching-extension@1.0.0-alpha.4...@anolilab/cerebro-patching-extension@1.0.0-alpha.5) (2021-08-10)
 
 

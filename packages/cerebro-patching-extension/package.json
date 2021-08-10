@@ -1,6 +1,6 @@
 {
     "name": "@anolilab/cerebro-patching-extension",
-    "version": "1.0.0-alpha.5",
+    "version": "1.0.0-alpha.6",
     "description": "cerebro patching extension - manipulating file contents",
     "keywords": [
         "cerebro",
@@ -40,14 +40,14 @@
         "LICENSE.md"
     ],
     "dependencies": {
-        "@anolilab/cerebro-filesystem-extension": "1.0.0-alpha.6"
+        "@anolilab/cerebro-filesystem-extension": "1.0.0-alpha.7"
     },
     "devDependencies": {
-        "@anolilab/cerebro-core": "1.0.0-alpha.8",
+        "@anolilab/cerebro-core": "1.0.0-alpha.9",
         "typescript": "^4.3.5"
     },
     "peerDependencies": {
-        "@anolilab/cerebro-core": "1.0.0-alpha.8"
+        "@anolilab/cerebro-core": "1.0.0-alpha.9"
     },
     "engines": {
         "node": ">=12"
