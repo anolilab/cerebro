@@ -1,3 +1,10 @@
+## @anolilab/cerebro-core [1.0.0-alpha.10](https://github.com/anolilab/cerebro/compare/@anolilab/cerebro-core@1.0.0-alpha.9...@anolilab/cerebro-core@1.0.0-alpha.10) (2021-08-11)
+
+
+### Bug Fixes
+
+* commands variable call in help command ([8979e79](https://github.com/anolilab/cerebro/commit/8979e790b2ff85f18241dbb876a6a5d8f490aa4e))
+
 ## @anolilab/cerebro-core [1.0.0-alpha.9](https://github.com/anolilab/cerebro/compare/@anolilab/cerebro-core@1.0.0-alpha.8...@anolilab/cerebro-core@1.0.0-alpha.9) (2021-08-10)
 
 
