@@ -46,7 +46,6 @@
         "LICENSE.md"
     ],
     "dependencies": {
-        "@types/chalk": "^2.2.0",
         "@types/chalk-animation": "^1.6.0",
         "@types/command-line-args": "^5.0.0",
         "@types/command-line-commands": "^2.0.1",
