@@ -13,7 +13,11 @@ class HelpCommand implements ICommand {
 
     public usage = [];
 
-    constructor(private commands: Map<String, ICommand>) {}
+    private readonly commands: Map<String, ICommand>;
+
+    constructor(commands: Map<String, ICommand>) {
+        this.commands = commands;
+    }
 
     public execute(toolbox) {
         const {
