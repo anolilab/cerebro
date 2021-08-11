@@ -1,6 +1,6 @@
 {
     "name": "@anolilab/cerebro-template-extension",
-    "version": "1.0.0-alpha.6",
+    "version": "1.0.0-alpha.7",
     "description": "cerebro template extension - generating files from templates",
     "keywords": [
         "cerebro",
@@ -41,18 +41,18 @@
     ],
     "dependencies": {
         "@anolilab/cerebro-filesystem-extension": "1.0.0-alpha.7",
-        "@anolilab/cerebro-strings-extension": "1.0.0-alpha.7",
+        "@anolilab/cerebro-strings-extension": "1.0.0-alpha.8",
         "@babel/runtime": "^7.14.8",
         "@types/ejs": "^3.0.7",
         "ejs": "^3.1.6"
     },
     "devDependencies": {
-        "@anolilab/cerebro-core": "1.0.0-alpha.9",
+        "@anolilab/cerebro-core": "1.0.0-alpha.10",
         "rimraf": "^3.0.2",
         "typescript": "^4.3.5"
     },
     "peerDependencies": {
-        "@anolilab/cerebro-core": "1.0.0-alpha.9"
+        "@anolilab/cerebro-core": "1.0.0-alpha.10"
     },
     "engines": {
         "node": ">=12"

@@ -1,3 +1,13 @@
+## @anolilab/cerebro-template-extension [1.0.0-alpha.7](https://github.com/anolilab/cerebro/compare/@anolilab/cerebro-template-extension@1.0.0-alpha.6...@anolilab/cerebro-template-extension@1.0.0-alpha.7) (2021-08-11)
+
+
+
+### Dependencies
+
+* **@anolilab/cerebro-filesystem-extension:** upgraded to 1.0.0-alpha.8
+* **@anolilab/cerebro-strings-extension:** upgraded to 1.0.0-alpha.8
+* **@anolilab/cerebro-core:** upgraded to 1.0.0-alpha.10
+
 ## @anolilab/cerebro-template-extension [1.0.0-alpha.6](https://github.com/anolilab/cerebro/compare/@anolilab/cerebro-template-extension@1.0.0-alpha.5...@anolilab/cerebro-template-extension@1.0.0-alpha.6) (2021-08-10)
 
 
