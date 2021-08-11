@@ -1,6 +1,6 @@
 {
     "name": "@anolilab/cerebro-semvar-extension",
-    "version": "1.0.0-alpha.7",
+    "version": "1.0.0-alpha.8",
     "description": "cerebro semvar extension - working with semantic versioning",
     "keywords": [
         "cerebro",
@@ -43,11 +43,11 @@
         "semver": "^7.3.5"
     },
     "devDependencies": {
-        "@anolilab/cerebro-core": "1.0.0-alpha.9",
+        "@anolilab/cerebro-core": "1.0.0-alpha.10",
         "typescript": "^4.3.5"
     },
     "peerDependencies": {
-        "@anolilab/cerebro-core": "1.0.0-alpha.9"
+        "@anolilab/cerebro-core": "1.0.0-alpha.10"
     },
     "engines": {
         "node": ">=12"

@@ -1,3 +1,11 @@
+## @anolilab/cerebro-semvar-extension [1.0.0-alpha.8](https://github.com/anolilab/cerebro/compare/@anolilab/cerebro-semvar-extension@1.0.0-alpha.7...@anolilab/cerebro-semvar-extension@1.0.0-alpha.8) (2021-08-11)
+
+
+
+### Dependencies
+
+* **@anolilab/cerebro-core:** upgraded to 1.0.0-alpha.10
+
 ## @anolilab/cerebro-semvar-extension [1.0.0-alpha.7](https://github.com/anolilab/cerebro/compare/@anolilab/cerebro-semvar-extension@1.0.0-alpha.6...@anolilab/cerebro-semvar-extension@1.0.0-alpha.7) (2021-08-10)
 
 
