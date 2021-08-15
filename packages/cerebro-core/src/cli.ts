@@ -9,6 +9,9 @@ import isInstalledGlobally from "is-installed-globally";
 // @ts-ignore
 import isYarnGlobal from "is-yarn-global";
 
+import CompletionCommand from "./commands/completion";
+import CompletionInstallCommand from "./commands/completion-install";
+import CompletionUninstallCommand from "./commands/completion-uninstall";
 import HelpCommand from "./commands/help.js";
 import VersionCommand from "./commands/version.js";
 import defaultArguments from "./default-arguments.js";
@@ -219,6 +222,19 @@ class Cli implements ICli {
      */
     public checkForUpdates(frequency: number): Cli {
         this.checkUpdate = Math.floor(Math.random() * 100) + 1 < frequency;
+
+        return this;
+    }
+
+    /**
+     * Enabled all completion commands.
+     *
+     * @returns {Cli}
+     */
+    public enableCompletion(): Cli {
+        this.addCommand(new CompletionCommand());
+        this.addCommand(new CompletionInstallCommand());
+        this.addCommand(new CompletionUninstallCommand());
 
         return this;
     }

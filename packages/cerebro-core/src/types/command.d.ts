@@ -22,4 +22,6 @@ export interface Command<TContext extends IToolbox = IToolbox> {
     file?: string;
     /** Potential other names for this command */
     alias?: string | string[];
+    /** list for the autocompletion */
+    autocompletes?: (string | { name: string, description: string})[];
 }

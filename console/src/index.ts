@@ -13,7 +13,8 @@ const __dirname = dirname(__filename);
         // Create a CLI runtime
         const cli = new Cli("cerebro", process.argv);
 
-        cli.addLoader(new CommandLoader(join(__dirname, "..", "commands")));
+        cli.addLoader(new CommandLoader(join(__dirname, "..", "commands")))
+            .enableCompletion();
 
         return await cli.run();
     } catch (error) {

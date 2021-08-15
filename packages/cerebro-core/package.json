@@ -41,6 +41,7 @@
     "types": "dist/anolilab-cerebro-core.cjs.d.ts",
     "files": [
         "dist",
+        "scripts",
         "README.md",
         "CHANGELOG.md",
         "LICENSE.md"

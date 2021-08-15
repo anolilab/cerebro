@@ -22,10 +22,13 @@ class Command implements ICommand<IToolbox> {
 
     public args;
 
+    public autocompletes;
+
     constructor(properties?: ICommand) {
         this.hidden = false;
         this.alias = [];
         this.args = [];
+        this.autocompletes = [];
 
         if (properties) {
             Object.assign(this, properties);

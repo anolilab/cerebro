@@ -43,6 +43,13 @@ export interface Cli {
      */
     checkForUpdates(frequency: number);
 
+    /**
+     * Enabled all completion commands.
+     *
+     * @returns {Cli}
+     */
+    enableCompletion(): Cli;
+
     getName(): string;
 
     getCommands(): Map<string, ICommand>;
