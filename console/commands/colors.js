@@ -1,4 +1,4 @@
-export default {
+module.exports = {
     name: "main:colors",
     description: "Output colors",
     dashed: true,

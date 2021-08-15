@@ -1,0 +1,10 @@
+{
+    "name": "console",
+    "private": true,
+    "main": "dist/console.cjs.js",
+    "module": "dist/console.esm.js",
+    "types": "dist/console.cjs.d.ts",
+    "dependencies": {
+        "@anolilab/cerebro-core": "^1.0.0-alpha.10"
+    }
+}

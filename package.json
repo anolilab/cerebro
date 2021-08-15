@@ -11,6 +11,7 @@
         "url": "https://github.com/prisis"
     },
     "workspaces": [
+        "console",
         "packages/cerebro-core",
         "packages/cerebro-filesystem-extension",
         "packages/cerebro-http-extension",
@@ -36,8 +37,7 @@
         "jest:watch": "jest --watch",
         "snapupdate": "jest --updateSnapshot",
         "windows:test": "yarn && yarn format && yarn jest:test && yarn clean-build && yarn compile && yarn copy-templates && jest --config=./.circleci/jest-integration.config.json",
-        "ci:test": "yarn lint && yarn jest:test --maxWorkers=2 && yarn integration",
-        "console:dev:esm": "rimraf ./console/dist && tsc --module es2020 --target es5 --outDir ./console/dist --watch ./console/cli.ts"
+        "ci:test": "yarn lint && yarn jest:test --maxWorkers=2 && yarn integration"
     },
     "lint-staged": {
         "*.ts": [
@@ -106,6 +106,7 @@
     },
     "preconstruct": {
         "packages": [
+            "console",
             "packages/cerebro-core",
             "packages/cerebro-filesystem-extension",
             "packages/cerebro-http-extension",

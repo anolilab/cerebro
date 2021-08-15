@@ -1,8 +1,8 @@
 import { dirname, join } from "path";
 import { fileURLToPath } from "url";
 
-import Cli, { CommandLoader } from "../../packages/cerebro-core/dist/mjs/index.js";
-import { Toolbox } from "../../packages/cerebro-core/dist/types/domain/toolbox";
+import Cli, { CommandLoader } from "@anolilab/cerebro-core";
+import type { Toolbox } from "@anolilab/cerebro-core";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);

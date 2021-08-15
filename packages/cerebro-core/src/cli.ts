@@ -61,8 +61,8 @@ class Cli implements ICli {
     private checkUpdate: boolean = false;
 
     /**
-     * @param name The name should be all lowercase and contains only numbers, letters, and dashes, the name will be used
-     * when searching for configuration files.
+     * @param name The name should be all lowercase and contains only numbers,
+     * letters, and dashes, the name will be used when searching for configuration files.
      * @param argv This should be in the base case process.argv
      * @param cwd  The path of main folder.
      */
@@ -182,6 +182,7 @@ class Cli implements ICli {
     }
 
     /**
+     * Adds a cli loader.
      *
      * @param {ILoader} loader
      *
@@ -201,7 +202,7 @@ class Cli implements ICli {
      *
      * @param {IExtension} extension
      *
-     * @returns This runtime.
+     * @returns {Cli}
      */
     public addExtension(extension: IExtension): Cli {
         this.extensions.push(extension);
@@ -213,7 +214,8 @@ class Cli implements ICli {
      * Check for updates randomly.
      *
      * @param frequency % frequency of checking
-     * @return self.
+     *
+     * @returns {Cli}
      */
     public checkForUpdates(frequency: number): Cli {
         this.checkUpdate = Math.floor(Math.random() * 100) + 1 < frequency;
