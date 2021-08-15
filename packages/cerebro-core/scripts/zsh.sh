@@ -7,7 +7,7 @@ if type compdef &>/dev/null; then
     IFS=$'\n' reply=($(COMP_CWORD="$((CURRENT-1))" COMP_LINE="$BUFFER" COMP_POINT="$CURSOR" {completer} {completeCmd} -- "${words[@]}"))
     IFS=$si
 
-    if [ "$reply" = "__tabtab_complete_files__" ]; then
+    if [ "$reply" = "__cerebro_complete_files__" ]; then
       _files
     else
       _describe 'values' reply

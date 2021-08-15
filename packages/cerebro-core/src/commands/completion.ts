@@ -9,6 +9,8 @@ import { ParsedEnvironment, parseEnvironment } from "../autocompletion";
 class CompletionCommand implements ICommand {
     public name = "completion";
 
+    public hidden = true;
+
     public description = "Installs or uninstalls the console autocomplete";
 
     public args = [

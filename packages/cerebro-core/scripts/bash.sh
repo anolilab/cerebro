@@ -17,7 +17,7 @@ if type complete &>/dev/null; then
                            2>/dev/null)) || return $?
     IFS="$si"
 
-    if [ "$COMPREPLY" = "__tabtab_complete_files__" ]; then
+    if [ "$COMPREPLY" = "__cerebro_complete_files__" ]; then
       COMPREPLY=($(compgen -f -- "$cword"))
     fi
 
