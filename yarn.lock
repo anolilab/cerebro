@@ -282,7 +282,7 @@ __metadata:
     "@semantic-release/github": ^7.2.3
     "@semantic-release/npm": ^7.1.3
     "@semantic-release/release-notes-generator": ^9.0.3
-    "@types/jest": ^27.0.0
+    "@types/jest": ^27.0.1
     "@types/node": 12.20.19
     "@typescript-eslint/eslint-plugin": ^4.29.1
     "@typescript-eslint/parser": ^4.29.1
@@ -299,7 +299,7 @@ __metadata:
     lint-staged: ^11.1.2
     prettier: ^2.3.2
     rimraf: ^3.0.2
-    semantic-release: ^17.4.4
+    semantic-release: ^17.4.5
     sort-package-json: ^1.50.0
     ts-jest: ^27.0.4
     ts-node: ^10.2.0
@@ -3923,13 +3923,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/jest@npm:^27.0.0":
-  version: 27.0.0
-  resolution: "@types/jest@npm:27.0.0"
+"@types/jest@npm:^27.0.1":
+  version: 27.0.1
+  resolution: "@types/jest@npm:27.0.1"
   dependencies:
-    jest-diff: ^26.0.0
-    pretty-format: ^26.0.0
-  checksum: bb894a1fcc0e244ecefdf2b43ed786c0354c416d00e433155bf68569d0d8a45b012b008fbe6673890903b785076b9a34f128c7095e1b25f4481f3d2a76c7495f
+    jest-diff: ^27.0.0
+    pretty-format: ^27.0.0
+  checksum: 972aaae341b83eb608970c93295282f1f9edc056dc8123635456cbaced822702673118d60279c7b889300e7c9a0726c3674d701115915e2e1967db09542389c2
   languageName: node
   linkType: hard
 
@@ -6832,13 +6832,6 @@ __metadata:
     asap: ^2.0.0
     wrappy: 1
   checksum: 8b26238db91423b2702a7a6d9629d0019c37c415e7b6e75d4b3e8d27e9464e21cac3618dd145f4d4ee96c70cc6ff034227b5b8a0e9c09015a8bdbe6dace3cfb9
-  languageName: node
-  linkType: hard
-
-"diff-sequences@npm:^26.6.2":
-  version: 26.6.2
-  resolution: "diff-sequences@npm:26.6.2"
-  checksum: 79af871776ef149a7ff3345d6b1bf37fe6e81f68632aa5542787851f6f60fba19b0be22fdd1e06046f56ae7382763ccfe94a982c39ee72bd107aef435ecbc0cf
   languageName: node
   linkType: hard
 
@@ -10444,19 +10437,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"jest-diff@npm:^26.0.0":
-  version: 26.6.2
-  resolution: "jest-diff@npm:26.6.2"
-  dependencies:
-    chalk: ^4.0.0
-    diff-sequences: ^26.6.2
-    jest-get-type: ^26.3.0
-    pretty-format: ^26.6.2
-  checksum: d00d297f31e1ac0252127089892432caa7a11c69bde29cf3bb6c7a839c8afdb95cf1fd401f9df16a4422745da2e6a5d94b428b30666a2540c38e1c5699915c2d
-  languageName: node
-  linkType: hard
-
-"jest-diff@npm:^27.0.6":
+"jest-diff@npm:^27.0.0, jest-diff@npm:^27.0.6":
   version: 27.0.6
   resolution: "jest-diff@npm:27.0.6"
   dependencies:
@@ -10516,13 +10497,6 @@ __metadata:
     jest-mock: ^27.0.6
     jest-util: ^27.0.6
   checksum: 910ced755557c4fbc134cf687d9c1571100dfb5d7e9691cdaa76dfcccd2bc97e62cec58e271e600757db94dc41612b3d97700fc3fd2439a298ce5f66e32da215
-  languageName: node
-  linkType: hard
-
-"jest-get-type@npm:^26.3.0":
-  version: 26.3.0
-  resolution: "jest-get-type@npm:26.3.0"
-  checksum: 1cc6465ae4f5e880be22ba52fd270fa64c21994915f81b41f8f7553a7957dd8e077cc8d03035de9412e2d739f8bad6a032ebb5dab5805692a5fb9e20dd4ea666
   languageName: node
   linkType: hard
 
@@ -12013,6 +11987,15 @@ __metadata:
   bin:
     marked: bin/marked
   checksum: 21a5ecd4941bc760aba21dfd97185853ec3b464cf707ad971e3ddb3aeb2f44d0deeb36b0889932afdb6f734975a994d92f18815dd0fabadbd902bdaff997cc5b
+  languageName: node
+  linkType: hard
+
+"marked@npm:^3.0.0":
+  version: 3.0.0
+  resolution: "marked@npm:3.0.0"
+  bin:
+    marked: bin/marked
+  checksum: 04d5ba7405463f8d8c0c1539dc7e06a253b2ebbdb41363ed8a3d0144bf0522f9a44d2c983fef979bbcf714c4f839f90e237e0a89b3a2fdcd58accc1675c4ec47
   languageName: node
   linkType: hard
 
@@ -14192,7 +14175,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"pretty-format@npm:^26.0.0, pretty-format@npm:^26.6.2":
+"pretty-format@npm:^26.6.2":
   version: 26.6.2
   resolution: "pretty-format@npm:26.6.2"
   dependencies:
@@ -14204,7 +14187,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"pretty-format@npm:^27.0.6":
+"pretty-format@npm:^27.0.0, pretty-format@npm:^27.0.6":
   version: 27.0.6
   resolution: "pretty-format@npm:27.0.6"
   dependencies:
@@ -15413,6 +15396,44 @@ resolve@^2.0.0-next.3:
   bin:
     semantic-release: bin/semantic-release.js
   checksum: 870b4df485e7aef09cd3dd9d060112c6d04b7ab4b72fbd74a6c8e5b7702920b33d956e3a16a0004c886508545e2385ee1673be481f1b8ae5380882efae03c444
+  languageName: node
+  linkType: hard
+
+"semantic-release@npm:17.4.5, semantic-release@npm:^17.4.5":
+  version: 17.4.5
+  resolution: "semantic-release@npm:17.4.5"
+  dependencies:
+    "@semantic-release/commit-analyzer": ^8.0.0
+    "@semantic-release/error": ^2.2.0
+    "@semantic-release/github": ^7.0.0
+    "@semantic-release/npm": ^7.0.0
+    "@semantic-release/release-notes-generator": ^9.0.0
+    aggregate-error: ^3.0.0
+    cosmiconfig: ^7.0.0
+    debug: ^4.0.0
+    env-ci: ^5.0.0
+    execa: ^5.0.0
+    figures: ^3.0.0
+    find-versions: ^4.0.0
+    get-stream: ^6.0.0
+    git-log-parser: ^1.2.0
+    hook-std: ^2.0.0
+    hosted-git-info: ^4.0.0
+    lodash: ^4.17.21
+    marked: ^3.0.0
+    marked-terminal: ^4.1.1
+    micromatch: ^4.0.2
+    p-each-series: ^2.1.0
+    p-reduce: ^2.0.0
+    read-pkg-up: ^7.0.0
+    resolve-from: ^5.0.0
+    semver: ^7.3.2
+    semver-diff: ^3.1.1
+    signale: ^1.2.1
+    yargs: ^16.2.0
+  bin:
+    semantic-release: bin/semantic-release.js
+  checksum: e1b16ce5a43bf9c1dac525e1d95801aa79d08e4435c1e5945a050ac960c5139e060487103184dde24a0a2c1ae4f090866fc22854e7a7bc8ea953ceea1ef94c31
   languageName: node
   linkType: hard
 

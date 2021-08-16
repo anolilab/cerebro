@@ -151,7 +151,7 @@ function printGeneralHelp(logger: ILogger, runtime: ICli, print: IPrint, command
             },
             {
                 header: "Available Commands",
-                content: [...new Set(commands.values())].filter(command => !command.hidden).map((command) => {
+                content: [...new Set(commands.values())].filter((command) => !command.hidden).map((command) => {
                     let aliases = "";
 
                     if (typeof command.alias === "string") {
