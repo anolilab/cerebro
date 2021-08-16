@@ -11,7 +11,7 @@
         "url": "https://github.com/prisis"
     },
     "workspaces": [
-        "console",
+        "!console",
         "packages/cerebro-core",
         "packages/cerebro-filesystem-extension",
         "packages/cerebro-http-extension",
