@@ -1,6 +1,6 @@
 {
     "name": "@anolilab/cerebro-filesystem-extension",
-    "version": "1.0.0-alpha.8",
+    "version": "1.0.0-alpha.9",
     "description": "cerebro filesystem extension - for moving files and directories around",
     "keywords": [
         "cerebro",
@@ -43,13 +43,13 @@
         "trash": "^7.2.0"
     },
     "devDependencies": {
-        "@anolilab/cerebro-core": "1.0.0-alpha.10",
+        "@anolilab/cerebro-core": "1.0.0-alpha.11",
         "@babel/runtime": "^7.14.8",
         "fs-jetpack": "^4.1.0",
         "typescript": "^4.3.5"
     },
     "peerDependencies": {
-        "@anolilab/cerebro-core": "1.0.0-alpha.10",
+        "@anolilab/cerebro-core": "1.0.0-alpha.11",
         "@babel/runtime": "^7.14.8",
         "fs-jetpack": "^4.1.0"
     },
