@@ -117,5 +117,6 @@
             "packages/cerebro-strings-extension",
             "packages/cerebro-template-extension"
         ]
-    }
+    },
+    "packageManager": "yarn@3.0.1"
 }
