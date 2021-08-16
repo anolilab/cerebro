@@ -1,3 +1,11 @@
+## @anolilab/cerebro-http-extension [1.0.0-alpha.9](https://github.com/anolilab/cerebro/compare/@anolilab/cerebro-http-extension@1.0.0-alpha.8...@anolilab/cerebro-http-extension@1.0.0-alpha.9) (2021-08-16)
+
+
+
+### Dependencies
+
+* **@anolilab/cerebro-core:** upgraded to 1.0.0-alpha.11
+
 ## @anolilab/cerebro-http-extension [1.0.0-alpha.8](https://github.com/anolilab/cerebro/compare/@anolilab/cerebro-http-extension@1.0.0-alpha.7...@anolilab/cerebro-http-extension@1.0.0-alpha.8) (2021-08-11)
 
 
