@@ -1,3 +1,10 @@
+## @anolilab/cerebro-core [1.0.0-alpha.11](https://github.com/anolilab/cerebro/compare/@anolilab/cerebro-core@1.0.0-alpha.10...@anolilab/cerebro-core@1.0.0-alpha.11) (2021-08-16)
+
+
+### Features
+
+* added filter for hidden comments ([99d95a0](https://github.com/anolilab/cerebro/commit/99d95a094c0e474000368374113ea3e418a06937))
+
 ## @anolilab/cerebro-core [1.0.0-alpha.10](https://github.com/anolilab/cerebro/compare/@anolilab/cerebro-core@1.0.0-alpha.9...@anolilab/cerebro-core@1.0.0-alpha.10) (2021-08-11)
 
 
