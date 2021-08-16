@@ -1,3 +1,12 @@
+## @anolilab/cerebro-patching-extension [1.0.0-alpha.8](https://github.com/anolilab/cerebro/compare/@anolilab/cerebro-patching-extension@1.0.0-alpha.7...@anolilab/cerebro-patching-extension@1.0.0-alpha.8) (2021-08-16)
+
+
+
+### Dependencies
+
+* **@anolilab/cerebro-filesystem-extension:** upgraded to 1.0.0-alpha.9
+* **@anolilab/cerebro-core:** upgraded to 1.0.0-alpha.11
+
 ## @anolilab/cerebro-patching-extension [1.0.0-alpha.7](https://github.com/anolilab/cerebro/compare/@anolilab/cerebro-patching-extension@1.0.0-alpha.6...@anolilab/cerebro-patching-extension@1.0.0-alpha.7) (2021-08-11)
 
 
