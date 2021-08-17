@@ -1,3 +1,10 @@
+## @anolilab/cerebro-strings-extension [1.0.0-alpha.10](https://github.com/anolilab/cerebro/compare/@anolilab/cerebro-strings-extension@1.0.0-alpha.9...@anolilab/cerebro-strings-extension@1.0.0-alpha.10) (2021-08-17)
+
+
+### Bug Fixes
+
+* fixed package.json exports, main, module and types exports ([48973ab](https://github.com/anolilab/cerebro/commit/48973ab33a04a557ba955e46833ecd522479067c))
+
 ## @anolilab/cerebro-strings-extension [1.0.0-alpha.9](https://github.com/anolilab/cerebro/compare/@anolilab/cerebro-strings-extension@1.0.0-alpha.8...@anolilab/cerebro-strings-extension@1.0.0-alpha.9) (2021-08-16)
 
 
