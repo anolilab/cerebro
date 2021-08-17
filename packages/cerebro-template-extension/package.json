@@ -1,6 +1,6 @@
 {
     "name": "@anolilab/cerebro-template-extension",
-    "version": "1.0.0-alpha.8",
+    "version": "1.0.0-alpha.9",
     "description": "cerebro template extension - generating files from templates",
     "keywords": [
         "cerebro",
@@ -38,8 +38,8 @@
         "LICENSE.md"
     ],
     "dependencies": {
-        "@anolilab/cerebro-filesystem-extension": "1.0.0-alpha.8",
-        "@anolilab/cerebro-strings-extension": "1.0.0-alpha.8",
+        "@anolilab/cerebro-filesystem-extension": "1.0.0-alpha.10",
+        "@anolilab/cerebro-strings-extension": "1.0.0-alpha.10",
         "@babel/runtime": "^7.14.8",
         "@types/ejs": "^3.0.7",
         "ejs": "^3.1.6"
