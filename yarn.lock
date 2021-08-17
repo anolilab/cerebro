@@ -111,22 +111,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@anolilab/cerebro-filesystem-extension@npm:1.0.0-alpha.8":
-  version: 1.0.0-alpha.8
-  resolution: "@anolilab/cerebro-filesystem-extension@npm:1.0.0-alpha.8"
-  dependencies:
-    fs-chmod: 1.0.6
-    fs-extra: 10.0.0
-    trash: ^7.2.0
-  peerDependencies:
-    "@anolilab/cerebro-core": 1.0.0-alpha.10
-    "@babel/runtime": ^7.14.8
-    fs-jetpack: ^4.1.0
-  checksum: fbe6863c25c3a71f0d162097dc1d542b4e3e8717015298a890cf8a5de42bcbe52fcaa23e2a65be961440f9338c04a736b4e3818493466cbfca8cc0524fd12db6
-  languageName: node
-  linkType: hard
-
-"@anolilab/cerebro-filesystem-extension@workspace:packages/cerebro-filesystem-extension":
+"@anolilab/cerebro-filesystem-extension@1.0.0-alpha.10, @anolilab/cerebro-filesystem-extension@workspace:packages/cerebro-filesystem-extension":
   version: 0.0.0-use.local
   resolution: "@anolilab/cerebro-filesystem-extension@workspace:packages/cerebro-filesystem-extension"
   dependencies:
@@ -186,7 +171,7 @@ __metadata:
   resolution: "@anolilab/cerebro-patching-extension@workspace:packages/cerebro-patching-extension"
   dependencies:
     "@anolilab/cerebro-core": 1.0.0-alpha.11
-    "@anolilab/cerebro-filesystem-extension": 1.0.0-alpha.8
+    "@anolilab/cerebro-filesystem-extension": 1.0.0-alpha.10
     typescript: ^4.3.5
   peerDependencies:
     "@anolilab/cerebro-core": 1.0.0-alpha.11
@@ -205,41 +190,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@anolilab/cerebro-strings-extension@npm:1.0.0-alpha.8":
-  version: 1.0.0-alpha.8
-  resolution: "@anolilab/cerebro-strings-extension@npm:1.0.0-alpha.8"
-  dependencies:
-    "@types/lodash.camelcase": ^4.3.6
-    "@types/lodash.kebabcase": ^4.1.6
-    "@types/lodash.lowercase": ^4.3.6
-    "@types/lodash.lowerfirst": ^4.3.6
-    "@types/lodash.pad": ^4.5.6
-    "@types/lodash.snakecase": ^4.1.6
-    "@types/lodash.startcase": ^4.4.6
-    "@types/lodash.trimend": ^4.5.6
-    "@types/lodash.trimstart": ^4.5.6
-    "@types/lodash.uppercase": ^4.3.6
-    "@types/lodash.upperfirst": ^4.3.6
-    "@types/pluralize": ^0.0.29
-    lodash.camelcase: ^4.3.0
-    lodash.kebabcase: ^4.1.1
-    lodash.lowercase: ^4.3.0
-    lodash.lowerfirst: ^4.3.1
-    lodash.pad: ^4.5.1
-    lodash.snakecase: ^4.1.1
-    lodash.startcase: ^4.4.0
-    lodash.trimend: ^4.5.1
-    lodash.trimstart: ^4.5.1
-    lodash.uppercase: ^4.3.0
-    lodash.upperfirst: ^4.3.1
-    pluralize: ^8.0.0
-  peerDependencies:
-    "@anolilab/cerebro-core": 1.0.0-alpha.10
-  checksum: 45e2b8b26370e4d1b6ba5806dbcf92ee034a00a0bdc63eead4d4dc133cde259ce9ec9b060a1763124aa0f500b43bf772d5957dd9b56f2bceb694f18020743248
-  languageName: node
-  linkType: hard
-
-"@anolilab/cerebro-strings-extension@workspace:packages/cerebro-strings-extension":
+"@anolilab/cerebro-strings-extension@1.0.0-alpha.10, @anolilab/cerebro-strings-extension@workspace:packages/cerebro-strings-extension":
   version: 0.0.0-use.local
   resolution: "@anolilab/cerebro-strings-extension@workspace:packages/cerebro-strings-extension"
   dependencies:
@@ -279,8 +230,8 @@ __metadata:
   resolution: "@anolilab/cerebro-template-extension@workspace:packages/cerebro-template-extension"
   dependencies:
     "@anolilab/cerebro-core": 1.0.0-alpha.11
-    "@anolilab/cerebro-filesystem-extension": 1.0.0-alpha.8
-    "@anolilab/cerebro-strings-extension": 1.0.0-alpha.8
+    "@anolilab/cerebro-filesystem-extension": 1.0.0-alpha.10
+    "@anolilab/cerebro-strings-extension": 1.0.0-alpha.10
     "@babel/runtime": ^7.14.8
     "@types/ejs": ^3.0.7
     ejs: ^3.1.6
