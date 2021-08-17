@@ -1,6 +1,6 @@
 {
     "name": "@anolilab/cerebro-http-extension",
-    "version": "1.0.0-alpha.9",
+    "version": "1.0.0-alpha.10",
     "description": "cerebro http extension - interacting with API servers",
     "keywords": [
         "cerebro",
