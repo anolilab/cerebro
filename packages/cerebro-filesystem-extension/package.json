@@ -1,6 +1,6 @@
 {
     "name": "@anolilab/cerebro-filesystem-extension",
-    "version": "1.0.0-alpha.9",
+    "version": "1.0.0-alpha.10",
     "description": "cerebro filesystem extension - for moving files and directories around",
     "keywords": [
         "cerebro",
