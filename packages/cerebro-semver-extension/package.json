@@ -1,6 +1,6 @@
 {
     "name": "@anolilab/cerebro-semver-extension",
-    "version": "1.0.0-alpha.9",
+    "version": "1.0.0-alpha.1",
     "description": "cerebro semver extension - working with semantic versioning",
     "keywords": [
         "cerebro",
