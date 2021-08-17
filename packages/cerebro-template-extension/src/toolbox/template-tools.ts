@@ -1,5 +1,5 @@
-import { toolbox } from "@anolilab/cerebro-core";
 import type { Toolbox as IToolbox } from "@anolilab/cerebro-core";
+import { toolbox } from "@anolilab/cerebro-core";
 import { filesystem } from "@anolilab/cerebro-filesystem-extension";
 import { strings } from "@anolilab/cerebro-strings-extension";
 import ejs from "ejs";

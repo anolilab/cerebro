@@ -31,7 +31,8 @@
         "prettier": "prettier --config=.prettierrc.cjs --write '**/*.{js,jsx,tsx,ts,less,md,json}'",
         "sort-package-json": "sort-package-json packages/**/package.json",
         "build": "preconstruct build",
-        "lint": "eslint ./packages",
+        "lint": "cross-env NO_LOGS=true eslint -c ./.eslintrc.cjs --ext .js,.ts ./packages",
+        "lint:fix": "yarn run lint --fix",
         "test": "jest",
         "jest:integration": "yarn build && jest --config=./.circleci/jest-integration.config.json",
         "jest:watch": "jest --watch",
@@ -40,19 +41,8 @@
         "ci:test": "yarn lint && yarn jest:test --maxWorkers=2 && yarn integration"
     },
     "lint-staged": {
-        "*.ts": [
-            "prettier --config=./.prettierrc.cjs --write",
-            "eslint --fix",
-            "git add"
-        ],
-        "*.md": [
-            "prettier --config=./.prettierrc.cjs --write",
-            "git add"
-        ],
-        "*.json": [
-            "prettier --config=./.prettierrc.cjs --write",
-            "git add"
-        ]
+        "*.{js,jsx,tsx,ts,less,md,json,css,scss,sass}": "prettier --config=.prettierrc.cjs --write",
+        "*.{js,jsx,ts,tsx}": "eslint -c ./.eslintrc.cjs --fix"
     },
     "config": {
         "commitizen": {
@@ -88,6 +78,7 @@
         "babel-eslint": "^10.1.0",
         "commitizen": "^4.2.4",
         "conventional-changelog-conventionalcommits": "^4.6.0",
+        "cross-env": "^7.0.3",
         "cz-conventional-changelog": "^3.3.0",
         "eslint": "^7.32.0",
         "eslint-plugin-jest": "^24.4.0",

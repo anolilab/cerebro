@@ -37,7 +37,7 @@
         "allowSyntheticDefaultImports": true,
         "esModuleInterop": true
     },
-    "include": ["packages/**/*.ts"],
+    "include": ["packages/**/*.ts", "packages/**/__tests__**/*.test.ts"],
     "exclude": ["node_modules/**", "node_modules/@types/**", "dist", "packages/**/fixtures/**", "packages/**/__tests__/**", "packages/**/*.test.ts"],
     "compileOnSave": false
 }

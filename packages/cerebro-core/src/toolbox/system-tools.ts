@@ -1,6 +1,6 @@
+import { exec as childProcessExec, ExecException } from "child_process";
 import crossSpawn from "cross-spawn";
 import execa from "execa";
-import { exec as childProcessExec, ExecException } from "child_process";
 import whichlib from "which";
 
 import {
