@@ -1,4 +1,4 @@
-import Toolbox from "@anolilab/cerebro-core/types/domain/toolbox";
+import type { Extension as IExtension, Toolbox as IToolbox } from "@anolilab/cerebro-core";
 import notifier from "node-notifier";
 
 /**
@@ -6,7 +6,7 @@ import notifier from "node-notifier";
  */
 export default {
     name: "notify",
-    execute: (toolbox: Toolbox) => {
+    execute: (toolbox: IToolbox) => {
         toolbox.notify = notifier;
     },
-};
+} as IExtension;

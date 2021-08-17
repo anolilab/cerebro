@@ -1,2 +1,2 @@
 export { default as http } from "got";
-export { default } from "./extension/http-extension.js";
+export { default as httpExtension } from "./extension/http-extension.js";

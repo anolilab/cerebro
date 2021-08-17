@@ -18,7 +18,7 @@
         "packages/cerebro-notify-extension",
         "packages/cerebro-package-manager-extension",
         "packages/cerebro-patching-extension",
-        "packages/cerebro-semvar-extension",
+        "packages/cerebro-semver-extension",
         "packages/cerebro-strings-extension",
         "packages/cerebro-template-extension"
     ],
@@ -113,7 +113,7 @@
             "packages/cerebro-notify-extension",
             "packages/cerebro-package-manager-extension",
             "packages/cerebro-patching-extension",
-            "packages/cerebro-semvar-extension",
+            "packages/cerebro-semver-extension",
             "packages/cerebro-strings-extension",
             "packages/cerebro-template-extension"
         ]

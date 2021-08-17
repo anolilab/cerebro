@@ -5,7 +5,15 @@
     "module": "dist/console.esm.js",
     "types": "dist/console.cjs.d.ts",
     "dependencies": {
-        "@anolilab/cerebro-core": "^1.0.0-alpha.10"
+        "@anolilab/cerebro-core": "^1.0.0-alpha.10",
+        "@anolilab/cerebro-filesystem-extension": "^1.0.0-alpha.9",
+        "@anolilab/cerebro-http-extension": "^1.0.0-alpha.9",
+        "@anolilab/cerebro-notify-extension": "^1.0.0-alpha.9",
+        "@anolilab/cerebro-package-manager-extension": "^1.0.0-alpha.9",
+        "@anolilab/cerebro-patching-extension": "^1.0.0-alpha.8",
+        "@anolilab/cerebro-semver-extension": "^1.0.0-alpha.1",
+        "@anolilab/cerebro-strings-extension": "^1.0.0-alpha.9",
+        "@anolilab/cerebro-template-extension": "^1.0.0-alpha.8"
     },
     "publishConfig": {
         "access": "restricted"

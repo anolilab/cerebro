@@ -1,20 +1,20 @@
 {
-    "name": "@anolilab/cerebro-semvar-extension",
+    "name": "@anolilab/cerebro-semver-extension",
     "version": "1.0.0-alpha.9",
-    "description": "cerebro semvar extension - working with semantic versioning",
+    "description": "cerebro semver extension - working with semantic versioning",
     "keywords": [
         "cerebro",
         "anolilab",
         "cli",
         "extension",
         "toolbox",
-        "semvar"
+        "semver"
     ],
-    "homepage": "https://anolilab.com/nodejs/packages/cerebro-semvar-extension",
+    "homepage": "https://anolilab.com/nodejs/packages/cerebro-semver-extension",
     "repository": {
         "type": "git",
         "url": "https://github.com/anolilab/cerebro.git",
-        "directory": "packages/cerebro-semvar-extension"
+        "directory": "packages/cerebro-semver-extension"
     },
     "license": "MIT",
     "author": {
@@ -23,16 +23,14 @@
     },
     "exports": {
         ".": {
-            "import": "./esm/index.js",
-            "require": "./commonjs/index.js"
+            "import": "./dist/anolilab-cerebro-semver-extension.esm.js",
+            "require": "./dist/anolilab-cerebro-semver-extension.cjs.js"
         },
-        "./esm": "./esm/index.js",
-        "./commonjs": "./commonjs/index.js",
         "./package.json": "./package.json"
     },
-    "main": "dist/anolilab-cerebro-semvar-extension.cjs.js",
-    "module": "dist/anolilab-cerebro-semvar-extension.esm.js",
-    "types": "types/index.d.ts",
+    "main": "dist/anolilab-cerebro-semver-extension.cjs.js",
+    "module": "dist/anolilab-cerebro-semver-extension.esm.js",
+    "types": "dist/anolilab-cerebro-semver-extension.cjs.d.ts",
     "files": [
         "dist",
         "README.md",

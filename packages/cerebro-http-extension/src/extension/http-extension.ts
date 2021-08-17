@@ -1,4 +1,4 @@
-import IToolbox from "@anolilab/cerebro-core/types/domain/toolbox";
+import type { Extension as IExtension, Toolbox as IToolbox } from "@anolilab/cerebro-core";
 import got from "got";
 
 /**
@@ -9,4 +9,4 @@ export default {
     execute: (toolbox: IToolbox): void => {
         toolbox.http = got;
     },
-};
+} as IExtension;

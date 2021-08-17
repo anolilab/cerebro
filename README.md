@@ -24,7 +24,7 @@ cerebro is a delightful toolkit for building Node-based command-line interfaces 
 
 [*patching* - manipulating file contents](./packages/cerebro-patching-extension)
 
-[*semver* - working with semantic versioning](./packages/cerebro-semvar-extension)
+[*semver* - working with semantic versioning](./packages/cerebro-semver-extension)
 
 [*strings* - manipulating strings & template data](./packages/cerebro-strings-extension)
 
@@ -52,7 +52,7 @@ post on why we think this is important](https://medium.com/the-node-js-collectio
 
 [@anolilab/cerebro-filesystem-extension](./packages/cerebro-filesystem-extension)
 
-[@anolilab/cerebro-semvar-extension](./packages/cerebro-semvar-extension)
+[@anolilab/cerebro-semvar-extension](./packages/cerebro-semver-extension)
 
 [@anolilab/cerebro-strings-extension](./packages/cerebro-strings-extension)
 

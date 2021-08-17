@@ -1,4 +1,4 @@
-import { Toolbox as IToolbox } from "@anolilab/cerebro-core";
+import type { Extension as IExtension, Toolbox as IToolbox } from "@anolilab/cerebro-core";
 
 import buildGenerate from "../toolbox/template-tools.js";
 
@@ -12,4 +12,4 @@ export default {
 
         toolbox.template = { generate };
     },
-};
+} as IExtension;
