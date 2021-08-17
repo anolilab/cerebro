@@ -1,6 +1,6 @@
 {
     "name": "@anolilab/cerebro-package-manager-extension",
-    "version": "1.0.0-alpha.9",
+    "version": "1.0.0-alpha.10",
     "description": "cerebro package-manager extension - installing NPM packages with Yarn or NPM",
     "keywords": [
         "cerebro",
