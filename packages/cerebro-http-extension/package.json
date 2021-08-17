@@ -38,7 +38,7 @@
         "LICENSE.md"
     ],
     "dependencies": {
-        "@types/got": "^9.6.11",
+        "@types/got": "^9.6.12",
         "got": "^11.8.2"
     },
     "devDependencies": {

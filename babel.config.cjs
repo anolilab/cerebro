@@ -12,7 +12,7 @@ module.exports = {
                 looseParameters: true,
                 looseTemplateLiterals: true,
 
-                runtimeVersion: "7.14.8",
+                runtimeVersion: "7.15.3",
             },
         ],
     ],
