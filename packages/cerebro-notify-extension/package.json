@@ -1,6 +1,6 @@
 {
     "name": "@anolilab/cerebro-notify-extension",
-    "version": "1.0.0-alpha.9",
+    "version": "1.0.0-alpha.10",
     "description": "cerebro notify extension - send cross platform native notifications",
     "keywords": [
         "cerebro",
