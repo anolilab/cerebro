@@ -1,6 +1,6 @@
-# cerebro
+# Cerebro
 
-cerebro is a delightful toolkit for building Node-based command-line interfaces (CLIs) in TypeScript or modern JavaScript, with support for:
+Cerebro is a delightful toolkit for building Node-based command-line interfaces (CLIs) in TypeScript or modern JavaScript, with support for:
 
 *parameters* - command-line arguments and options
 
@@ -8,9 +8,9 @@ cerebro is a delightful toolkit for building Node-based command-line interfaces 
 
 *prompt* - auto-complete prompts
 
-*print* - printing pretty colors and tables
+*print* - printing colors and tables
 
-> Note: In addition, `cerebro` supports expanding your CLI's ecosystem with a robust set of easy-to-write plugins and extensions.
+> Note: In addition, `cerebro` supports expanding your CLI’s ecosystem with a robust set of easy-to-write plugins and extensions.
 
 ### Addition extensions
 
@@ -32,27 +32,27 @@ cerebro is a delightful toolkit for building Node-based command-line interfaces 
 
 # Why use cerebro?
 
-You might want to use cerebro if:
+You want to use cerebro if:
 
 * You need to build a CLI app
 * You want to have powerful tools at your fingertips
-* And you don't want to give up flexibility at the same time
+* And you don’t want to give up flexibility at the same time
 
-If so ... welcome!
+If so ... Welcome!
 
 ## Supported Node.js Versions
 
 Libraries in this ecosystem make a best effort to track
-[Node.js' release schedule](https://nodejs.org/en/about/releases/). Here's [a
+[Node.js release schedule](https://nodejs.org/en/about/releases/). Here’s [a
 post on why we think this is important](https://medium.com/the-node-js-collection/maintainers-should-consider-following-node-js-release-schedule-ab08ed4de71a).
 
 # Packages:
 
-[@anolilab/cerebro-core](./packages/cerebro-core) - core cli package
+[@anolilab/cerebro-core](./packages/cerebro-core) - core CLI package
 
 [@anolilab/cerebro-filesystem-extension](./packages/cerebro-filesystem-extension)
 
-[@anolilab/cerebro-semvar-extension](./packages/cerebro-semver-extension)
+[@anolilab/cerebro-semver-extension](./packages/cerebro-semver-extension)
 
 [@anolilab/cerebro-strings-extension](./packages/cerebro-strings-extension)
 

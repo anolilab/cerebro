@@ -27,7 +27,8 @@
         "preinstall": "node verify-node-version.cjs",
         "postinstall": "husky install && preconstruct dev",
         "lint:staged": "lint-staged",
-        "lint:text": "textlint ./.build/ISSUE_TEMPLATE/** ./src/** ./docs/** ./README.md ./UPGRADE.md --dry-run",
+        "lint:text": "textlint \"./packages/**/README.md\" ./README.md ./UPGRADE.md --parallel --experimental",
+        "lint:text:fix": "yarn run lint:text --fix",
         "prettier": "prettier --config=.prettierrc.cjs --write '**/*.{js,jsx,tsx,ts,less,md,json}'",
         "sort-package-json": "sort-package-json packages/**/package.json",
         "build": "preconstruct build",
@@ -95,6 +96,7 @@
         "ts-node": "^10.2.0",
         "typescript": "^4.3.5"
     },
+    "packageManager": "yarn@3.0.1",
     "preconstruct": {
         "packages": [
             "console",
@@ -108,6 +110,5 @@
             "packages/cerebro-strings-extension",
             "packages/cerebro-template-extension"
         ]
-    },
-    "packageManager": "yarn@3.0.1"
+    }
 }
