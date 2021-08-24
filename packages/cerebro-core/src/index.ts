@@ -23,7 +23,7 @@ import {
     trim,
 } from "./toolbox/utils.js";
 
-export { default } from "./cli.js";
+export { default as Cli } from "./cli.js";
 export { CommandLoader } from "./loaders/command-loader.js";
 export { ExtensionLoader } from "./loaders/extension-loader.js";
 export { default as ModuleLoader } from "./loaders/utils/load-module.js";

@@ -9,16 +9,11 @@ import trimEnd from "lodash.trimend";
 import trimStart from "lodash.trimstart";
 import upperCase from "lodash.uppercase";
 import upperFirst from "lodash.upperfirst";
-import pluralize, {
-    addIrregularRule,
-    addPluralRule,
-    addSingularRule,
-    addUncountableRule,
-    isPlural,
-    isSingular,
-    plural,
-    singular,
-} from "pluralize";
+import pluralizePkg from "pluralize";
+
+const {
+    plural, singular, addPluralRule, addSingularRule, addIrregularRule, addUncountableRule, isPlural, isSingular,
+} = pluralizePkg;
 
 const { is, isBlank } = toolbox.utils;
 
@@ -67,7 +62,7 @@ export const strings: Strings = {
     trimStart,
     upperCase,
     upperFirst,
-    pluralize,
+    pluralize: pluralizePkg,
     plural,
     singular,
     addPluralRule,

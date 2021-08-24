@@ -3,7 +3,7 @@
 The fastest way to get started is to use this code snipped:
 
 ```typescript
-import Cli, { CommandLoader } from "@anolilab/cerebro-core";
+import { Cli, CommandLoader } from "@anolilab/cerebro-core";
 import type { Toolbox } from "@anolilab/cerebro-core";
 
 // Use this if you using type: module in your package.json

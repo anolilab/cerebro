@@ -1,5 +1,5 @@
 import { toolbox } from "@anolilab/cerebro-core";
-import { chmod, chmodSync, existsSync } from "fs-chmod";
+import { chmod, chmodSync } from "fs-chmod";
 import jetpack from "fs-jetpack";
 import type { FSJetpack } from "fs-jetpack/types";
 import os from "os";
@@ -95,7 +95,7 @@ const filesystem: Filesystem = {
         process.chdir(path);
     },
     trash: (filename = "") => {
-        if (existsSync(filename)) {
+        if (jetpack.exists(filename) !== false) {
             trash(filename);
         }
     },

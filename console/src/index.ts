@@ -1,7 +1,7 @@
 import { dirname, join } from "path";
 import { fileURLToPath } from "url";
 
-import Cli, { CommandLoader } from "@anolilab/cerebro-core";
+import { Cli, CommandLoader } from "@anolilab/cerebro-core";
 import type { Toolbox } from "@anolilab/cerebro-core";
 import { filesystemExtension } from "@anolilab/cerebro-filesystem-extension";
 import { httpExtension } from "@anolilab/cerebro-http-extension";

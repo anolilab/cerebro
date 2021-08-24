@@ -21,6 +21,7 @@
         "name": "Daniel Bannert",
         "email": "d.bannert@anolilab.de"
     },
+    "type": "module",
     "exports": {
         ".": {
             "import": "./dist/anolilab-cerebro-http-extension.esm.js",

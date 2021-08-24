@@ -1,6 +1,8 @@
-import {
-    clean, gt, lt, satisfies, valid, validRange,
-} from "semver";
+import semverPkg from "semver";
+
+const {
+    valid, clean, satisfies, gt, lt, validRange,
+} = semverPkg;
 
 /**
  * We're replicating the interface of semver in order to

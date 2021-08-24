@@ -13,6 +13,8 @@ module.exports = {
                 looseTemplateLiterals: true,
 
                 runtimeVersion: "7.15.3",
+
+                runtimeHelpersUseESModules: true
             },
         ],
     ],

@@ -4,6 +4,7 @@
     "main": "dist/console.cjs.js",
     "module": "dist/console.esm.js",
     "types": "dist/console.cjs.d.ts",
+    "type": "module",
     "dependencies": {
         "@anolilab/cerebro-core": "^1.0.0-alpha.10",
         "@anolilab/cerebro-filesystem-extension": "^1.0.0-alpha.10",
