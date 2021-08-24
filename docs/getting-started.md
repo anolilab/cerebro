@@ -35,9 +35,9 @@ import type { Toolbox } from "@anolilab/cerebro-core";
 })();
 ```
 
-## Creating your first addCommand
+## Creating your first command
 
-Your cerebro-powered CLI isn't very useful without a addCommand! In your CLI, create a new JS file in `src/commands` called `hello.js`. In that file, add this:
+Your cerebro-powered CLI isn't very useful without a command! In your CLI, create a new JS file in `src/commands` called `hello.js`. In that file, add this:
 
 ```js
 // src/commands/hello.js
@@ -63,7 +63,7 @@ module.exports = {
 }
 ```
 
-Now execute your addCommand:
+Now execute your command:
 
 ```
 $ mycli hello
@@ -100,7 +100,7 @@ module.exports = {
 }
 ```
 
-Then, in your `hello` addCommand, use that function instead:
+Then, in your `hello` command, use that function instead:
 
 ```js
 // src/commands/hello.js
@@ -113,7 +113,7 @@ module.exports = {
 }
 ```
 
-When you execute the addCommand, this time it'll use the extension's output.
+When you execute the command, this time it'll use the extension's output.
 
 ```
 $ mycli hello

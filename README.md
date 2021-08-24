@@ -2,6 +2,16 @@
 
 Cerebro is a delightful toolkit for building Node-based command-line interfaces (CLIs) in TypeScript or modern JavaScript, with support for:
 
+*parameters* - command-line arguments and options
+
+*system* - executing other command-line scripts
+
+*prompt* - auto-complete prompts
+
+*print* - printing colors and tables
+
+> Note: in addition, `cerebro` supports expanding your CLI’s ecosystem with a robust set of plugins and extensions.
+
 ---
 
 <div align="center">
@@ -14,15 +24,17 @@ Cerebro is a delightful toolkit for building Node-based command-line interfaces 
 
 ---
 
-*parameters* - command-line arguments and options
+# Why to use cerebro
 
-*system* - executing other command-line scripts
+You want to use cerebro if:
 
-*prompt* - auto-complete prompts
+* You need to build a CLI app
+* You want to have powerful tools at your fingertips
+* And you don’t want to give up flexibility at the same time
 
-*print* - printing colors and tables
+# Getting Started
 
-> Note: in addition, `cerebro` supports expanding your CLI’s ecosystem with a robust set of plugins and extensions.
+Check the [getting started guid](./docs/getting-started.md).
 
 ### Addition extensions
 
@@ -41,14 +53,6 @@ Cerebro is a delightful toolkit for building Node-based command-line interfaces 
 [*strings* - manipulating strings & template data](./packages/cerebro-strings-extension)
 
 [*template* - generating files from templates](./packages/cerebro-template-extension)
-
-# Why to use cerebro
-
-You want to use cerebro if:
-
-* You need to build a CLI app
-* You want to have powerful tools at your fingertips
-* And you don’t want to give up flexibility at the same time
 
 ## Supported Node.js Versions
 
