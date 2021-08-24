@@ -86,7 +86,7 @@ If you would like to help take a look at the [list of issues](https://github.com
 Credits
 -------------
 
-- [gluegun](https://github.com/infinitered/gluegun) - Many thanks for the ideas and docs.
+- [gluegun](https://github.com/infinitered/gluegun) - Thanks for the ideas and docs.
 - [Daniel Bannert](https://github.com/prisis)
 - [All Contributors](https://github.com/anolilab/cerebro/graphs/contributors)
 
