@@ -2,6 +2,18 @@
 
 Cerebro is a delightful toolkit for building Node-based command-line interfaces (CLIs) in TypeScript or modern JavaScript, with support for:
 
+---
+
+<div align="center">
+    <p>
+        <sup>
+            Daniel Bannert's open source work is supported by the community on <a href="https://github.com/sponsors/prisis">GitHub Sponsors</a>
+        </sup>
+    </p>
+</div>
+
+---
+
 *parameters* - command-line arguments and options
 
 *system* - executing other command-line scripts
@@ -74,6 +86,7 @@ If you would like to help take a look at the [list of issues](https://github.com
 Credits
 -------------
 
+- [gluegun](https://github.com/infinitered/gluegun) - Many thanks for the ideas and docs.
 - [Daniel Bannert](https://github.com/prisis)
 - [All Contributors](https://github.com/anolilab/cerebro/graphs/contributors)
 

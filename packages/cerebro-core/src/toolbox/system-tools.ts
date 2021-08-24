@@ -19,6 +19,7 @@ async function run(commandLine: string, options: IOptions = {}): Promise<any> {
     const trimmer = options && options.trim ? (s) => s.trim() : (s) => s;
     const { trim, ...nodeOptions } = options;
 
+    // eslint-disable-next-line compat/compat
     return new Promise((resolve, reject) => {
         childProcessExec(
             commandLine,
@@ -45,7 +46,9 @@ async function run(commandLine: string, options: IOptions = {}): Promise<any> {
  * @returns Promise with result.
  */
 async function exec(commandLine: string, options: IOptions = {}): Promise<any> {
+    // eslint-disable-next-line compat/compat
     return new Promise((resolve, reject) => {
+        // eslint-disable-next-line @typescript-eslint/naming-convention,no-underscore-dangle
         const arguments_ = commandLine.split(" ");
 
         execa(head(arguments_), tail(arguments_), options)
@@ -62,7 +65,9 @@ async function exec(commandLine: string, options: IOptions = {}): Promise<any> {
  * @returns The response code.
  */
 async function spawn(commandLine: string, options: IOptions = {}): Promise<any> {
+    // eslint-disable-next-line compat/compat
     return new Promise((resolve) => {
+        // eslint-disable-next-line @typescript-eslint/naming-convention,no-underscore-dangle
         const arguments_ = commandLine.split(" ");
         const spawned = crossSpawn(head(arguments_), tail(arguments_), options);
 
