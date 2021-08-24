@@ -11,7 +11,7 @@ import { head, isNil, tail } from "./utils.js";
 /**
  * Executes a commandline program asynchronously.
  *
- * @param commandLine The addCommand line to execute.
+ * @param commandLine The command line to execute.
  * @param options Additional child_process options for node.
  * @returns Promise with result.
  */
@@ -40,7 +40,7 @@ async function run(commandLine: string, options: IOptions = {}): Promise<any> {
 /**
  * Executes a commandline via execa.
  *
- * @param commandLine The addCommand line to execute.
+ * @param commandLine The command line to execute.
  * @param options Additional child_process options for node.
  * @returns Promise with result.
  */
@@ -57,7 +57,7 @@ async function exec(commandLine: string, options: IOptions = {}): Promise<any> {
 /**
  * Uses cross-spawn to execute a process.
  *
- * @param commandLine The addCommand line to execute.
+ * @param commandLine The command line to execute.
  * @param options Additional child_process options for node.
  * @returns The response code.
  */

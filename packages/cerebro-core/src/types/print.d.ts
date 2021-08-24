@@ -4,9 +4,6 @@ import CLITable from "cli-table3";
 import ora from "ora";
 import terminalLink from "terminal-link";
 
-import { Command as ICommand } from "./command";
-import { Toolbox as IToolbox } from "./toolbox";
-
 export type TableStyle = Partial<CLITable.TableInstanceOptions["style"]>;
 
 export interface PrintTableOptions {
@@ -57,8 +54,6 @@ export interface Print {
     table: (data: string[][], options?: PrintTableOptions) => void;
     /* An `ora`-powered spinner. */
     spin(options?: ora.Options | string): ora.Ora;
-    /* Prints help info, including version and commands. */
-    printHelp(toolbox: IToolbox, commands: Map<string, ICommand>, name?: string): void;
 
     link: typeof terminalLink;
 
@@ -72,7 +67,7 @@ export interface Print {
     /**
      * Console.log with some checks.
      *
-     * @param args
+     * @param arguments_
      */
     print(arguments_: any): void;
 

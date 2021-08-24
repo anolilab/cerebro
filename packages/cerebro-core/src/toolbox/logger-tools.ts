@@ -2,7 +2,7 @@ import chalk from "chalk";
 import stripAnsi from "strip-ansi";
 import windowSizeLib from "window-size";
 
-import { ConfigType, Logger as ILogger } from "../types";
+import { Logger as ILogger } from "../types";
 import Dumper, { dd, dump } from "./dumper-tools.js";
 import {
     print as printTools,
@@ -41,23 +41,6 @@ class LoggerTools implements ILogger {
     // eslint-disable-next-line class-methods-use-this
     public clear(): void {
         printTools.clear();
-    }
-
-    /**
-     *
-     *
-     * @param {*} [config={}]
-     * @return {*}
-     */
-    public print(config: Partial<ConfigType> = {}) {
-        const alertConfig = LoggerTools.validateConfig({
-            type: "info",
-            msg: "",
-            icon: false,
-            ...config,
-        });
-
-        return this[alertConfig.type](alertConfig.msg, alertConfig.label, alertConfig.icon);
     }
 
     // eslint-disable-next-line class-methods-use-this
@@ -328,15 +311,6 @@ class LoggerTools implements ILogger {
 
     private static getIcon(type: string): string {
         return icons[type];
-    }
-
-    private static validateConfig(config: Partial<ConfigType> = {}): ConfigType {
-        const finalConfig = Object.assign(config);
-
-        finalConfig.type = finalConfig.type === "" ? "info" : finalConfig.type;
-        finalConfig.label = config.label || "";
-
-        return finalConfig;
     }
 
     private static formatMessage(message: string | object): string {

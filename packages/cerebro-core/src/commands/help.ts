@@ -1,4 +1,5 @@
-import { Command as ICommand } from "../types";
+import type { Command as ICommand } from "../types";
+import printHelp from "../utils/print-help";
 
 class HelpCommand implements ICommand {
     public name = "help";
@@ -13,20 +14,20 @@ class HelpCommand implements ICommand {
 
     public usage = [];
 
-    private readonly commands: Map<String, ICommand>;
+    private readonly commands: Map<string, ICommand>;
 
-    constructor(commands: Map<String, ICommand>) {
+    constructor(commands: Map<string, ICommand>) {
         this.commands = commands;
     }
 
     public execute(toolbox) {
         const {
-            print, parameters, logger, runtime, meta,
+            parameters, logger, runtime, meta,
         } = toolbox;
 
         logger.info(`${runtime.getName()} ${meta.version()}`);
 
-        print.printHelp(toolbox, this.commands, parameters?.options?.command);
+        printHelp(toolbox, this.commands, parameters?.options?.command);
     }
 }
 

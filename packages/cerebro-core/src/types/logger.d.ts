@@ -1,9 +1,5 @@
-export type ConfigType = { type: string; msg: string; label: string; icon: boolean };
-
 export interface Logger {
     clear(): void;
-
-    print(config: Partial<ConfigType> = {});
 
     critical(message: any, label: string = "", showIcon: boolean = false): string;
 

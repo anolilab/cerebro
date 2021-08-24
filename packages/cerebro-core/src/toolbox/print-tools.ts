@@ -1,20 +1,14 @@
 import chalk from "chalk";
 import chalkAnimation from "chalk-animation";
 import CliTable from "cli-table3";
-import commandLineUsage, { Section } from "command-line-usage";
 import ora from "ora";
 import terminalLink from "terminal-link";
 import windowSize from "window-size";
 
-import defaultArguments from "../default-arguments.js";
-import findAlternatives from "../domain/levenstein.js";
-import Toolbox from "../domain/toolbox.js";
 import {
-    Cli as ICli,
-    Command as ICommand,
-    Logger as ILogger,
     Print as IPrint,
     PrintTableOptions as IPrintTableOptions,
+    TableStyle,
 } from "../types";
 import { times } from "./utils.js";
 
@@ -89,13 +83,30 @@ function findWidths(ctable: CliTable.Table): number[] {
 }
 
 /**
- * Returns an array of column dividers based on column widths.
+ * Returns an array of column dividers based on column widths, taking possible
+ * paddings into account.
  *
  * @param ctable Data table.
  * @returns Array of properly sized column dividers.
  */
-function columnHeaderDivider(ctable: CliTable.Table): string[] {
-    return findWidths(ctable).map((w) => Array.from({ length: w }).join("-"));
+function columnHeaderDivider(ctable: CliTable.Table, style: TableStyle = {}): string[] {
+    const padding = (style["padding-left"] || 0) + (style["padding-right"] || 0);
+
+    return findWidths(ctable).map((w) => new Array(w + padding).join("-"));
+}
+
+/**
+ * Resets the padding of a table.
+ *
+ * @param cliTable Data table.
+ */
+function resetTablePadding(cliTable: CliTable.Table) {
+    const { style } = (cliTable as any).options;
+
+    if (style) {
+        style["padding-left"] = 1;
+        style["padding-right"] = 1;
+    }
 }
 
 /**
@@ -108,19 +119,22 @@ function table(data: string[][], options: IPrintTableOptions = {}): void {
         const markdownTable = new CliTable({
             head: header,
             chars: CLI_TABLE_MARKDOWN,
+            style: options.style,
         });
         markdownTable.push(...data);
-        markdownTable.unshift(columnHeaderDivider(markdownTable));
+        markdownTable.unshift(columnHeaderDivider(markdownTable, options.style));
+        resetTablePadding(markdownTable);
 
         console.log(markdownTable.toString());
     } else if (options.format === "lean") {
-        const leanTable = new CliTable();
+        const leanTable = new CliTable({ style: options.style });
         leanTable.push(...data);
 
         console.log(leanTable.toString());
     } else {
         const defaultTable = new CliTable({
             chars: CLI_TABLE_COMPACT,
+            style: options.style,
         });
         defaultTable.push(...data);
 
@@ -138,94 +152,6 @@ function spin(config?: string | object): any {
     return ora(config || "").start();
 }
 
-function printGeneralHelp(logger: ILogger, runtime: ICli, print: IPrint, commands: Map<string, ICommand>) {
-    logger.debug("no command given, printing general help...");
-
-    logger.log(
-        commandLineUsage([
-            {
-                header: "Usage",
-                content: `${print.colors.cyan(runtime.getName())} ${print.colors.green(
-                    "<command>",
-                )} [arguments] [options]`,
-            },
-            {
-                header: "Available Commands",
-                content: [...new Set(commands.values())].filter((command) => !command.hidden).map((command) => {
-                    let aliases = "";
-
-                    if (typeof command.alias === "string") {
-                        aliases = command.alias;
-                    } else if (Array.isArray(command.alias)) {
-                        aliases = command.alias.join(", ");
-                    }
-
-                    if (aliases !== "") {
-                        aliases = ` [${aliases}]`;
-                    }
-
-                    return { name: print.colors.green(command.name) + aliases, summary: command.description };
-                }),
-            },
-            { header: "Global Options", optionList: defaultArguments },
-            {
-                content: `Run "${runtime.getName()} help <command>" or "${runtime.getName()} <command> --help" for help with a specific command.`,
-                raw: true,
-            },
-        ]),
-    );
-}
-
-function printHelp(toolbox: Toolbox, commands: Map<string, ICommand>, name?: string): void {
-    const { runtime, logger, print } = toolbox;
-
-    if (name) {
-        const command = commands.get(name) as ICommand;
-
-        if (!command) {
-            let alternatives = "";
-
-            const foundAlternatives = findAlternatives(name, [...commands.keys()]);
-
-            if (foundAlternatives.length > 0) {
-                alternatives = ` Did you mean: \r\n    - ${foundAlternatives.join("    \r\n- ")}`;
-            }
-
-            logger.error(`\r\n"${name}" is not an available command.${alternatives}\r\n`);
-
-            return;
-        }
-
-        newline();
-        logger.info(command.name);
-        logger.log(command.description);
-
-        const usageGroups: Section[] = [];
-
-        if (command.args.length > 0) {
-            usageGroups.push({ header: "Command Options", optionList: command.args });
-        }
-
-        usageGroups.push({ header: "Global Options", optionList: defaultArguments });
-
-        if (typeof command.alias !== "undefined" && command.alias.length > 0) {
-            let alias: string[] = command.alias as string[];
-
-            if (typeof command.alias === "string") {
-                alias = [command.alias];
-            }
-
-            usageGroups.splice(1, 0, {
-                header: "Alias(es)",
-                content: alias,
-            });
-        }
-
-        logger.log(commandLineUsage(usageGroups));
-    } else {
-        printGeneralHelp(logger, runtime, print, commands);
-    }
-}
 const windows = process.platform.indexOf("win") === 0;
 
 function clear() {
@@ -337,7 +263,6 @@ export const print: IPrint = {
     columnHeaderDivider,
     table,
     spin,
-    printHelp,
     checkmark,
     xmark,
     link: terminalLink,

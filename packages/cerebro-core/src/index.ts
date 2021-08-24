@@ -71,7 +71,6 @@ export type {
     PackageJSON,
     Logger,
     Loader,
-    ConfigType,
     Extension,
     ExtensionSetup,
     ExtensionOverrides,
