@@ -12,11 +12,12 @@ on: # yamllint disable-line rule:truthy
 
 jobs:
     semantic-release:
-        name: "Semantic Release"
+        name: "Markdown lint"
 
         runs-on: "ubuntu-latest"
 
         steps:
+            - name: "Git checkout"
             - uses: "actions/checkout@v2"
               with:
                   fetch-depth: 0
