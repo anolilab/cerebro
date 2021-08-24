@@ -10,7 +10,7 @@ Cerebro is a delightful toolkit for building Node-based command-line interfaces 
 
 *print* - printing colors and tables
 
-> Note: In addition, `cerebro` supports expanding your CLI’s ecosystem with a robust set of easy-to-write plugins and extensions.
+> Note: in addition, `cerebro` supports expanding your CLI’s ecosystem with a robust set of plugins and extensions.
 
 ### Addition extensions
 
@@ -18,7 +18,7 @@ Cerebro is a delightful toolkit for building Node-based command-line interfaces 
 
 [*http* - interacting with API servers](./packages/cerebro-http-extension)
 
-[*notify* - send cross platform native notifications](./packages/cerebro-notify-extension)
+[*notify* - send cross-platform native notifications](./packages/cerebro-notify-extension)
 
 [*packageManager* - installing NPM packages with Yarn or NPM](./packages/cerebro-package-manager-extension)
 
@@ -30,15 +30,13 @@ Cerebro is a delightful toolkit for building Node-based command-line interfaces 
 
 [*template* - generating files from templates](./packages/cerebro-template-extension)
 
-# Why use cerebro?
+# Why to use cerebro
 
 You want to use cerebro if:
 
 * You need to build a CLI app
 * You want to have powerful tools at your fingertips
 * And you don’t want to give up flexibility at the same time
-
-If so ... Welcome!
 
 ## Supported Node.js Versions
 
@@ -52,19 +50,19 @@ post on why we think this is important](https://medium.com/the-node-js-collectio
 
 [@anolilab/cerebro-filesystem-extension](./packages/cerebro-filesystem-extension)
 
-[@anolilab/cerebro-semver-extension](./packages/cerebro-semver-extension)
-
-[@anolilab/cerebro-strings-extension](./packages/cerebro-strings-extension)
+[@anolilab/cerebro-http-extension](./packages/cerebro-http-extension)
 
 [@anolilab/cerebro-notify-extension](./packages/cerebro-notify-extension)
 
 [@anolilab/cerebro-package-manager-extension](./packages/cerebro-package-manager-extension)
 
-[@anolilab/cerebro-http-extension](./packages/cerebro-http-extension)
+[@anolilab/cerebro-patching-extension](./packages/cerebro-patching-extension)
+
+[@anolilab/cerebro-semver-extension](./packages/cerebro-semver-extension)
+
+[@anolilab/cerebro-strings-extension](./packages/cerebro-strings-extension)
 
 [@anolilab/cerebro-template-extension](./packages/cerebro-template-extension)
-
-[@anolilab/cerebro-patching-extension](./packages/cerebro-patching-extension)
 
 Contributing
 ------------
