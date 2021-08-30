@@ -61,3 +61,14 @@ jobs:
                   GITHUB_TOKEN: "${{ secrets.SEMANTIC_RELEASE_GITHUB_TOKEN }}"
                   NPM_TOKEN: "${{ secrets.NPM_AUTH_TOKEN }}"
               run: "yarn run multi-semantic-release"
+
+            - name: "Update yarn.lock"
+              run: "yarn install"
+
+            - name: "Commit modified files"
+              uses: "stefanzweifel/git-auto-commit-action@v4.11.0"
+              with:
+                  commit_author: "prisis <d.bannert@anolilab.de>"
+                  commit_message: "chore: updated yarn.lock"
+                  commit_user_email: "d.bannert@anolilab.de"
+                  commit_user_name: "prisis"
