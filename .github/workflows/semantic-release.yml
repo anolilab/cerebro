@@ -36,14 +36,6 @@ jobs:
               with:
                   node-version: "^12.6.8"
 
-            - name: "set git credentials"
-              run: |
-                  git config --local user.email "d.bannert@anolilab.de"
-                  git config --local user.name "Daniel Bannert"
-
-            - name: "update yarn"
-              run: "yarn set version latest"
-
             - name: "Get yarn cache directory path"
               id: "yarn-cache-dir-path"
               run: "echo \"::set-output name=dir::$(yarn config get cacheFolder)\""
@@ -82,3 +74,54 @@ jobs:
               with:
                   commit_message: "chore: updated yarn.lock"
                   branch: "${{ steps.branch.outputs.name }}"
+
+    yarn-lock-update:
+        name: "yarn.lock update"
+
+        runs-on: "ubuntu-latest"
+
+        needs: ["semantic-release"]
+
+        steps:
+            -   name: "Git checkout"
+                uses: "actions/checkout@v2"
+                with:
+                    fetch-depth: 2
+                    token: "${{ secrets.SEMANTIC_RELEASE_GITHUB_TOKEN }}"
+                    ref: "${{ github.head_ref }}"
+                env:
+                    GIT_COMMITTER_NAME: "GitHub Actions Shell"
+                    GIT_AUTHOR_NAME: "GitHub Actions Shell"
+                    EMAIL: "github-actions[bot]@users.noreply.github.com"
+
+            - name: "Use Node.js 12.x"
+              uses: "actions/setup-node@v2"
+              with:
+                  node-version: "^12.6.8"
+
+            - name: "Update yarn"
+              run: "yarn set version latest"
+
+            - name: "Get yarn cache directory path"
+              id: "yarn-cache-dir-path"
+              run: "echo \"::set-output name=dir::$(yarn config get cacheFolder)\""
+
+            - uses: "actions/cache@v2"
+              id: "yarn-cache" # use this to check for `cache-hit` (`steps.yarn-cache.outputs.cache-hit != 'true'`)
+              with:
+                  path: "${{ steps.yarn-cache-dir-path.outputs.dir }}"
+                  key: "${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}"
+                  restore-keys: |
+                      ${{ runner.os }}-yarn-
+
+            - name: "Update yarn.lock"
+              run: "yarn install"
+
+            - name: "Commit modified files"
+              uses: "stefanzweifel/git-auto-commit-action@v4.11.0"
+              with:
+                  commit_message: "chore: updated yarn.lock"
+                  commit_author: "prisis <d.bannert@anolilab.de>"
+                  commit_user_email: "d.bannert@anolilab.de"
+                  commit_user_name: "prisis"
+                  branch: "${{ github.head_ref }}"
