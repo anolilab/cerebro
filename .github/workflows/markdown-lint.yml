@@ -28,14 +28,6 @@ jobs:
               with:
                   node-version: "^12.6.8"
 
-            - name: "set git credentials"
-              run: |
-                  git config --local user.email "d.bannert@anolilab.de"
-                  git config --local user.name "Daniel Bannert"
-
-            - name: "update yarn"
-              run: "yarn set version latest"
-
             - name: "Get yarn cache directory path"
               id: "yarn-cache-dir-path"
               run: "echo \"::set-output name=dir::$(yarn config get cacheFolder)\""
@@ -49,7 +41,7 @@ jobs:
                       ${{ runner.os }}-yarn-
 
             - name: "install"
-              run: "yarn install --immutable"
+              run: "yarn install --immutable --immutable-cache --check-cache"
 
             - name: "lint"
               run: "yarn lint:text"
