@@ -21,33 +21,75 @@
         "name": "Daniel Bannert",
         "email": "d.bannert@anolilab.de"
     },
+    "sideEffects": false,
     "type": "module",
     "exports": {
         ".": {
-            "import": "./dist/anolilab-cerebro-template-extension.esm.js",
-            "require": "./dist/anolilab-cerebro-template-extension.cjs.js"
+            "types": "./dist/index.d.ts",
+            "import": "./dist/index.js"
         },
         "./package.json": "./package.json"
     },
-    "main": "dist/anolilab-cerebro-template-extension.cjs.js",
-    "module": "dist/anolilab-cerebro-template-extension.esm.js",
-    "types": "dist/anolilab-cerebro-template-extension.cjs.d.ts",
+    "main": "dist/index.js",
+    "module": "dist/index.js",
+    "source": "src/index.ts",
+    "types": "dist/index.d.ts",
     "files": [
-        "dist",
+        "dist/**",
         "README.md",
         "CHANGELOG.md",
         "LICENSE.md"
     ],
+    "scripts": {
+        "build": "cross-env NODE_ENV=development tsup",
+        "build:prod": "cross-env NODE_ENV=production tsup",
+        "clean": "rimraf node_modules dist",
+        "coverage": "vitest run --coverage",
+        "dev": "pnpm predev && pnpm run build --watch",
+        "lint:eslint": "cross-env NO_LOGS=true eslint --ext js,jsx,ts,tsx --max-warnings=0 --config .eslintrc.cjs --cache --cache-strategy content .",
+        "lint:eslint:fix": "pnpm run lint:eslint --fix",
+        "test": "vitest"
+    },
     "dependencies": {
         "@anolilab/cerebro-filesystem-extension": "1.0.0-alpha.10",
         "@anolilab/cerebro-strings-extension": "1.0.0-alpha.10",
-        "@babel/runtime": "^7.15.3",
-        "@types/ejs": "^3.0.7",
-        "ejs": "^3.1.6"
+        "@babel/runtime": "^7.19.0",
+        "@types/ejs": "^3.1.1",
+        "ejs": "^3.1.8"
     },
     "devDependencies": {
         "@anolilab/cerebro-core": "1.0.0-alpha.11",
-        "typescript": "^4.3.5"
+        "@anolilab/eslint-config": "^4.0.9",
+        "@anolilab/semantic-release-preset": "^2.0.7",
+        "@rushstack/eslint-plugin-security": "^0.4.0",
+        "@typescript-eslint/eslint-plugin": "^5.36.1",
+        "@typescript-eslint/parser": "^5.36.1",
+        "c8": "^7.12.0",
+        "cross-env": "^7.0.3",
+        "eslint": "^8.22.0",
+        "eslint-plugin-compat": "^4.0.2",
+        "eslint-plugin-eslint-comments": "^3.2.0",
+        "eslint-plugin-import": "^2.26.0",
+        "eslint-plugin-json": "^3.1.0",
+        "eslint-plugin-jsx-a11y": "^6.6.1",
+        "eslint-plugin-markdown": "^3.0.0",
+        "eslint-plugin-material-ui": "^1.0.1",
+        "eslint-plugin-no-loops": "^0.3.0",
+        "eslint-plugin-no-secrets": "^0.8.9",
+        "eslint-plugin-node": "^11.1.0",
+        "eslint-plugin-optimize-regex": "^1.2.1",
+        "eslint-plugin-promise": "^6.0.1",
+        "eslint-plugin-radar": "^0.2.1",
+        "eslint-plugin-simple-import-sort": "^8.0.0",
+        "eslint-plugin-sort-keys-fix": "^1.1.2",
+        "eslint-plugin-testing-library": "^5.6.1",
+        "eslint-plugin-unicorn": "^43.0.2",
+        "eslint-plugin-you-dont-need-lodash-underscore": "^6.12.0",
+        "eslint-plugin-you-dont-need-momentjs": "^1.6.0",
+        "semantic-release": "^19.0.5",
+        "tsup": "^6.2.3",
+        "typescript": "^4.8.4",
+        "vitest": "^0.23.1"
     },
     "peerDependencies": {
         "@anolilab/cerebro-core": "1.0.0-alpha.11"

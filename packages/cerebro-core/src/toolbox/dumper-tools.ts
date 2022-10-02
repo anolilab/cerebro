@@ -53,10 +53,10 @@ class Dumper {
 
         // For each key of the object, keep
         // preparing the inspection output
-        for (const itemKey in toDump) {
+        Object.keys(toDump).forEach((itemKey) => {
             if (!Object.prototype.hasOwnProperty.call(toDump, itemKey)) {
                 // eslint-disable-next-line no-continue
-                continue;
+                return;
             }
 
             const originalValue = toDump[itemKey];
@@ -64,7 +64,7 @@ class Dumper {
             const valueDump = this.prepareValueDump(indent, originalValue);
 
             output += this.makeArrowString(originalParameterType, indent, itemKey, valueDump);
-        }
+        });
 
         return startWith + output + endWith;
     }
@@ -157,12 +157,14 @@ class Dumper {
 
     private incrementDepth() {
         if (this.depth) {
+            // eslint-disable-next-line no-plusplus
             this.currentDepth++;
         }
     }
 
     private decrementDepth() {
         if (this.depth) {
+            // eslint-disable-next-line no-plusplus
             this.currentDepth--;
         }
     }
@@ -173,7 +175,9 @@ function dump(object: any) {
     const caller = callerId.getData();
 
     // Print the file path, line number and generated dump
+    // eslint-disable-next-line no-console
     console.log(`${caller.filePath}:${caller.lineNumber}:`);
+    // eslint-disable-next-line no-console
     console.log(dumper.generateDump(object));
 }
 
@@ -182,9 +186,12 @@ function dd(object: any) {
     const caller = callerId.getData();
 
     // Print the file path, line number and generated dump
+    // eslint-disable-next-line no-console
     console.log(`${caller.filePath}:${caller.lineNumber}:`);
+    // eslint-disable-next-line no-console
     console.log(dumper.generateDump(object));
 
+    // eslint-disable-next-line unicorn/no-process-exit
     process.exit(0);
 }
 

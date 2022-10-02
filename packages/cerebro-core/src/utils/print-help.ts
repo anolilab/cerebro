@@ -3,7 +3,7 @@ import commandLineUsage, { Section } from "command-line-usage";
 import defaultArguments from "../default-arguments";
 import findAlternatives from "../domain/levenstein";
 import type {
-    Cli as ICli, Command as ICommand, Logger as ILogger, Print as IPrint, Toolbox as IToolbox
+    Cli as ICli, Command as ICommand, Logger as ILogger, Print as IPrint, Toolbox as IToolbox,
 } from "../types";
 
 function printGeneralHelp(logger: ILogger, runtime: ICli, print: IPrint, commands: Map<string, ICommand>) {

@@ -1,6 +1,7 @@
-import expect from "expect";
+import { describe, expect, it } from "vitest";
 import { platform } from "os";
-import { Toolbox } from "../../src/domain/toolbox";
+
+import Toolbox from "../../src/domain/toolbox";
 import create from "../../src/extensions/system-extension";
 
 const delay = (ms) => new Promise((resolve) => setTimeout(resolve, ms));

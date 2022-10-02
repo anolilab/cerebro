@@ -51,8 +51,8 @@ class LoggerTools implements ILogger {
 
         const label = label_ ? ` ${label_} ` : "";
         const icon = showIcon ? `${LoggerTools.getIcon("critical")}  ` : "";
-        const output = `${chalk.bgKeyword("orangered").black(label)}${label ? " " : ""}${icon}${chalk.keyword(
-            "orangered",
+        const output = `${chalk.bgHex("#ff4500").black(label)}${label ? " " : ""}${icon}${chalk.hex(
+            "#ff4500",
         )(LoggerTools.formatMessage(message_))}`;
 
         printTools.print(output);
@@ -156,7 +156,7 @@ class LoggerTools implements ILogger {
         const icon = showIcon ? `${LoggerTools.getIcon("debug")} ` : "";
         const message = LoggerTools.formatMessage(message_);
 
-        const output = `${chalk.bgKeyword("darkgray").black(label)}${label ? " " : ""}${chalk.gray(icon + message)}`;
+        const output = `${chalk.bgHex("#a9a9a9").black(label)}${label ? " " : ""}${chalk.gray(icon + message)}`;
 
         printTools.print(output);
 
@@ -218,7 +218,7 @@ class LoggerTools implements ILogger {
         const label = label_ ? ` ${label_} ` : "";
         const icon = showIcon ? `${LoggerTools.getIcon("note")} ` : "";
         const message = LoggerTools.formatMessage(message_);
-        const output = `${chalk.bgKeyword("orange").black(label)}${label ? " " : ""}${chalk.keyword("orange")(
+        const output = `${chalk.bgHex("#FFA500").black(label)}${label ? " " : ""}${chalk.hex("#FFA500")(
             icon + message,
         )}`;
 
@@ -229,6 +229,7 @@ class LoggerTools implements ILogger {
 
     // eslint-disable-next-line class-methods-use-this
     public processing(message: string): void {
+        // eslint-disable-next-line no-console
         console.log(chalk.yellow(message));
     }
 

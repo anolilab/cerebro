@@ -1,4 +1,5 @@
-import expect from "expect";
+import { describe, expect, it } from "vitest";
+
 import { loadCommandFromFile } from "../../src/loaders/command-loader";
 
 test("loading from a missing file", async () => {

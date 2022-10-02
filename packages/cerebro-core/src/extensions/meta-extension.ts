@@ -1,4 +1,6 @@
-import { checkForUpdate, getPackageJSON, getVersion } from "../toolbox/meta-tools.js";
+import {
+    checkForUpdate, getPackageJSON, getVersion, onAbort,
+} from "../toolbox/meta-tools.js";
 import { Extension as IExtension, Meta as IMeta, Toolbox as IToolbox } from "../types";
 
 /**
@@ -9,10 +11,12 @@ import { Extension as IExtension, Meta as IMeta, Toolbox as IToolbox } from "../
 export default {
     name: "meta",
     execute: (toolbox: IToolbox): void => {
+        // eslint-disable-next-line no-param-reassign
         toolbox.meta = {
             version: () => getVersion(toolbox),
             packageJSON: () => getPackageJSON(toolbox),
             checkForUpdate: () => checkForUpdate(toolbox),
+            onAbort,
         } as IMeta;
     },
 } as IExtension;

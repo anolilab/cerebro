@@ -1,22 +1,24 @@
-import expect from "expect";
-import { Toolbox } from "../../src/domain/toolbox";
-import { Runtime } from "../../src/runtime/runtime";
+import { describe, expect, it } from "vitest";
+import Toolbox from "../../src/domain/toolbox";
+import Runtime from "../../src/runtime/runtime";
 import createExtension from "../../src/extensions/meta-extension";
-import { Meta as IMeta } from "../../src/types";
+import { Meta as IMeta } from "../../src/types/types";
 
-test("has the proper interface", () => {
-    const toolbox = new Toolbox();
-    const fakeRuntime = { plugin: { directory: "/the/path" } } as Runtime;
+describe("extensions meta extension", () => {
+    it("has the proper interface", () => {
+        const toolbox = new Toolbox();
+        const fakeRuntime = { plugin: { directory: "/the/path" } } as Runtime;
 
-    toolbox.runtime = fakeRuntime;
+        toolbox.runtime = fakeRuntime;
 
-    createExtension(toolbox);
+        createExtension(toolbox);
 
-    const ext = toolbox.meta as IMeta;
+        const ext = toolbox.meta as IMeta;
 
-    expect(ext).toBeTruthy();
-    expect(ext.src).toEqual("/the/path");
-    expect(typeof ext.version).toBe("function");
-    expect(typeof ext.commandInfo).toBe("function");
-    expect(typeof ext.checkForUpdate).toBe("function");
+        expect(ext).toBeTruthy();
+        expect(ext.src).toEqual("/the/path");
+        expect(typeof ext.version).toBe("function");
+        expect(typeof ext.commandInfo).toBe("function");
+        expect(typeof ext.checkForUpdate).toBe("function");
+    });
 });

@@ -1,5 +1,5 @@
 # Cerebro package manager extension
-Installing NPM packages with Yarn or NPM
+Installing NPM packages with PNPM, Yarn or NPM
 
 ---
 

@@ -1,4 +1,5 @@
-import expect from "expect";
+import { describe, expect, it } from "vitest";
+
 import { Runtime } from "../../src/runtime/runtime";
 
 const BAD_PLUGIN_PATH = `${__dirname}/../fixtures/does-not-exist`;

@@ -67,13 +67,15 @@ export async function exists(filename: string, findPattern: string | RegExp): Pr
     const contents = filesystem.read(filename);
 
     // only let the strings pass
-    if (!is(String, contents)) return false;
+    if (!is(String, contents)) {
+        return false;
+    }
 
     // do the appropriate check
-    return isPatternIncluded(contents, findPattern);
+    return isPatternIncluded(contents as string, findPattern);
 }
 
-export async function readFile(filename: string): Promise<string> {
+export async function readFile(filename: string): Promise<string | undefined> {
     // bomb if the file doesn't exist
     if (!filesystem.isFile(filename)) throw new Error(`file not found ${filename}`);
 
@@ -97,8 +99,12 @@ export async function update(
 ): Promise<string | object | false> {
     const contents = await readFile(filename);
 
+    if (!is(String, contents)) {
+        return false;
+    }
+
     // let the caller mutate the contents in memory
-    const mutatedContents = callback(contents);
+    const mutatedContents = callback(contents as string);
 
     // only write if they actually sent back something to write
     if (mutatedContents !== false) {

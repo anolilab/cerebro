@@ -1,4 +1,5 @@
-import expect from "expect";
+import { describe, expect, it } from "vitest";
+
 import { print } from "../../src/toolbox/print-tools";
 import stripANSI from "strip-ansi";
 

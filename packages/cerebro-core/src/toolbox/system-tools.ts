@@ -1,12 +1,14 @@
-import { exec as childProcessExec, ExecException } from "child_process";
 import crossSpawn from "cross-spawn";
-import execa from "execa";
+import type { Options } from "execa";
+import { execa } from "execa";
+import type { ExecOptions } from "node:child_process";
+import { exec as childProcessExec, ExecException } from "node:child_process";
 import whichlib from "which";
 
 import {
     CerebroError, Options as IOptions, StringOrBuffer as IStringOrBuffer, System as ISystem,
 } from "../types";
-import { head, isNil, tail } from "./utils.js";
+import { head, isNil, tail } from "./utils";
 
 /**
  * Executes a commandline program asynchronously.
@@ -15,7 +17,7 @@ import { head, isNil, tail } from "./utils.js";
  * @param options Additional child_process options for node.
  * @returns Promise with result.
  */
-async function run(commandLine: string, options: IOptions = {}): Promise<any> {
+async function run(commandLine: string, options: IOptions & ExecOptions = {}): Promise<any> {
     const trimmer = options && options.trim ? (s) => s.trim() : (s) => s;
     const { trim, ...nodeOptions } = options;
 
@@ -24,9 +26,12 @@ async function run(commandLine: string, options: IOptions = {}): Promise<any> {
         childProcessExec(
             commandLine,
             nodeOptions,
+            // eslint-disable-next-line consistent-return
             (error: ExecException | null, stdout: IStringOrBuffer, stderr: IStringOrBuffer) => {
                 if (error) {
+                    // eslint-disable-next-line no-param-reassign
                     (error as CerebroError).stdout = stdout;
+                    // eslint-disable-next-line no-param-reassign
                     (error as CerebroError).stderr = stderr;
 
                     return reject(error);
@@ -45,7 +50,7 @@ async function run(commandLine: string, options: IOptions = {}): Promise<any> {
  * @param options Additional child_process options for node.
  * @returns Promise with result.
  */
-async function exec(commandLine: string, options: IOptions = {}): Promise<any> {
+async function exec(commandLine: string, options: IOptions & Options = {}): Promise<any> {
     // eslint-disable-next-line compat/compat
     return new Promise((resolve, reject) => {
         // eslint-disable-next-line @typescript-eslint/naming-convention,no-underscore-dangle

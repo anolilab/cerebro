@@ -4,19 +4,29 @@
         "target": "es2019",
         "module": "ESNext",
 
+        "removeComments": true,
         "incremental": true,
+        "tsBuildInfoFile": ".tsbuildinfo",
+
         "moduleResolution": "node",
+        "isolatedModules": true,
+        "strictFunctionTypes": true,
+        "useUnknownInCatchVariables": true,
+        "stripInternal": true,
         "experimentalDecorators": true,
         "emitDecoratorMetadata": true,
         "noImplicitAny": false,
         "noImplicitThis": true,
         "inlineSourceMap": true,
         "strict": true /* Enable all strict type-checking options. */,
+        "alwaysStrict": true,
         "allowUnreachableCode": false,
         "forceConsistentCasingInFileNames": true,
+        "inlineSources": false,
         "preserveConstEnums": true,
         // Emits types for others to consume
         "declaration": true,
+        "allowJs": true,
         "skipLibCheck": true,
         "importHelpers": true,
 
@@ -25,6 +35,7 @@
         "noUnusedParameters": true /* Report errors on unused parameters. */,
         "noImplicitReturns": true /* Report error when not all code paths in function return a value. */,
         "noFallthroughCasesInSwitch": true /* Report errors for fallthrough cases in switch statement. */,
+        "noUncheckedIndexedAccess": true,
 
         /* Debugging Options */
         "traceResolution": false /* Report module resolution log messages. */,
@@ -35,7 +46,8 @@
         "types": ["node"],
 
         "allowSyntheticDefaultImports": true,
-        "esModuleInterop": false
+        "esModuleInterop": true,
+        "resolveJsonModule": true,
     },
     "include": ["packages/**/*.ts", "packages/**/__tests__**/*.test.ts"],
     "exclude": ["node_modules/**", "node_modules/@types/**", "dist", "packages/**/fixtures/**", "packages/**/__tests__/**", "packages/**/*.test.ts"],

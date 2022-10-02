@@ -9,6 +9,7 @@ import { Extension as IExtension, Toolbox as IToolbox } from "../types";
 export default {
     name: "system",
     execute: (toolbox: IToolbox) => {
+        // eslint-disable-next-line no-param-reassign
         toolbox.system = system;
     },
 } as IExtension;

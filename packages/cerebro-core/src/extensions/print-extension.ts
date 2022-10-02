@@ -10,6 +10,7 @@ export default {
     name: "print",
     execute: (toolbox: IToolbox): void => {
         // attach the feature set
+        // eslint-disable-next-line no-param-reassign
         toolbox.print = print;
     },
 } as IExtension;

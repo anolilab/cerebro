@@ -60,7 +60,7 @@ export type {
     Parameters,
     Timer,
     System,
-    Cli,
+    Cli as CliTypes,
     Toolbox,
     EmptyToolbox,
     StringOrBuffer,

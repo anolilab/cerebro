@@ -1,5 +1,5 @@
 import jetpack from "fs-jetpack";
-import path from "path";
+import path from "node:path";
 
 import EmptyToolbox from "../domain/empty-toolbox.js";
 import { Extension } from "../domain/extension.js";
@@ -88,7 +88,5 @@ export class ExtensionLoader implements Loader {
 
             cli.addExtension(extension);
         });
-
-        return Promise.resolve();
     }
 }

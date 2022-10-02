@@ -1,5 +1,6 @@
-import expect from "expect";
-import { Toolbox } from "../../src/domain/toolbox";
+import { describe, expect, it } from "vitest";
+
+import Toolbox from "../../src/domain/toolbox";
 import printExtension from "../../src/extensions/print-extension";
 
 const toolbox = new Toolbox();

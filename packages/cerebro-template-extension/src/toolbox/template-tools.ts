@@ -51,8 +51,12 @@ const buildGenerate = (t: IToolbox) => {
         // read the template
         const templateContent = filesystem.read(pathToTemplate);
 
+        if (!templateContent) {
+            throw new Error(`template not found ${pathToTemplate}`);
+        }
+
         // render the template
-        const content = ejs.render(templateContent, data);
+        const content = ejs.render(templateContent as string, data);
 
         // save it to the file system
         if (!isBlank(target)) {

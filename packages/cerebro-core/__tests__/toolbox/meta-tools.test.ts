@@ -1,7 +1,8 @@
-import expect from "expect";
-import { Command } from "../../src/domain/command";
+import { describe, expect, it } from "vitest";
+
+import Command from "../../src/domain/command";
 import { Plugin } from "../../src/domain/plugin";
-import { Toolbox } from "../../src/domain/toolbox";
+import Toolbox from "../../src/domain/toolbox";
 import { Runtime } from "../../src/runtime/runtime";
 import { commandInfo } from "../../src/toolbox/meta-tools";
 

@@ -1,5 +1,5 @@
 import jetpack from "fs-jetpack";
-import pathlib from "path";
+import pathlib from "node:path";
 
 import Command from "../domain/command.js";
 import {
@@ -20,6 +20,7 @@ type IOptions = {
  * Loads the command from the given file.
  *
  * @param file The full path to the file to load.
+ * @param options
  *
  * @return The loaded command.
  */
@@ -40,10 +41,11 @@ export async function loadCommandFromFile(file: string, options?: IOptions): Pro
     command.file = file;
     // default name is the name without the file extension
 
+    // eslint-disable-next-line prefer-destructuring
     command.name = (jetpack.inspect(file) as any).name.split(".")[0];
 
     // strip the extension from the end of the commandPath
-    command.commandPath = (options?.commandPath || last(file.split(`commands${pathlib.sep}`)).split(pathlib.sep)).map(
+    command.commandPath = (options?.commandPath || (last(file.split(`commands${pathlib.sep}`)) as string).split(pathlib.sep)).map(
         (f) => ([`${command.name}.js`, `${command.name}.mjs`, `${command.name}.cjs`].includes(f) ? command.name : f),
     );
 
@@ -107,7 +109,5 @@ export class CommandLoader implements Loader {
 
             cli.addCommand(command);
         });
-
-        return Promise.resolve();
     }
 }

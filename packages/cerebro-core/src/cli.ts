@@ -124,6 +124,7 @@ class Cli implements ICli {
         this.addExtension({
             name: "logger",
             execute: (toolbox: IToolbox) => {
+                // eslint-disable-next-line no-param-reassign
                 toolbox.logger = this.logger;
             },
         } as IExtension);
@@ -164,7 +165,7 @@ class Cli implements ICli {
                     aliases = [command.alias];
                 }
 
-                for (const alias of aliases) {
+                aliases.forEach((alias) => {
                     this.logger.debug("adding alias", alias);
 
                     if (this.commands.has(alias)) {
@@ -172,7 +173,7 @@ class Cli implements ICli {
                     } else {
                         this.commands.set(alias, command);
                     }
-                }
+                });
             }
         } else {
             this.logger.warning(`Ignored command with name "${command.name}, it was found in the command list."`);
@@ -246,7 +247,7 @@ class Cli implements ICli {
 
         try {
             parsedArguments = commandLineCommands([null, ...commandNames], parseRawCommand(this.argv));
-        } catch (error) {
+        } catch (error: any) {
             // CLI needs a valid command name to do anything. If the given
             // command is invalid, run the generalized help command with default
             // config. This should print the general usage information.
@@ -302,6 +303,7 @@ class Cli implements ICli {
 
             extension.execute(toolbox);
 
+            // eslint-disable-next-line compat/compat
             return Promise.resolve(null);
         });
 
@@ -327,6 +329,7 @@ class Cli implements ICli {
         toolbox.result = await this.prepareToolboxResult(commandOptions, toolbox as IToolbox, command);
 
         // recast it
+        // eslint-disable-next-line consistent-return
         return toolbox as IToolbox;
     }
 
@@ -393,6 +396,7 @@ class Cli implements ICli {
                     updateAvailable,
                 )} \nRun ${print.colors.cyan(installCommand)} to update`;
 
+                // eslint-disable-next-line no-console
                 console.error(
                     boxen(template, {
                         padding: 1,
@@ -414,6 +418,7 @@ class Cli implements ICli {
      */
     // tslint:disable-next-line: no-any Super hacky scary code.
     private static parseCLIArgs(commandOptions: any): { [name: string]: string } {
+        // eslint-disable-next-line no-param-reassign,no-underscore-dangle
         commandOptions = commandOptions && commandOptions._all;
 
         const parsedOptions = { ...commandOptions };
@@ -443,9 +448,12 @@ class Cli implements ICli {
         const major = Number(process.version.match(/v([^.]+)/)![1]);
 
         if (major < minNodeVersion) {
+            // eslint-disable-next-line no-console
             console.log(
+                // eslint-disable-next-line max-len
                 `cerebro supports a minimum Node.js version of ${minNodeVersion}. You have ${nodeVersion}. Read our version support policy: https://github.com/anolilab/cerebro#supported-nodejs-versions`,
             );
+            // eslint-disable-next-line unicorn/no-process-exit
             process.exit(1);
         }
     }

@@ -1,5 +1,6 @@
-import expect from "expect";
-import { system } from "../../src/toolbox/system-tools";
+import { describe, expect, it } from "vitest";
+
+import system from "../../src/toolbox/system-tools";
 
 test("which - existing package", () => {
     const result = system.which("node");

@@ -1,4 +1,5 @@
-import expect from "expect";
+import { describe, expect, it } from "vitest";
+
 import { loadModule } from "../../src/loaders/utils/load-module";
 
 test("handles weird input", () => {

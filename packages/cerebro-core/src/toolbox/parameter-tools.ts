@@ -16,11 +16,11 @@ const COMMAND_DELIMITER = " ";
 export function mergeArguments(argumentLists: OptionDefinition[][]): OptionDefinition[] {
     const argumentsByName = new Map<string, OptionDefinition>();
 
-    for (const arguments_ of argumentLists) {
-        for (const argument of arguments_) {
+    argumentLists.forEach((argumentList) => {
+        argumentList.forEach((argument) => {
             argumentsByName.set(argument.name, { ...argumentsByName.get(argument.name), ...argument });
-        }
-    }
+        });
+    });
 
     return [...argumentsByName.values()];
 }

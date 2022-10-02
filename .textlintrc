@@ -1,5 +1,7 @@
 {
-  "filters": {},
+  "filters": {
+      "comments": true
+  },
   "rules": {
     "en-capitalization": true,
     "footnote-order": true,
@@ -26,8 +28,7 @@
             "execution",
             "executed",
             "remain",
-            "execute",
-            "colors"
+            "execute"
         ]
     },
     "@textlint-rule/preset-google": true,

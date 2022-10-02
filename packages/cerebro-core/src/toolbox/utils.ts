@@ -1,13 +1,13 @@
-const head = <T>(a: T[]): T => a[0];
+const head = <T>(a: T[]): T | undefined => a[0];
 const tail = <T>(a: T[]): T[] => a.slice(1);
 const identity = (a) => a;
 const isNil = (a: any): boolean => a === null || typeof a === "undefined";
 const split = (b: string, a: string): string[] => a.split(b);
 const trim = (a: string): string => a.trim();
-const forEach = <T>(f: (index: T) => void, a: T[]) => a.forEach(f);
+const forEach = <T>(f: (index: T) => void, a: T[]) => a.forEach((element) => { f(element); });
 const keys = (a: Object): string[] => (Object(a) !== a ? [] : Object.keys(a));
 const replace = (b: string | RegExp, c: string, a: string): string => a.replace(b, c);
-const last = <T>(a: T[]): T => a[a.length - 1];
+const last = <T>(a: T[]): T | undefined => a[a.length - 1];
 const reject = <T>(f: (index: T) => boolean, a: T[]): T[] => a.filter((b) => !f(b));
 const is = (Ctor: any, value: any): boolean => (typeof value !== "undefined" && value.constructor === Ctor) || value instanceof Ctor;
 const takeLast = <T>(n: number, a: T[]): T[] => a.slice(-1 * n);
@@ -15,6 +15,7 @@ const equals = (a: string[], b: string[]) => a.length === b.length && a.every((v
 const times = (function_: Function, n: number) => {
     const list = Array.from({ length: n });
 
+    // eslint-disable-next-line no-plusplus
     for (let index = 0; index < n; index++) {
         list[index] = function_(index);
     }
@@ -62,7 +63,9 @@ function getProcessArgvBin() {
 }
 
 async function asyncForEach(array, callback) {
+    // eslint-disable-next-line no-plusplus
     for (let index = 0; index < array.length; index++) {
+        // eslint-disable-next-line no-await-in-loop
         await callback(array[index], index, array);
     }
 }

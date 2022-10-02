@@ -1,4 +1,5 @@
-import expect from "expect";
+import { describe, expect, it } from "vitest";
+
 import { Runtime } from "../../src/runtime/runtime";
 
 test("loads the core extensions in the right order", () => {

@@ -1,4 +1,5 @@
-import expect from "expect";
+import { describe, expect, it } from "vitest";
+
 import { loadExtensionFromFile } from "../../src/loaders/extension-loader";
 
 test("loading from a missing file", async () => {

@@ -1,6 +1,6 @@
 import jetpack from "fs-jetpack";
 
-import { PackageJSON as IPackageJSON, Toolbox as IToolbox } from "../types";
+import type { AbortSignals as IAbortSignals, PackageJSON as IPackageJSON, Toolbox as IToolbox } from "../types";
 
 /**
  * Finds the currently running CLI package.json
@@ -67,4 +67,38 @@ export async function checkForUpdate(toolbox: IToolbox): Promise<null | string> 
     }
 
     return null;
+}
+
+/**
+ * Executes the given callback when a termination signal is received.
+ * If callback returns a promise, it will wait for promise to resolve before aborting.
+ *
+ * @param callback Callback function for handling process termination
+ */
+export function onAbort(callback: (signal: IAbortSignals) => void | Promise<void>): void {
+    const signals: IAbortSignals[] = ["SIGINT", "SIGQUIT", "SIGTERM", "SIGHUP", "SIGBREAK"];
+
+    // eslint-disable-next-line no-restricted-syntax
+    for (const signal of signals) {
+        // eslint-disable-next-line @typescript-eslint/no-loop-func
+        process.on(signal, async () => {
+            // eslint-disable-next-line compat/compat
+            await Promise.resolve();
+
+            // eslint-disable-next-line no-restricted-syntax
+            for (const removeSignal of signals) {
+                // Remove listeners to prevent calling it multiple times
+                process.removeAllListeners(removeSignal);
+
+                // Add empty listeners to prevent terminating while onAbort callback is running
+                // eslint-disable-next-line @typescript-eslint/no-empty-function
+                process.on(removeSignal, () => {});
+            }
+
+            await callback(signal);
+
+            // eslint-disable-next-line unicorn/no-process-exit
+            process.exit();
+        });
+    }
 }

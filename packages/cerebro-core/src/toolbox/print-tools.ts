@@ -44,21 +44,22 @@ const CLI_TABLE_MARKDOWN = {
 };
 
 const colors = {
-    success: chalk.keyword("green"),
+    success: chalk.hex("#00ff00"),
     error: chalk.bold.red,
-    info: chalk.keyword("blue"),
-    warning: chalk.keyword("orange"),
-    important: chalk.keyword("grey"),
+    info: chalk.hex("#0000ff"),
+    warning: chalk.hex("#ffa500"),
+    important: chalk.hex("#bebebe"),
     critical: chalk.bold.red,
-    highlight: chalk.keyword("cyan"),
-    line: chalk.keyword("grey"),
-    muted: chalk.keyword("grey"),
+    highlight: chalk.hex("#00ffff"),
+    line: chalk.hex("#bebebe"),
+    muted: chalk.hex("#bebebe"),
 };
 
 /**
  * Print a blank line.
  */
 function newline() {
+    // eslint-disable-next-line no-console
     console.log("");
 }
 
@@ -66,6 +67,7 @@ function newline() {
  * Prints a divider line
  */
 function divider() {
+    // eslint-disable-next-line no-console
     console.log(colors.line("---------------------------------------------------------------"));
 }
 
@@ -87,12 +89,13 @@ function findWidths(ctable: CliTable.Table): number[] {
  * paddings into account.
  *
  * @param ctable Data table.
+ * @param style
  * @returns Array of properly sized column dividers.
  */
 function columnHeaderDivider(ctable: CliTable.Table, style: TableStyle = {}): string[] {
     const padding = (style["padding-left"] || 0) + (style["padding-right"] || 0);
 
-    return findWidths(ctable).map((w) => new Array(w + padding).join("-"));
+    return findWidths(ctable).map((w) => Array.from({ length: w + padding }).join("-"));
 }
 
 /**
@@ -125,11 +128,13 @@ function table(data: string[][], options: IPrintTableOptions = {}): void {
         markdownTable.unshift(columnHeaderDivider(markdownTable, options.style));
         resetTablePadding(markdownTable);
 
+        // eslint-disable-next-line no-console
         console.log(markdownTable.toString());
     } else if (options.format === "lean") {
         const leanTable = new CliTable({ style: options.style });
         leanTable.push(...data);
 
+        // eslint-disable-next-line no-console
         console.log(leanTable.toString());
     } else {
         const defaultTable = new CliTable({
@@ -138,6 +143,7 @@ function table(data: string[][], options: IPrintTableOptions = {}): void {
         });
         defaultTable.push(...data);
 
+        // eslint-disable-next-line no-console
         console.log(defaultTable.toString());
     }
 }
@@ -163,6 +169,7 @@ function clear() {
         let index;
         const lines = windowSize.height;
 
+        // eslint-disable-next-line no-plusplus
         for (index = 0; index < lines; index++) {
             stdout += "\r\n";
         }
@@ -183,6 +190,7 @@ const log = (arguments_: any): void => {
     }
 
     // this has been disabled, using jest function mock instead
+    // eslint-disable-next-line no-console
     console.log(arguments_);
 };
 

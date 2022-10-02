@@ -1,5 +1,5 @@
 import { build } from "../src";
-import { Toolbox as IToolbox } from "../src/types";
+import { Toolbox as IToolbox } from "../src/types/types";
 
 /**
  * Create the cli and kick it off

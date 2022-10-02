@@ -1,3 +1,5 @@
+import { describe, expect, it } from "vitest";
+
 import Dumper from "../../src/toolbox/dumper-tools";
 
 const generateDump = (item, opts) => {

@@ -1,7 +1,8 @@
-import expect from "expect";
-import { Toolbox } from "../../src/domain/toolbox";
-import createExtension from "../../src/extensions/prompt-extension";
+import { describe, expect, it } from "vitest";
 import { stdin } from "mock-stdin";
+
+import Toolbox from "../../src/domain/toolbox";
+import createExtension from "../../src/extensions/prompt-extension";
 
 // Key codes
 const keys = { up: "\x1B\x5B\x41", down: "\x1B\x5B\x42", enter: "\x0D", space: "\x20" };

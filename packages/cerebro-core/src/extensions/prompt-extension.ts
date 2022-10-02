@@ -10,6 +10,7 @@ import { Extension as IExtension, Prompts as IPrompts, Toolbox as IToolbox } fro
 export default {
     name: "prompt",
     execute: (toolbox: IToolbox) => {
+        // eslint-disable-next-line no-param-reassign
         toolbox.prompts = prompts as unknown as IPrompts;
     },
 } as IExtension;
